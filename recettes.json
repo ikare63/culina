@@ -1,7 +1,7 @@
 {
   "meta": {
     "nom": "Culina",
-    "version": "1.0",
+    "version": "2.0",
     "description": "Base personnelle de recettes Culina.",
     "nutrition": "Les valeurs nutritionnelles sont des estimations par portion.",
     "nombre_recettes": 150,
@@ -12,7 +12,13 @@
       "Boisson": 10,
       "Sauce & base": 10,
       "Snack": 10
-    }
+    },
+    "fonctionnalites": [
+      "Recettes",
+      "Mes stocks",
+      "Suggestions selon les stocks",
+      "Liste de courses"
+    ]
   },
   "recettes": [
     {
@@ -34,62 +40,86 @@
         {
           "quantite": 500,
           "unite": "g",
-          "ingredient": "Semoule de couscous"
+          "ingredient": "Semoule de couscous",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
         },
         {
           "quantite": 6,
           "unite": "",
-          "ingredient": "Merguez"
+          "ingredient": "Merguez",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 600,
           "unite": "g",
-          "ingredient": "Poulet"
+          "ingredient": "Poulet",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 3,
           "unite": "",
-          "ingredient": "Carottes"
+          "ingredient": "Carottes",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 2,
           "unite": "",
-          "ingredient": "Courgettes"
+          "ingredient": "Courgettes",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 2,
           "unite": "",
-          "ingredient": "Navets"
+          "ingredient": "Navets",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 400,
           "unite": "g",
-          "ingredient": "Pois chiches"
+          "ingredient": "Pois chiches",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 800,
           "unite": "g",
-          "ingredient": "Tomates concassées"
+          "ingredient": "Tomates concassées",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon"
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 2,
           "unite": "c. à soupe",
-          "ingredient": "Ras el-hanout"
+          "ingredient": "Ras el-hanout",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile d'olive"
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1.2,
           "unite": "L",
-          "ingredient": "Bouillon"
+          "ingredient": "Bouillon",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -127,62 +157,86 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Pancetta"
+          "ingredient": "Pancetta",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 650,
           "unite": "g",
-          "ingredient": "Bœuf haché"
+          "ingredient": "Bœuf haché",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Carotte"
+          "ingredient": "Carotte",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 1,
           "unite": "branche",
-          "ingredient": "Céleri"
+          "ingredient": "Céleri",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon"
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 150,
           "unite": "ml",
-          "ingredient": "Vin rouge"
+          "ingredient": "Vin rouge",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 700,
           "unite": "g",
-          "ingredient": "Tomates concassées"
+          "ingredient": "Tomates concassées",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 250,
           "unite": "ml",
-          "ingredient": "Bouillon"
+          "ingredient": "Bouillon",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 150,
           "unite": "ml",
-          "ingredient": "Lait"
+          "ingredient": "Lait",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 12,
           "unite": "feuilles",
-          "ingredient": "Pâtes à lasagnes"
+          "ingredient": "Pâtes à lasagnes",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
         },
         {
           "quantite": 700,
           "unite": "ml",
-          "ingredient": "Béchamel"
+          "ingredient": "Béchamel",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Parmesan"
+          "ingredient": "Parmesan",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -221,37 +275,51 @@
         {
           "quantite": 200,
           "unite": "g",
-          "ingredient": "Pâtes protéinées"
+          "ingredient": "Pâtes protéinées",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
         },
         {
           "quantite": 250,
           "unite": "g",
-          "ingredient": "Poulet pané"
+          "ingredient": "Poulet pané",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 180,
           "unite": "ml",
-          "ingredient": "Crème entière"
+          "ingredient": "Crème entière",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Poivron rouge"
+          "ingredient": "Poivron rouge",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 30,
           "unite": "g",
-          "ingredient": "Parmesan"
+          "ingredient": "Parmesan",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Paprika"
+          "ingredient": "Paprika",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -288,37 +356,51 @@
         {
           "quantite": 700,
           "unite": "g",
-          "ingredient": "Porc"
+          "ingredient": "Porc",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 4,
           "unite": "c. à soupe",
-          "ingredient": "Sauce soja"
+          "ingredient": "Sauce soja",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon"
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 2,
           "unite": "gousses",
-          "ingredient": "Ail"
+          "ingredient": "Ail",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 250,
           "unite": "ml",
-          "ingredient": "Eau"
+          "ingredient": "Eau",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Gingembre"
+          "ingredient": "Gingembre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -356,32 +438,44 @@
         {
           "quantite": 320,
           "unite": "g",
-          "ingredient": "Riz cuit froid"
+          "ingredient": "Riz cuit froid",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
         },
         {
           "quantite": 3,
           "unite": "",
-          "ingredient": "Œufs"
+          "ingredient": "Œufs",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 150,
           "unite": "g",
-          "ingredient": "Jambon"
+          "ingredient": "Jambon",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Petits pois"
+          "ingredient": "Petits pois",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 2,
           "unite": "",
-          "ingredient": "Oignons nouveaux"
+          "ingredient": "Oignons nouveaux",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 2,
           "unite": "c. à soupe",
-          "ingredient": "Sauce soja"
+          "ingredient": "Sauce soja",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -418,27 +512,37 @@
         {
           "quantite": 3,
           "unite": "",
-          "ingredient": "Œufs"
+          "ingredient": "Œufs",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 60,
           "unite": "g",
-          "ingredient": "Poivron"
+          "ingredient": "Poivron",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 50,
           "unite": "g",
-          "ingredient": "Courgette"
+          "ingredient": "Courgette",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 30,
           "unite": "g",
-          "ingredient": "Oignon"
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 20,
           "unite": "g",
-          "ingredient": "Fromage râpé"
+          "ingredient": "Fromage râpé",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -473,27 +577,37 @@
         {
           "quantite": 300,
           "unite": "g",
-          "ingredient": "Riz cuit froid"
+          "ingredient": "Riz cuit froid",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
         },
         {
           "quantite": 2,
           "unite": "",
-          "ingredient": "Œufs"
+          "ingredient": "Œufs",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Légumes mélangés"
+          "ingredient": "Légumes mélangés",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 2,
           "unite": "c. à soupe",
-          "ingredient": "Sauce soja"
+          "ingredient": "Sauce soja",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Huile"
+          "ingredient": "Huile",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -530,37 +644,51 @@
         {
           "quantite": 150,
           "unite": "g",
-          "ingredient": "Bœuf charolais très frais"
+          "ingredient": "Bœuf charolais très frais",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Jaune d'œuf"
+          "ingredient": "Jaune d'œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Moutarde"
+          "ingredient": "Moutarde",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Câpres"
+          "ingredient": "Câpres",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Cornichons"
+          "ingredient": "Cornichons",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Échalote"
+          "ingredient": "Échalote",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Sauce Worcestershire"
+          "ingredient": "Sauce Worcestershire",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -595,32 +723,44 @@
         {
           "quantite": 200,
           "unite": "g",
-          "ingredient": "Pâtes"
+          "ingredient": "Pâtes",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
         },
         {
           "quantite": 220,
           "unite": "g",
-          "ingredient": "Poulet"
+          "ingredient": "Poulet",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 150,
           "unite": "ml",
-          "ingredient": "Crème légère"
+          "ingredient": "Crème légère",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 30,
           "unite": "g",
-          "ingredient": "Parmesan"
+          "ingredient": "Parmesan",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile d'olive"
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -656,32 +796,44 @@
         {
           "quantite": 200,
           "unite": "g",
-          "ingredient": "Pâtes"
+          "ingredient": "Pâtes",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
         },
         {
           "quantite": 220,
           "unite": "g",
-          "ingredient": "Saumon"
+          "ingredient": "Saumon",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 150,
           "unite": "ml",
-          "ingredient": "Crème légère"
+          "ingredient": "Crème légère",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 30,
           "unite": "g",
-          "ingredient": "Parmesan"
+          "ingredient": "Parmesan",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile d'olive"
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -717,32 +869,44 @@
         {
           "quantite": 200,
           "unite": "g",
-          "ingredient": "Pâtes"
+          "ingredient": "Pâtes",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
         },
         {
           "quantite": 220,
           "unite": "g",
-          "ingredient": "Poulet"
+          "ingredient": "Poulet",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 150,
           "unite": "ml",
-          "ingredient": "Crème légère"
+          "ingredient": "Crème légère",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 30,
           "unite": "g",
-          "ingredient": "Parmesan"
+          "ingredient": "Parmesan",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile d'olive"
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -778,32 +942,44 @@
         {
           "quantite": 200,
           "unite": "g",
-          "ingredient": "Pâtes"
+          "ingredient": "Pâtes",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
         },
         {
           "quantite": 220,
           "unite": "g",
-          "ingredient": "Bœuf haché"
+          "ingredient": "Bœuf haché",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 150,
           "unite": "ml",
-          "ingredient": "Crème légère"
+          "ingredient": "Crème légère",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 30,
           "unite": "g",
-          "ingredient": "Parmesan"
+          "ingredient": "Parmesan",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile d'olive"
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -839,32 +1015,44 @@
         {
           "quantite": 200,
           "unite": "g",
-          "ingredient": "Pâtes"
+          "ingredient": "Pâtes",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
         },
         {
           "quantite": 220,
           "unite": "g",
-          "ingredient": "Jambon"
+          "ingredient": "Jambon",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 150,
           "unite": "ml",
-          "ingredient": "Crème légère"
+          "ingredient": "Crème légère",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 30,
           "unite": "g",
-          "ingredient": "Parmesan"
+          "ingredient": "Parmesan",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile d'olive"
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -899,32 +1087,44 @@
         {
           "quantite": 200,
           "unite": "g",
-          "ingredient": "Pâtes"
+          "ingredient": "Pâtes",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
         },
         {
           "quantite": 220,
           "unite": "g",
-          "ingredient": "Cheddar"
+          "ingredient": "Cheddar",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 150,
           "unite": "ml",
-          "ingredient": "Crème légère"
+          "ingredient": "Crème légère",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 30,
           "unite": "g",
-          "ingredient": "Parmesan"
+          "ingredient": "Parmesan",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile d'olive"
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -960,32 +1160,44 @@
         {
           "quantite": 200,
           "unite": "g",
-          "ingredient": "Pâtes"
+          "ingredient": "Pâtes",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
         },
         {
           "quantite": 220,
           "unite": "g",
-          "ingredient": "Lardons"
+          "ingredient": "Lardons",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 150,
           "unite": "ml",
-          "ingredient": "Crème légère"
+          "ingredient": "Crème légère",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 30,
           "unite": "g",
-          "ingredient": "Parmesan"
+          "ingredient": "Parmesan",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile d'olive"
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -1021,32 +1233,44 @@
         {
           "quantite": 200,
           "unite": "g",
-          "ingredient": "Pâtes"
+          "ingredient": "Pâtes",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
         },
         {
           "quantite": 220,
           "unite": "g",
-          "ingredient": "Thon"
+          "ingredient": "Thon",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 150,
           "unite": "ml",
-          "ingredient": "Crème légère"
+          "ingredient": "Crème légère",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 30,
           "unite": "g",
-          "ingredient": "Parmesan"
+          "ingredient": "Parmesan",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile d'olive"
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -1081,32 +1305,44 @@
         {
           "quantite": 200,
           "unite": "g",
-          "ingredient": "Pâtes"
+          "ingredient": "Pâtes",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
         },
         {
           "quantite": 220,
           "unite": "g",
-          "ingredient": "Champignons"
+          "ingredient": "Champignons",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 150,
           "unite": "ml",
-          "ingredient": "Crème légère"
+          "ingredient": "Crème légère",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 30,
           "unite": "g",
-          "ingredient": "Parmesan"
+          "ingredient": "Parmesan",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile d'olive"
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -1141,32 +1377,44 @@
         {
           "quantite": 200,
           "unite": "g",
-          "ingredient": "Pâtes"
+          "ingredient": "Pâtes",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
         },
         {
           "quantite": 220,
           "unite": "g",
-          "ingredient": "Chorizo"
+          "ingredient": "Chorizo",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 150,
           "unite": "ml",
-          "ingredient": "Crème légère"
+          "ingredient": "Crème légère",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 30,
           "unite": "g",
-          "ingredient": "Parmesan"
+          "ingredient": "Parmesan",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile d'olive"
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -1202,32 +1450,44 @@
         {
           "quantite": 200,
           "unite": "g",
-          "ingredient": "Pâtes"
+          "ingredient": "Pâtes",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
         },
         {
           "quantite": 220,
           "unite": "g",
-          "ingredient": "Parmesan"
+          "ingredient": "Parmesan",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 150,
           "unite": "ml",
-          "ingredient": "Crème légère"
+          "ingredient": "Crème légère",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 30,
           "unite": "g",
-          "ingredient": "Parmesan"
+          "ingredient": "Parmesan",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile d'olive"
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -1263,32 +1523,44 @@
         {
           "quantite": 200,
           "unite": "g",
-          "ingredient": "Pâtes"
+          "ingredient": "Pâtes",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
         },
         {
           "quantite": 220,
           "unite": "g",
-          "ingredient": "Poulet"
+          "ingredient": "Poulet",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 150,
           "unite": "ml",
-          "ingredient": "Crème légère"
+          "ingredient": "Crème légère",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 30,
           "unite": "g",
-          "ingredient": "Parmesan"
+          "ingredient": "Parmesan",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile d'olive"
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -1324,32 +1596,44 @@
         {
           "quantite": 160,
           "unite": "g",
-          "ingredient": "Riz cru"
+          "ingredient": "Riz cru",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
         },
         {
           "quantite": 250,
           "unite": "g",
-          "ingredient": "Poulet"
+          "ingredient": "Poulet",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon"
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Légumes"
+          "ingredient": "Légumes",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile"
+          "ingredient": "Huile",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 2,
           "unite": "c. à soupe",
-          "ingredient": "Sauce soja"
+          "ingredient": "Sauce soja",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -1385,32 +1669,44 @@
         {
           "quantite": 160,
           "unite": "g",
-          "ingredient": "Riz cru"
+          "ingredient": "Riz cru",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
         },
         {
           "quantite": 250,
           "unite": "g",
-          "ingredient": "Champignons"
+          "ingredient": "Champignons",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon"
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Légumes"
+          "ingredient": "Légumes",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile"
+          "ingredient": "Huile",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 2,
           "unite": "c. à soupe",
-          "ingredient": "Sauce soja"
+          "ingredient": "Sauce soja",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -1446,32 +1742,44 @@
         {
           "quantite": 160,
           "unite": "g",
-          "ingredient": "Riz cru"
+          "ingredient": "Riz cru",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
         },
         {
           "quantite": 250,
           "unite": "g",
-          "ingredient": "Chorizo"
+          "ingredient": "Chorizo",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon"
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Légumes"
+          "ingredient": "Légumes",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile"
+          "ingredient": "Huile",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 2,
           "unite": "c. à soupe",
-          "ingredient": "Sauce soja"
+          "ingredient": "Sauce soja",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -1506,32 +1814,44 @@
         {
           "quantite": 160,
           "unite": "g",
-          "ingredient": "Riz cru"
+          "ingredient": "Riz cru",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
         },
         {
           "quantite": 250,
           "unite": "g",
-          "ingredient": "Poulet"
+          "ingredient": "Poulet",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon"
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Légumes"
+          "ingredient": "Légumes",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile"
+          "ingredient": "Huile",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 2,
           "unite": "c. à soupe",
-          "ingredient": "Sauce soja"
+          "ingredient": "Sauce soja",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -1567,32 +1887,44 @@
         {
           "quantite": 160,
           "unite": "g",
-          "ingredient": "Riz cru"
+          "ingredient": "Riz cru",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
         },
         {
           "quantite": 250,
           "unite": "g",
-          "ingredient": "Poulet"
+          "ingredient": "Poulet",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon"
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Légumes"
+          "ingredient": "Légumes",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile"
+          "ingredient": "Huile",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 2,
           "unite": "c. à soupe",
-          "ingredient": "Sauce soja"
+          "ingredient": "Sauce soja",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -1628,32 +1960,44 @@
         {
           "quantite": 160,
           "unite": "g",
-          "ingredient": "Riz cru"
+          "ingredient": "Riz cru",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
         },
         {
           "quantite": 250,
           "unite": "g",
-          "ingredient": "Boulettes de bœuf"
+          "ingredient": "Boulettes de bœuf",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon"
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Légumes"
+          "ingredient": "Légumes",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile"
+          "ingredient": "Huile",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 2,
           "unite": "c. à soupe",
-          "ingredient": "Sauce soja"
+          "ingredient": "Sauce soja",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -1688,32 +2032,44 @@
         {
           "quantite": 160,
           "unite": "g",
-          "ingredient": "Riz cru"
+          "ingredient": "Riz cru",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
         },
         {
           "quantite": 250,
           "unite": "g",
-          "ingredient": "Saumon"
+          "ingredient": "Saumon",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon"
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Légumes"
+          "ingredient": "Légumes",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile"
+          "ingredient": "Huile",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 2,
           "unite": "c. à soupe",
-          "ingredient": "Sauce soja"
+          "ingredient": "Sauce soja",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -1749,32 +2105,44 @@
         {
           "quantite": 160,
           "unite": "g",
-          "ingredient": "Riz cru"
+          "ingredient": "Riz cru",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
         },
         {
           "quantite": 250,
           "unite": "g",
-          "ingredient": "Bœuf haché"
+          "ingredient": "Bœuf haché",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon"
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Légumes"
+          "ingredient": "Légumes",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile"
+          "ingredient": "Huile",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 2,
           "unite": "c. à soupe",
-          "ingredient": "Sauce soja"
+          "ingredient": "Sauce soja",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -1809,32 +2177,44 @@
         {
           "quantite": 350,
           "unite": "g",
-          "ingredient": "Poulet"
+          "ingredient": "Poulet",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon"
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 150,
           "unite": "ml",
-          "ingredient": "Crème entière"
+          "ingredient": "Crème entière",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile"
+          "ingredient": "Huile",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Paprika"
+          "ingredient": "Paprika",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -1869,32 +2249,44 @@
         {
           "quantite": 350,
           "unite": "g",
-          "ingredient": "Poulet"
+          "ingredient": "Poulet",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon"
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 150,
           "unite": "ml",
-          "ingredient": "Crème à la moutarde"
+          "ingredient": "Crème à la moutarde",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile"
+          "ingredient": "Huile",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Paprika"
+          "ingredient": "Paprika",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -1929,32 +2321,44 @@
         {
           "quantite": 350,
           "unite": "g",
-          "ingredient": "Poulet"
+          "ingredient": "Poulet",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon"
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 150,
           "unite": "ml",
-          "ingredient": "Crème au paprika"
+          "ingredient": "Crème au paprika",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile"
+          "ingredient": "Huile",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Paprika"
+          "ingredient": "Paprika",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -1989,32 +2393,44 @@
         {
           "quantite": 350,
           "unite": "g",
-          "ingredient": "Poulet"
+          "ingredient": "Poulet",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon"
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 150,
           "unite": "ml",
-          "ingredient": "Lait de coco"
+          "ingredient": "Lait de coco",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile"
+          "ingredient": "Huile",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Paprika"
+          "ingredient": "Paprika",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -2049,32 +2465,44 @@
         {
           "quantite": 350,
           "unite": "g",
-          "ingredient": "Poulet"
+          "ingredient": "Poulet",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon"
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 150,
           "unite": "ml",
-          "ingredient": "Sauce miel-soja"
+          "ingredient": "Sauce miel-soja",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile"
+          "ingredient": "Huile",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Paprika"
+          "ingredient": "Paprika",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -2109,32 +2537,44 @@
         {
           "quantite": 350,
           "unite": "g",
-          "ingredient": "Poulet"
+          "ingredient": "Poulet",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon"
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 150,
           "unite": "ml",
-          "ingredient": "Sauce citronnée"
+          "ingredient": "Sauce citronnée",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile"
+          "ingredient": "Huile",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Paprika"
+          "ingredient": "Paprika",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -2169,32 +2609,44 @@
         {
           "quantite": 350,
           "unite": "g",
-          "ingredient": "Poulet"
+          "ingredient": "Poulet",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon"
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 150,
           "unite": "ml",
-          "ingredient": "Sauce tomate"
+          "ingredient": "Sauce tomate",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile"
+          "ingredient": "Huile",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Paprika"
+          "ingredient": "Paprika",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -2229,32 +2681,44 @@
         {
           "quantite": 350,
           "unite": "g",
-          "ingredient": "Poulet"
+          "ingredient": "Poulet",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon"
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 150,
           "unite": "ml",
-          "ingredient": "Sauce tomate-poivron"
+          "ingredient": "Sauce tomate-poivron",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile"
+          "ingredient": "Huile",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Paprika"
+          "ingredient": "Paprika",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -2289,32 +2753,44 @@
         {
           "quantite": 300,
           "unite": "g",
-          "ingredient": "Escalope de poulet"
+          "ingredient": "Escalope de poulet",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon"
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile d'olive"
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Légumes ou garniture"
+          "ingredient": "Légumes ou garniture",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Sel"
+          "ingredient": "Sel",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -2349,32 +2825,44 @@
         {
           "quantite": 300,
           "unite": "g",
-          "ingredient": "Bœuf haché"
+          "ingredient": "Bœuf haché",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon"
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile d'olive"
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Légumes ou garniture"
+          "ingredient": "Légumes ou garniture",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Sel"
+          "ingredient": "Sel",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -2409,32 +2897,44 @@
         {
           "quantite": 300,
           "unite": "g",
-          "ingredient": "Bœuf haché"
+          "ingredient": "Bœuf haché",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon"
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile d'olive"
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Légumes ou garniture"
+          "ingredient": "Légumes ou garniture",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Sel"
+          "ingredient": "Sel",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -2469,32 +2969,44 @@
         {
           "quantite": 300,
           "unite": "g",
-          "ingredient": "Steak haché"
+          "ingredient": "Steak haché",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon"
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile d'olive"
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Légumes ou garniture"
+          "ingredient": "Légumes ou garniture",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Sel"
+          "ingredient": "Sel",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -2529,32 +3041,44 @@
         {
           "quantite": 300,
           "unite": "g",
-          "ingredient": "Steak haché"
+          "ingredient": "Steak haché",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon"
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile d'olive"
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Légumes ou garniture"
+          "ingredient": "Légumes ou garniture",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Sel"
+          "ingredient": "Sel",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -2589,32 +3113,44 @@
         {
           "quantite": 300,
           "unite": "g",
-          "ingredient": "Jambon"
+          "ingredient": "Jambon",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon"
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile d'olive"
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Légumes ou garniture"
+          "ingredient": "Légumes ou garniture",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Sel"
+          "ingredient": "Sel",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -2649,32 +3185,44 @@
         {
           "quantite": 300,
           "unite": "g",
-          "ingredient": "Cheddar"
+          "ingredient": "Cheddar",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon"
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile d'olive"
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Légumes ou garniture"
+          "ingredient": "Légumes ou garniture",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Sel"
+          "ingredient": "Sel",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -2709,32 +3257,44 @@
         {
           "quantite": 300,
           "unite": "g",
-          "ingredient": "Poulet"
+          "ingredient": "Poulet",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon"
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile d'olive"
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Légumes ou garniture"
+          "ingredient": "Légumes ou garniture",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Sel"
+          "ingredient": "Sel",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -2769,32 +3329,44 @@
         {
           "quantite": 300,
           "unite": "g",
-          "ingredient": "Poulet pané"
+          "ingredient": "Poulet pané",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon"
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile d'olive"
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Légumes ou garniture"
+          "ingredient": "Légumes ou garniture",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Sel"
+          "ingredient": "Sel",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -2829,32 +3401,44 @@
         {
           "quantite": 300,
           "unite": "g",
-          "ingredient": "Poulet"
+          "ingredient": "Poulet",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon"
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile d'olive"
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Légumes ou garniture"
+          "ingredient": "Légumes ou garniture",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Sel"
+          "ingredient": "Sel",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -2889,32 +3473,44 @@
         {
           "quantite": 300,
           "unite": "g",
-          "ingredient": "Jambon"
+          "ingredient": "Jambon",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon"
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile d'olive"
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Légumes ou garniture"
+          "ingredient": "Légumes ou garniture",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Sel"
+          "ingredient": "Sel",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -2949,32 +3545,44 @@
         {
           "quantite": 300,
           "unite": "g",
-          "ingredient": "Poulet"
+          "ingredient": "Poulet",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon"
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile d'olive"
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Légumes ou garniture"
+          "ingredient": "Légumes ou garniture",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Sel"
+          "ingredient": "Sel",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -3009,32 +3617,44 @@
         {
           "quantite": 300,
           "unite": "g",
-          "ingredient": "Lardons"
+          "ingredient": "Lardons",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon"
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile d'olive"
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Légumes ou garniture"
+          "ingredient": "Légumes ou garniture",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Sel"
+          "ingredient": "Sel",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -3069,32 +3689,44 @@
         {
           "quantite": 300,
           "unite": "g",
-          "ingredient": "Poulet"
+          "ingredient": "Poulet",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon"
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile d'olive"
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Légumes ou garniture"
+          "ingredient": "Légumes ou garniture",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Sel"
+          "ingredient": "Sel",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -3129,32 +3761,44 @@
         {
           "quantite": 300,
           "unite": "g",
-          "ingredient": "Pommes de terre"
+          "ingredient": "Pommes de terre",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon"
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile d'olive"
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Légumes ou garniture"
+          "ingredient": "Légumes ou garniture",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Sel"
+          "ingredient": "Sel",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -3189,32 +3833,44 @@
         {
           "quantite": 300,
           "unite": "g",
-          "ingredient": "Jambon"
+          "ingredient": "Jambon",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon"
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile d'olive"
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Légumes ou garniture"
+          "ingredient": "Légumes ou garniture",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Sel"
+          "ingredient": "Sel",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -3249,32 +3905,44 @@
         {
           "quantite": 300,
           "unite": "g",
-          "ingredient": "Pommes de terre"
+          "ingredient": "Pommes de terre",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon"
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile d'olive"
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Légumes ou garniture"
+          "ingredient": "Légumes ou garniture",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Sel"
+          "ingredient": "Sel",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -3309,32 +3977,44 @@
         {
           "quantite": 300,
           "unite": "g",
-          "ingredient": "Pommes de terre"
+          "ingredient": "Pommes de terre",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon"
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile d'olive"
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Légumes ou garniture"
+          "ingredient": "Légumes ou garniture",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Sel"
+          "ingredient": "Sel",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -3369,32 +4049,44 @@
         {
           "quantite": 300,
           "unite": "g",
-          "ingredient": "Poulet pané"
+          "ingredient": "Poulet pané",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon"
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile d'olive"
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Légumes ou garniture"
+          "ingredient": "Légumes ou garniture",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Sel"
+          "ingredient": "Sel",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -3429,32 +4121,44 @@
         {
           "quantite": 300,
           "unite": "g",
-          "ingredient": "Mozzarella"
+          "ingredient": "Mozzarella",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon"
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile d'olive"
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Légumes ou garniture"
+          "ingredient": "Légumes ou garniture",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Sel"
+          "ingredient": "Sel",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -3489,32 +4193,44 @@
         {
           "quantite": 300,
           "unite": "g",
-          "ingredient": "Poulet"
+          "ingredient": "Poulet",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon"
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile d'olive"
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Légumes ou garniture"
+          "ingredient": "Légumes ou garniture",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Sel"
+          "ingredient": "Sel",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -3549,32 +4265,44 @@
         {
           "quantite": 300,
           "unite": "g",
-          "ingredient": "Poulet"
+          "ingredient": "Poulet",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon"
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile d'olive"
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Légumes ou garniture"
+          "ingredient": "Légumes ou garniture",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Sel"
+          "ingredient": "Sel",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -3609,32 +4337,44 @@
         {
           "quantite": 300,
           "unite": "g",
-          "ingredient": "Feta"
+          "ingredient": "Feta",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon"
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile d'olive"
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Légumes ou garniture"
+          "ingredient": "Légumes ou garniture",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Sel"
+          "ingredient": "Sel",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -3669,32 +4409,44 @@
         {
           "quantite": 300,
           "unite": "g",
-          "ingredient": "Semoule"
+          "ingredient": "Semoule",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon"
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Huile d'olive"
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Légumes ou garniture"
+          "ingredient": "Légumes ou garniture",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Sel"
+          "ingredient": "Sel",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Poivre"
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -3729,32 +4481,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Pépites de chocolat"
+          "ingredient": "Pépites de chocolat",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -3789,32 +4553,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Chocolat au lait"
+          "ingredient": "Chocolat au lait",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -3849,32 +4625,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Trois chocolats"
+          "ingredient": "Trois chocolats",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -3909,32 +4697,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Pâte à tartiner"
+          "ingredient": "Pâte à tartiner",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -3971,32 +4771,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Noix de pécan"
+          "ingredient": "Noix de pécan",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -4032,32 +4844,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Chocolat noir"
+          "ingredient": "Chocolat noir",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -4092,32 +4916,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Pépites de chocolat"
+          "ingredient": "Pépites de chocolat",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -4152,32 +4988,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Chocolat noir"
+          "ingredient": "Chocolat noir",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -4212,32 +5060,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Chocolat noir"
+          "ingredient": "Chocolat noir",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -4272,32 +5132,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Chocolat blanc"
+          "ingredient": "Chocolat blanc",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -4332,32 +5204,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Chocolat noir"
+          "ingredient": "Chocolat noir",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -4392,32 +5276,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Chocolat noir"
+          "ingredient": "Chocolat noir",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -4452,32 +5348,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Chocolat noir"
+          "ingredient": "Chocolat noir",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -4512,32 +5420,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Pépites de chocolat"
+          "ingredient": "Pépites de chocolat",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -4572,32 +5492,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Myrtilles"
+          "ingredient": "Myrtilles",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -4632,32 +5564,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Banane"
+          "ingredient": "Banane",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -4692,32 +5636,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Banane et chocolat"
+          "ingredient": "Banane et chocolat",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -4752,32 +5708,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Cacao"
+          "ingredient": "Cacao",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -4812,32 +5780,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Citron"
+          "ingredient": "Citron",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -4872,32 +5852,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Zeste de citron"
+          "ingredient": "Zeste de citron",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -4932,32 +5924,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Poudre d'amande"
+          "ingredient": "Poudre d'amande",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -4992,32 +5996,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Lait"
+          "ingredient": "Lait",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -5052,32 +6068,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Lait"
+          "ingredient": "Lait",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -5112,32 +6140,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Skyr"
+          "ingredient": "Skyr",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -5172,32 +6212,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Lait"
+          "ingredient": "Lait",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -5232,32 +6284,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Pain brioché"
+          "ingredient": "Pain brioché",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -5292,32 +6356,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Mascarpone"
+          "ingredient": "Mascarpone",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -5352,32 +6428,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Spéculoos"
+          "ingredient": "Spéculoos",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -5412,32 +6500,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Fromage frais"
+          "ingredient": "Fromage frais",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -5472,32 +6572,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Caramel"
+          "ingredient": "Caramel",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -5532,32 +6644,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Chocolat noir"
+          "ingredient": "Chocolat noir",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -5592,32 +6716,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Crème entière"
+          "ingredient": "Crème entière",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -5652,32 +6788,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Riz rond"
+          "ingredient": "Riz rond",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -5712,32 +6860,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Crème entière"
+          "ingredient": "Crème entière",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -5772,32 +6932,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Lait"
+          "ingredient": "Lait",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -5832,32 +7004,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Cerises"
+          "ingredient": "Cerises",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -5892,32 +7076,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Pommes"
+          "ingredient": "Pommes",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -5952,32 +7148,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Pommes"
+          "ingredient": "Pommes",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -6012,32 +7220,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Chocolat noir"
+          "ingredient": "Chocolat noir",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -6072,32 +7292,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Lait"
+          "ingredient": "Lait",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -6132,32 +7364,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Citron"
+          "ingredient": "Citron",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -6192,32 +7436,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Cannelle"
+          "ingredient": "Cannelle",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -6252,32 +7508,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Vanille"
+          "ingredient": "Vanille",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -6312,32 +7580,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Cacao"
+          "ingredient": "Cacao",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -6372,32 +7652,44 @@
         {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine"
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 80,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 70,
           "unite": "g",
-          "ingredient": "Beurre"
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Œuf"
+          "ingredient": "Œuf",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Noix de coco râpée"
+          "ingredient": "Noix de coco râpée",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "c. à café",
-          "ingredient": "Levure chimique"
+          "ingredient": "Levure chimique",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -6432,17 +7724,23 @@
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Fromage blanc"
+          "ingredient": "Fromage blanc",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Garniture adaptée"
+          "ingredient": "Garniture adaptée",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Assaisonnement ou sucre selon la recette"
+          "ingredient": "Assaisonnement ou sucre selon la recette",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -6476,17 +7774,23 @@
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Fromage blanc"
+          "ingredient": "Fromage blanc",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Garniture adaptée"
+          "ingredient": "Garniture adaptée",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Assaisonnement ou sucre selon la recette"
+          "ingredient": "Assaisonnement ou sucre selon la recette",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -6521,17 +7825,23 @@
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Fromage blanc"
+          "ingredient": "Fromage blanc",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Garniture adaptée"
+          "ingredient": "Garniture adaptée",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Assaisonnement ou sucre selon la recette"
+          "ingredient": "Assaisonnement ou sucre selon la recette",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -6565,17 +7875,23 @@
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Fromage blanc"
+          "ingredient": "Fromage blanc",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Garniture adaptée"
+          "ingredient": "Garniture adaptée",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Assaisonnement ou sucre selon la recette"
+          "ingredient": "Assaisonnement ou sucre selon la recette",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -6609,17 +7925,23 @@
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Skyr"
+          "ingredient": "Skyr",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Garniture adaptée"
+          "ingredient": "Garniture adaptée",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Assaisonnement ou sucre selon la recette"
+          "ingredient": "Assaisonnement ou sucre selon la recette",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -6653,17 +7975,23 @@
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Flocons d'avoine"
+          "ingredient": "Flocons d'avoine",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Garniture adaptée"
+          "ingredient": "Garniture adaptée",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Assaisonnement ou sucre selon la recette"
+          "ingredient": "Assaisonnement ou sucre selon la recette",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -6697,17 +8025,23 @@
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Flocons d'avoine"
+          "ingredient": "Flocons d'avoine",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Garniture adaptée"
+          "ingredient": "Garniture adaptée",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Assaisonnement ou sucre selon la recette"
+          "ingredient": "Assaisonnement ou sucre selon la recette",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -6741,17 +8075,23 @@
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Flocons d'avoine"
+          "ingredient": "Flocons d'avoine",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Garniture adaptée"
+          "ingredient": "Garniture adaptée",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Assaisonnement ou sucre selon la recette"
+          "ingredient": "Assaisonnement ou sucre selon la recette",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -6785,17 +8125,23 @@
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Fromage blanc"
+          "ingredient": "Fromage blanc",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Garniture adaptée"
+          "ingredient": "Garniture adaptée",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Assaisonnement ou sucre selon la recette"
+          "ingredient": "Assaisonnement ou sucre selon la recette",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -6829,17 +8175,23 @@
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Œufs"
+          "ingredient": "Œufs",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Garniture adaptée"
+          "ingredient": "Garniture adaptée",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Assaisonnement ou sucre selon la recette"
+          "ingredient": "Assaisonnement ou sucre selon la recette",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -6873,17 +8225,23 @@
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Œufs"
+          "ingredient": "Œufs",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Garniture adaptée"
+          "ingredient": "Garniture adaptée",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Assaisonnement ou sucre selon la recette"
+          "ingredient": "Assaisonnement ou sucre selon la recette",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -6917,17 +8275,23 @@
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Avocat"
+          "ingredient": "Avocat",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Garniture adaptée"
+          "ingredient": "Garniture adaptée",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Assaisonnement ou sucre selon la recette"
+          "ingredient": "Assaisonnement ou sucre selon la recette",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -6961,17 +8325,23 @@
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Jambon"
+          "ingredient": "Jambon",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Garniture adaptée"
+          "ingredient": "Garniture adaptée",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Assaisonnement ou sucre selon la recette"
+          "ingredient": "Assaisonnement ou sucre selon la recette",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -7005,17 +8375,23 @@
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Banane"
+          "ingredient": "Banane",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Garniture adaptée"
+          "ingredient": "Garniture adaptée",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Assaisonnement ou sucre selon la recette"
+          "ingredient": "Assaisonnement ou sucre selon la recette",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -7049,17 +8425,23 @@
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Pain"
+          "ingredient": "Pain",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Garniture adaptée"
+          "ingredient": "Garniture adaptée",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Assaisonnement ou sucre selon la recette"
+          "ingredient": "Assaisonnement ou sucre selon la recette",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -7094,17 +8476,23 @@
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Espresso"
+          "ingredient": "Espresso",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 180,
           "unite": "ml",
-          "ingredient": "Lait ou boisson adaptée"
+          "ingredient": "Lait ou boisson adaptée",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Arôme ou garniture"
+          "ingredient": "Arôme ou garniture",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         }
       ],
       "etapes": [
@@ -7138,17 +8526,23 @@
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Espresso"
+          "ingredient": "Espresso",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 180,
           "unite": "ml",
-          "ingredient": "Lait ou boisson adaptée"
+          "ingredient": "Lait ou boisson adaptée",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Arôme ou garniture"
+          "ingredient": "Arôme ou garniture",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         }
       ],
       "etapes": [
@@ -7182,17 +8576,23 @@
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Espresso"
+          "ingredient": "Espresso",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 180,
           "unite": "ml",
-          "ingredient": "Lait ou boisson adaptée"
+          "ingredient": "Lait ou boisson adaptée",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Arôme ou garniture"
+          "ingredient": "Arôme ou garniture",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         }
       ],
       "etapes": [
@@ -7226,17 +8626,23 @@
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Espresso"
+          "ingredient": "Espresso",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 180,
           "unite": "ml",
-          "ingredient": "Lait ou boisson adaptée"
+          "ingredient": "Lait ou boisson adaptée",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Arôme ou garniture"
+          "ingredient": "Arôme ou garniture",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         }
       ],
       "etapes": [
@@ -7270,17 +8676,23 @@
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Café froid"
+          "ingredient": "Café froid",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 180,
           "unite": "ml",
-          "ingredient": "Lait ou boisson adaptée"
+          "ingredient": "Lait ou boisson adaptée",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Arôme ou garniture"
+          "ingredient": "Arôme ou garniture",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         }
       ],
       "etapes": [
@@ -7314,17 +8726,23 @@
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Lait"
+          "ingredient": "Lait",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 180,
           "unite": "ml",
-          "ingredient": "Lait ou boisson adaptée"
+          "ingredient": "Lait ou boisson adaptée",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Arôme ou garniture"
+          "ingredient": "Arôme ou garniture",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         }
       ],
       "etapes": [
@@ -7358,17 +8776,23 @@
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Banane"
+          "ingredient": "Banane",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 180,
           "unite": "ml",
-          "ingredient": "Lait ou boisson adaptée"
+          "ingredient": "Lait ou boisson adaptée",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Arôme ou garniture"
+          "ingredient": "Arôme ou garniture",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         }
       ],
       "etapes": [
@@ -7402,17 +8826,23 @@
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Fraise et banane"
+          "ingredient": "Fraise et banane",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 180,
           "unite": "ml",
-          "ingredient": "Lait ou boisson adaptée"
+          "ingredient": "Lait ou boisson adaptée",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Arôme ou garniture"
+          "ingredient": "Arôme ou garniture",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         }
       ],
       "etapes": [
@@ -7446,17 +8876,23 @@
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Glace vanille"
+          "ingredient": "Glace vanille",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 180,
           "unite": "ml",
-          "ingredient": "Lait ou boisson adaptée"
+          "ingredient": "Lait ou boisson adaptée",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Arôme ou garniture"
+          "ingredient": "Arôme ou garniture",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         }
       ],
       "etapes": [
@@ -7490,17 +8926,23 @@
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Orange"
+          "ingredient": "Orange",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 180,
           "unite": "ml",
-          "ingredient": "Lait ou boisson adaptée"
+          "ingredient": "Lait ou boisson adaptée",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Arôme ou garniture"
+          "ingredient": "Arôme ou garniture",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         }
       ],
       "etapes": [
@@ -7534,17 +8976,23 @@
         {
           "quantite": 200,
           "unite": "g",
-          "ingredient": "Crème entière"
+          "ingredient": "Crème entière",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Assaisonnement"
+          "ingredient": "Assaisonnement",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Matière grasse si nécessaire"
+          "ingredient": "Matière grasse si nécessaire",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         }
       ],
       "etapes": [
@@ -7578,17 +9026,23 @@
         {
           "quantite": 200,
           "unite": "g",
-          "ingredient": "Moutarde"
+          "ingredient": "Moutarde",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Assaisonnement"
+          "ingredient": "Assaisonnement",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Matière grasse si nécessaire"
+          "ingredient": "Matière grasse si nécessaire",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         }
       ],
       "etapes": [
@@ -7622,17 +9076,23 @@
         {
           "quantite": 200,
           "unite": "g",
-          "ingredient": "Poivre concassé"
+          "ingredient": "Poivre concassé",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Assaisonnement"
+          "ingredient": "Assaisonnement",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Matière grasse si nécessaire"
+          "ingredient": "Matière grasse si nécessaire",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         }
       ],
       "etapes": [
@@ -7666,17 +9126,23 @@
         {
           "quantite": 200,
           "unite": "g",
-          "ingredient": "Tomates concassées"
+          "ingredient": "Tomates concassées",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Assaisonnement"
+          "ingredient": "Assaisonnement",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Matière grasse si nécessaire"
+          "ingredient": "Matière grasse si nécessaire",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         }
       ],
       "etapes": [
@@ -7710,17 +9176,23 @@
         {
           "quantite": 200,
           "unite": "g",
-          "ingredient": "Basilic"
+          "ingredient": "Basilic",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Assaisonnement"
+          "ingredient": "Assaisonnement",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Matière grasse si nécessaire"
+          "ingredient": "Matière grasse si nécessaire",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         }
       ],
       "etapes": [
@@ -7754,17 +9226,23 @@
         {
           "quantite": 200,
           "unite": "g",
-          "ingredient": "Lait de coco"
+          "ingredient": "Lait de coco",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Assaisonnement"
+          "ingredient": "Assaisonnement",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Matière grasse si nécessaire"
+          "ingredient": "Matière grasse si nécessaire",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         }
       ],
       "etapes": [
@@ -7798,17 +9276,23 @@
         {
           "quantite": 200,
           "unite": "g",
-          "ingredient": "Sauce soja"
+          "ingredient": "Sauce soja",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Assaisonnement"
+          "ingredient": "Assaisonnement",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Matière grasse si nécessaire"
+          "ingredient": "Matière grasse si nécessaire",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         }
       ],
       "etapes": [
@@ -7842,17 +9326,23 @@
         {
           "quantite": 200,
           "unite": "g",
-          "ingredient": "Lait"
+          "ingredient": "Lait",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Assaisonnement"
+          "ingredient": "Assaisonnement",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Matière grasse si nécessaire"
+          "ingredient": "Matière grasse si nécessaire",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         }
       ],
       "etapes": [
@@ -7886,17 +9376,23 @@
         {
           "quantite": 200,
           "unite": "g",
-          "ingredient": "Sucre"
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Assaisonnement"
+          "ingredient": "Assaisonnement",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Matière grasse si nécessaire"
+          "ingredient": "Matière grasse si nécessaire",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         }
       ],
       "etapes": [
@@ -7930,17 +9426,23 @@
         {
           "quantite": 200,
           "unite": "g",
-          "ingredient": "Chocolat noir"
+          "ingredient": "Chocolat noir",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Assaisonnement"
+          "ingredient": "Assaisonnement",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "c. à soupe",
-          "ingredient": "Matière grasse si nécessaire"
+          "ingredient": "Matière grasse si nécessaire",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         }
       ],
       "etapes": [
@@ -7974,17 +9476,23 @@
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Skyr"
+          "ingredient": "Skyr",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Garniture"
+          "ingredient": "Garniture",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Assaisonnement"
+          "ingredient": "Assaisonnement",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         }
       ],
       "etapes": [
@@ -8018,17 +9526,23 @@
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Fromage blanc"
+          "ingredient": "Fromage blanc",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Garniture"
+          "ingredient": "Garniture",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Assaisonnement"
+          "ingredient": "Assaisonnement",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         }
       ],
       "etapes": [
@@ -8062,17 +9576,23 @@
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Banane"
+          "ingredient": "Banane",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Garniture"
+          "ingredient": "Garniture",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Assaisonnement"
+          "ingredient": "Assaisonnement",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         }
       ],
       "etapes": [
@@ -8106,17 +9626,23 @@
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Pain"
+          "ingredient": "Pain",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Garniture"
+          "ingredient": "Garniture",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Assaisonnement"
+          "ingredient": "Assaisonnement",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         }
       ],
       "etapes": [
@@ -8150,17 +9676,23 @@
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Maïs à pop-corn"
+          "ingredient": "Maïs à pop-corn",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Garniture"
+          "ingredient": "Garniture",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Assaisonnement"
+          "ingredient": "Assaisonnement",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         }
       ],
       "etapes": [
@@ -8194,17 +9726,23 @@
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Pois chiches"
+          "ingredient": "Pois chiches",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Garniture"
+          "ingredient": "Garniture",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Assaisonnement"
+          "ingredient": "Assaisonnement",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         }
       ],
       "etapes": [
@@ -8238,17 +9776,23 @@
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Tortilla"
+          "ingredient": "Tortilla",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Garniture"
+          "ingredient": "Garniture",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Assaisonnement"
+          "ingredient": "Assaisonnement",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         }
       ],
       "etapes": [
@@ -8282,17 +9826,23 @@
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Œufs"
+          "ingredient": "Œufs",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Garniture"
+          "ingredient": "Garniture",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Assaisonnement"
+          "ingredient": "Assaisonnement",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         }
       ],
       "etapes": [
@@ -8326,17 +9876,23 @@
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Pomme"
+          "ingredient": "Pomme",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Garniture"
+          "ingredient": "Garniture",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Assaisonnement"
+          "ingredient": "Assaisonnement",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         }
       ],
       "etapes": [
@@ -8370,17 +9926,23 @@
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Skyr"
+          "ingredient": "Skyr",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "portion",
-          "ingredient": "Garniture"
+          "ingredient": "Garniture",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Assaisonnement"
+          "ingredient": "Assaisonnement",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
         }
       ],
       "etapes": [
