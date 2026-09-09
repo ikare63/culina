@@ -1,7 +1,7 @@
 {
   "meta": {
     "nom": "Culina",
-    "version": "5.2",
+    "version": "5.3",
     "description": "Base personnelle de recettes Culina.",
     "nutrition": "Les valeurs nutritionnelles sont des estimations par portion.",
     "nombre_recettes": 213,
@@ -36,7 +36,8 @@
       "Le bloc repas de l’accueil s’adapte à l’heure : Ce matin avant 9 h, Ce midi de 9 h à 14 h, Ce soir après 14 h.",
       "Ajout des recettes personnelles récupérées dans les anciens échanges avec ChatGPT",
       "Bouton Version simple dans les fiches quand les étapes peuvent être regroupées sans changer le plat",
-      "Affichage explicite des calories et macros par portion sur les cartes et dans les fiches recettes."
+      "Affichage explicite des calories et macros par portion sur les cartes et dans les fiches recettes.",
+      "Mes stocks enrichi : dinde, blanc de poulet, haricots verts, nombreux légumes et protéines, plus une catégorie Frais & basiques."
     ]
   },
   "recettes": [
