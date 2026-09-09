@@ -1,7 +1,7 @@
 {
   "meta": {
     "nom": "Culina",
-    "version": "4.0",
+    "version": "4.1",
     "description": "Base personnelle de recettes Culina.",
     "nutrition": "Les valeurs nutritionnelles sont des estimations par portion.",
     "nombre_recettes": 200,
@@ -32,7 +32,8 @@
       "Suggestions qui privilégient les restes à utiliser",
       "Menu de la semaine généré avec variété des protéines et féculents",
       "Ajout des ingrédients manquants du menu hebdomadaire à la liste de courses",
-      "Classement interne sans note ni pourcentage visible"
+      "Classement interne sans note ni pourcentage visible",
+      "Le bloc repas de l’accueil s’adapte à l’heure : Ce matin avant 9 h, Ce midi de 9 h à 14 h, Ce soir après 14 h."
     ]
   },
   "recettes": [
