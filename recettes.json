@@ -1,7 +1,7 @@
 {
   "meta": {
     "nom": "Culina",
-    "version": "3.1",
+    "version": "4.0",
     "description": "Base personnelle de recettes Culina.",
     "nutrition": "Les valeurs nutritionnelles sont des estimations par portion.",
     "nombre_recettes": 200,
@@ -14,19 +14,25 @@
       "Snack": 10
     },
     "fonctionnalites": [
+      "Pour toi",
+      "Profil de goûts appris automatiquement",
+      "Gestion des restes",
+      "Menu de la semaine",
       "Recettes",
       "Mes stocks",
-      "Suggestions selon les stocks",
-      "Liste de courses",
       "Culina Match",
+      "Liste de courses",
       "Historique des plats cuisinés",
       "Anti-répétition"
     ],
     "nouveautes": [
-      "50 recettes salées supplémentaires sans dominante pâtes",
-      "Nouveaux féculents : riz, pommes de terre, patate douce, semoule, boulgour, quinoa, polenta, lentilles, blé, orge, tortillas et pain",
-      "Culina Match : recommandations personnalisées selon stocks, temps, envie et historique",
-      "Culina Match classe les recettes du plus au moins pertinent sans afficher de note ni de pourcentage."
+      "Accueil Pour toi avec suggestions personnalisées",
+      "Profil de goûts construit à partir des favoris, À refaire, Validée, Bof et de l’historique",
+      "Gestion des restes de plats et d’ingrédients",
+      "Suggestions qui privilégient les restes à utiliser",
+      "Menu de la semaine généré avec variété des protéines et féculents",
+      "Ajout des ingrédients manquants du menu hebdomadaire à la liste de courses",
+      "Classement interne sans note ni pourcentage visible"
     ]
   },
   "recettes": [
