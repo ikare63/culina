@@ -1,17 +1,17 @@
 {
   "meta": {
     "nom": "Culina",
-    "version": "4.1",
+    "version": "5.2",
     "description": "Base personnelle de recettes Culina.",
     "nutrition": "Les valeurs nutritionnelles sont des estimations par portion.",
-    "nombre_recettes": 200,
+    "nombre_recettes": 213,
     "categories": {
-      "Salé": 110,
-      "Sucré": 45,
+      "Salé": 121,
+      "Sucré": 46,
       "Petit-déjeuner": 15,
       "Boisson": 10,
       "Sauce & base": 10,
-      "Snack": 10
+      "Snack": 11
     },
     "fonctionnalites": [
       "Pour toi",
@@ -33,7 +33,10 @@
       "Menu de la semaine généré avec variété des protéines et féculents",
       "Ajout des ingrédients manquants du menu hebdomadaire à la liste de courses",
       "Classement interne sans note ni pourcentage visible",
-      "Le bloc repas de l’accueil s’adapte à l’heure : Ce matin avant 9 h, Ce midi de 9 h à 14 h, Ce soir après 14 h."
+      "Le bloc repas de l’accueil s’adapte à l’heure : Ce matin avant 9 h, Ce midi de 9 h à 14 h, Ce soir après 14 h.",
+      "Ajout des recettes personnelles récupérées dans les anciens échanges avec ChatGPT",
+      "Bouton Version simple dans les fiches quand les étapes peuvent être regroupées sans changer le plat",
+      "Affichage explicite des calories et macros par portion sur les cartes et dans les fiches recettes."
     ]
   },
   "recettes": [
@@ -152,7 +155,15 @@
       },
       "statut": "Validée",
       "favori": true,
-      "note_personnelle": "Plat favori."
+      "note_personnelle": "Plat favori.",
+      "version_simplifiee": {
+        "etapes": [
+          "Faire revenir l'oignon et le poulet dans l'huile.",
+          "Ajouter les épices, les tomates, le bouillon et les légumes les plus fermes. Laisser mijoter 35 minutes, puis ajouter courgettes, pois chiches et merguez.",
+          "Préparer la semoule séparément et servir avec le bouillon et la garniture."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "lasagnes-alla-bolognese-traditionnelles",
@@ -352,7 +363,15 @@
       },
       "statut": "Validée",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire les pâtes al dente.",
+          "Faire dorer le poulet pané et le couper en morceaux. Faire revenir le poivron, ajouter la crème, le paprika et le parmesan.",
+          "Mélanger avec les pâtes puis ajouter le poulet juste avant de servir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "porc-au-caramel",
@@ -433,7 +452,15 @@
       },
       "statut": "Validée",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Faire dorer le porc.",
+          "Préparer un caramel blond puis détendre avec l'eau et la sauce soja. Ajouter ail, oignon, gingembre et porc.",
+          "Laisser réduire jusqu'à obtenir une sauce brillante."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "riz-cantonais",
@@ -508,7 +535,15 @@
       },
       "statut": "Validée",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Brouiller rapidement les œufs.",
+          "Faire sauter le riz froid à feu vif. Ajouter jambon, petits pois et oignons nouveaux.",
+          "Remettre les œufs et assaisonner de sauce soja."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "omelette-aux-legumes",
@@ -640,7 +675,15 @@
       },
       "statut": "Validée",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Faire sauter les légumes dans l'huile.",
+          "Ajouter le riz et le faire légèrement griller. Pousser sur le côté, cuire les œufs puis mélanger.",
+          "Ajouter la sauce soja et servir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "tartare-de-buf-charolais-classique",
@@ -793,7 +836,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire les pâtes al dente et garder un peu d'eau de cuisson.",
+          "Cuire ou réchauffer poulet dans une grande poêle. Ajouter la crème et le parmesan puis détendre avec un peu d'eau de cuisson.",
+          "Ajouter les pâtes, bien enrober et servir immédiatement."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "pates-saumon-creme-citron",
@@ -866,7 +917,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire les pâtes al dente et garder un peu d'eau de cuisson.",
+          "Cuire ou réchauffer saumon dans une grande poêle. Ajouter la crème et le parmesan puis détendre avec un peu d'eau de cuisson.",
+          "Ajouter les pâtes, bien enrober et servir immédiatement."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "pates-pesto-poulet",
@@ -939,7 +998,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire les pâtes al dente et garder un peu d'eau de cuisson.",
+          "Cuire ou réchauffer poulet dans une grande poêle. Ajouter la crème et le parmesan puis détendre avec un peu d'eau de cuisson.",
+          "Ajouter les pâtes, bien enrober et servir immédiatement."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "pates-bolognaise-maison",
@@ -1012,7 +1079,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire les pâtes al dente et garder un peu d'eau de cuisson.",
+          "Cuire ou réchauffer bœuf haché dans une grande poêle. Ajouter la crème et le parmesan puis détendre avec un peu d'eau de cuisson.",
+          "Ajouter les pâtes, bien enrober et servir immédiatement."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "pates-gratinees-jambon-fromage",
@@ -1085,7 +1160,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire les pâtes al dente et garder un peu d'eau de cuisson.",
+          "Cuire ou réchauffer jambon dans une grande poêle. Ajouter la crème et le parmesan puis détendre avec un peu d'eau de cuisson.",
+          "Ajouter les pâtes, bien enrober et servir immédiatement."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "mac-cheese",
@@ -1157,7 +1240,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire les pâtes al dente et garder un peu d'eau de cuisson.",
+          "Cuire ou réchauffer cheddar dans une grande poêle. Ajouter la crème et le parmesan puis détendre avec un peu d'eau de cuisson.",
+          "Ajouter les pâtes, bien enrober et servir immédiatement."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "pates-carbonara",
@@ -1230,7 +1321,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire les pâtes al dente et garder un peu d'eau de cuisson.",
+          "Cuire ou réchauffer lardons dans une grande poêle. Ajouter la crème et le parmesan puis détendre avec un peu d'eau de cuisson.",
+          "Ajouter les pâtes, bien enrober et servir immédiatement."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "pates-thon-tomate",
@@ -1303,7 +1402,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire les pâtes al dente et garder un peu d'eau de cuisson.",
+          "Cuire ou réchauffer thon dans une grande poêle. Ajouter la crème et le parmesan puis détendre avec un peu d'eau de cuisson.",
+          "Ajouter les pâtes, bien enrober et servir immédiatement."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "pates-aux-champignons-et-parmesan",
@@ -1375,7 +1482,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire les pâtes al dente et garder un peu d'eau de cuisson.",
+          "Cuire ou réchauffer champignons dans une grande poêle. Ajouter la crème et le parmesan puis détendre avec un peu d'eau de cuisson.",
+          "Ajouter les pâtes, bien enrober et servir immédiatement."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "pates-chorizo-poivron",
@@ -1447,7 +1562,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire les pâtes al dente et garder un peu d'eau de cuisson.",
+          "Cuire ou réchauffer chorizo dans une grande poêle. Ajouter la crème et le parmesan puis détendre avec un peu d'eau de cuisson.",
+          "Ajouter les pâtes, bien enrober et servir immédiatement."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "pates-citron-parmesan",
@@ -1520,7 +1643,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire les pâtes al dente et garder un peu d'eau de cuisson.",
+          "Cuire ou réchauffer parmesan dans une grande poêle. Ajouter la crème et le parmesan puis détendre avec un peu d'eau de cuisson.",
+          "Ajouter les pâtes, bien enrober et servir immédiatement."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "pates-poulet-curry",
@@ -1593,7 +1724,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire les pâtes al dente et garder un peu d'eau de cuisson.",
+          "Cuire ou réchauffer poulet dans une grande poêle. Ajouter la crème et le parmesan puis détendre avec un peu d'eau de cuisson.",
+          "Ajouter les pâtes, bien enrober et servir immédiatement."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "risotto-cremeux-au-poulet",
@@ -1666,7 +1805,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire le riz puis l'égoutter.",
+          "Faire revenir poulet avec l'oignon. Ajouter les légumes puis le riz.",
+          "Assaisonner, faire sauter 2 à 3 minutes et servir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "risotto-champignons-parmesan",
@@ -1739,7 +1886,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire le riz puis l'égoutter.",
+          "Faire revenir champignons avec l'oignon. Ajouter les légumes puis le riz.",
+          "Assaisonner, faire sauter 2 à 3 minutes et servir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "risotto-poivron-chorizo",
@@ -1812,7 +1967,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire le riz puis l'égoutter.",
+          "Faire revenir chorizo avec l'oignon. Ajouter les légumes puis le riz.",
+          "Assaisonner, faire sauter 2 à 3 minutes et servir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "riz-cremeux-poulet-curry",
@@ -1884,7 +2047,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire le riz puis l'égoutter.",
+          "Faire revenir poulet avec l'oignon. Ajouter les légumes puis le riz.",
+          "Assaisonner, faire sauter 2 à 3 minutes et servir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "riz-saute-poulet-uf",
@@ -1957,7 +2128,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire le riz puis l'égoutter.",
+          "Faire revenir poulet avec l'oignon. Ajouter les légumes puis le riz.",
+          "Assaisonner, faire sauter 2 à 3 minutes et servir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "riz-tomate-boulettes",
@@ -2030,7 +2209,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire le riz puis l'égoutter.",
+          "Faire revenir boulettes de bœuf avec l'oignon. Ajouter les légumes puis le riz.",
+          "Assaisonner, faire sauter 2 à 3 minutes et servir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "riz-saumon-citron",
@@ -2102,7 +2289,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire le riz puis l'égoutter.",
+          "Faire revenir saumon avec l'oignon. Ajouter les légumes puis le riz.",
+          "Assaisonner, faire sauter 2 à 3 minutes et servir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "riz-mexicain-buf-haricots-rouges",
@@ -2175,7 +2370,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire le riz puis l'égoutter.",
+          "Faire revenir bœuf haché avec l'oignon. Ajouter les légumes puis le riz.",
+          "Assaisonner, faire sauter 2 à 3 minutes et servir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "poulet-a-la-creme",
@@ -2247,7 +2450,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Découper puis dorer le poulet dans l'huile.",
+          "Ajouter l'oignon et laisser fondre. Ajouter crème entière et assaisonner.",
+          "Laisser mijoter à feu doux jusqu'à ce que le poulet soit cuit."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "poulet-creme-moutarde",
@@ -2319,7 +2530,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Découper puis dorer le poulet dans l'huile.",
+          "Ajouter l'oignon et laisser fondre. Ajouter crème à la moutarde et assaisonner.",
+          "Laisser mijoter à feu doux jusqu'à ce que le poulet soit cuit."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "poulet-paprika-creme",
@@ -2391,7 +2610,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Découper puis dorer le poulet dans l'huile.",
+          "Ajouter l'oignon et laisser fondre. Ajouter crème au paprika et assaisonner.",
+          "Laisser mijoter à feu doux jusqu'à ce que le poulet soit cuit."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "poulet-curry-coco",
@@ -2463,7 +2690,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Découper puis dorer le poulet dans l'huile.",
+          "Ajouter l'oignon et laisser fondre. Ajouter lait de coco et assaisonner.",
+          "Laisser mijoter à feu doux jusqu'à ce que le poulet soit cuit."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "poulet-miel-soja",
@@ -2535,7 +2770,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Découper puis dorer le poulet dans l'huile.",
+          "Ajouter l'oignon et laisser fondre. Ajouter sauce miel-soja et assaisonner.",
+          "Laisser mijoter à feu doux jusqu'à ce que le poulet soit cuit."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "poulet-citron-ail",
@@ -2607,7 +2850,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Découper puis dorer le poulet dans l'huile.",
+          "Ajouter l'oignon et laisser fondre. Ajouter sauce citronnée et assaisonner.",
+          "Laisser mijoter à feu doux jusqu'à ce que le poulet soit cuit."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "poulet-parmesan-au-four",
@@ -2679,7 +2930,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Découper puis dorer le poulet dans l'huile.",
+          "Ajouter l'oignon et laisser fondre. Ajouter sauce tomate et assaisonner.",
+          "Laisser mijoter à feu doux jusqu'à ce que le poulet soit cuit."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "poulet-basquaise-express",
@@ -2751,7 +3010,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Découper puis dorer le poulet dans l'huile.",
+          "Ajouter l'oignon et laisser fondre. Ajouter sauce tomate-poivron et assaisonner.",
+          "Laisser mijoter à feu doux jusqu'à ce que le poulet soit cuit."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "escalope-parmesan",
@@ -2823,7 +3090,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préparer escalope de poulet et la garniture.",
+          "Faire cuire les éléments selon leur nature. Assembler ou laisser mijoter jusqu'à obtenir la texture souhaitée.",
+          "Rectifier l'assaisonnement et servir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "hachis-parmentier",
@@ -2895,7 +3170,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préparer bœuf haché et la garniture.",
+          "Faire cuire les éléments selon leur nature. Assembler ou laisser mijoter jusqu'à obtenir la texture souhaitée.",
+          "Rectifier l'assaisonnement et servir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "steak-hache-sauce-poivre",
@@ -2967,7 +3250,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préparer bœuf haché et la garniture.",
+          "Faire cuire les éléments selon leur nature. Assembler ou laisser mijoter jusqu'à obtenir la texture souhaitée.",
+          "Rectifier l'assaisonnement et servir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "burger-maison",
@@ -3039,7 +3330,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préparer steak haché et la garniture.",
+          "Faire cuire les éléments selon leur nature. Assembler ou laisser mijoter jusqu'à obtenir la texture souhaitée.",
+          "Rectifier l'assaisonnement et servir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "cheeseburger-smash",
@@ -3111,7 +3410,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préparer steak haché et la garniture.",
+          "Faire cuire les éléments selon leur nature. Assembler ou laisser mijoter jusqu'à obtenir la texture souhaitée.",
+          "Rectifier l'assaisonnement et servir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "croque-monsieur",
@@ -3183,7 +3490,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préparer jambon et la garniture.",
+          "Faire cuire les éléments selon leur nature. Assembler ou laisser mijoter jusqu'à obtenir la texture souhaitée.",
+          "Rectifier l'assaisonnement et servir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "grilled-cheese",
@@ -3255,7 +3570,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préparer cheddar et la garniture.",
+          "Faire cuire les éléments selon leur nature. Assembler ou laisser mijoter jusqu'à obtenir la texture souhaitée.",
+          "Rectifier l'assaisonnement et servir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "quesadillas-poulet-fromage",
@@ -3327,7 +3650,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préparer poulet et la garniture.",
+          "Faire cuire les éléments selon leur nature. Assembler ou laisser mijoter jusqu'à obtenir la texture souhaitée.",
+          "Rectifier l'assaisonnement et servir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "wrap-poulet-croustillant",
@@ -3399,7 +3730,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préparer poulet pané et la garniture.",
+          "Faire cuire les éléments selon leur nature. Assembler ou laisser mijoter jusqu'à obtenir la texture souhaitée.",
+          "Rectifier l'assaisonnement et servir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "tacos-poulet-maison",
@@ -3471,7 +3810,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préparer poulet et la garniture.",
+          "Faire cuire les éléments selon leur nature. Assembler ou laisser mijoter jusqu'à obtenir la texture souhaitée.",
+          "Rectifier l'assaisonnement et servir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "pizza-jambon-mozzarella",
@@ -3543,7 +3890,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préparer jambon et la garniture.",
+          "Faire cuire les éléments selon leur nature. Assembler ou laisser mijoter jusqu'à obtenir la texture souhaitée.",
+          "Rectifier l'assaisonnement et servir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "pizza-poulet-creme",
@@ -3615,7 +3970,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préparer poulet et la garniture.",
+          "Faire cuire les éléments selon leur nature. Assembler ou laisser mijoter jusqu'à obtenir la texture souhaitée.",
+          "Rectifier l'assaisonnement et servir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "quiche-lorraine",
@@ -3687,7 +4050,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préparer lardons et la garniture.",
+          "Faire cuire les éléments selon leur nature. Assembler ou laisser mijoter jusqu'à obtenir la texture souhaitée.",
+          "Rectifier l'assaisonnement et servir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "quiche-poulet-poivron",
@@ -3759,7 +4130,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préparer poulet et la garniture.",
+          "Faire cuire les éléments selon leur nature. Assembler ou laisser mijoter jusqu'à obtenir la texture souhaitée.",
+          "Rectifier l'assaisonnement et servir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "gratin-dauphinois",
@@ -3831,7 +4210,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préparer pommes de terre et la garniture.",
+          "Faire cuire les éléments selon leur nature. Assembler ou laisser mijoter jusqu'à obtenir la texture souhaitée.",
+          "Rectifier l'assaisonnement et servir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "gratin-de-pates-jambon-fromage",
@@ -3903,7 +4290,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préparer jambon et la garniture.",
+          "Faire cuire les éléments selon leur nature. Assembler ou laisser mijoter jusqu'à obtenir la texture souhaitée.",
+          "Rectifier l'assaisonnement et servir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "pommes-de-terre-roties-au-four",
@@ -3975,7 +4370,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préparer pommes de terre et la garniture.",
+          "Faire cuire les éléments selon leur nature. Assembler ou laisser mijoter jusqu'à obtenir la texture souhaitée.",
+          "Rectifier l'assaisonnement et servir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "frites-maison-au-four",
@@ -4047,7 +4450,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préparer pommes de terre et la garniture.",
+          "Faire cuire les éléments selon leur nature. Assembler ou laisser mijoter jusqu'à obtenir la texture souhaitée.",
+          "Rectifier l'assaisonnement et servir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "salade-cesar-au-poulet-croustillant",
@@ -4119,7 +4530,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préparer poulet pané et la garniture.",
+          "Faire cuire les éléments selon leur nature. Assembler ou laisser mijoter jusqu'à obtenir la texture souhaitée.",
+          "Rectifier l'assaisonnement et servir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "salade-tomate-mozzarella",
@@ -4191,7 +4610,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préparer mozzarella et la garniture.",
+          "Faire cuire les éléments selon leur nature. Assembler ou laisser mijoter jusqu'à obtenir la texture souhaitée.",
+          "Rectifier l'assaisonnement et servir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "salade-de-pates-poulet-poivron",
@@ -4263,7 +4690,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préparer poulet et la garniture.",
+          "Faire cuire les éléments selon leur nature. Assembler ou laisser mijoter jusqu'à obtenir la texture souhaitée.",
+          "Rectifier l'assaisonnement et servir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "bowl-poulet-riz-avocat",
@@ -4335,7 +4770,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préparer poulet et la garniture.",
+          "Faire cuire les éléments selon leur nature. Assembler ou laisser mijoter jusqu'à obtenir la texture souhaitée.",
+          "Rectifier l'assaisonnement et servir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "bowl-mediterraneen",
@@ -4407,7 +4850,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préparer feta et la garniture.",
+          "Faire cuire les éléments selon leur nature. Assembler ou laisser mijoter jusqu'à obtenir la texture souhaitée.",
+          "Rectifier l'assaisonnement et servir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "taboule-maison",
@@ -4479,7 +4930,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préparer semoule et la garniture.",
+          "Faire cuire les éléments selon leur nature. Assembler ou laisser mijoter jusqu'à obtenir la texture souhaitée.",
+          "Rectifier l'assaisonnement et servir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "cookie-classique-aux-pepites-de-chocolat",
@@ -4551,7 +5010,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter pépites de chocolat sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "cookie-chocolat-au-lait",
@@ -4623,7 +5090,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter chocolat au lait sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "cookie-triple-chocolat",
@@ -4695,7 +5170,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter trois chocolats sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "cookie-cur-pate-a-tartiner",
@@ -4767,7 +5250,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter pâte à tartiner sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "cookie-noix-de-pecan-sirop-d-erable",
@@ -4841,7 +5332,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter noix de pécan sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "cookie-chocolat-aux-epices",
@@ -4914,7 +5413,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter chocolat noir sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "cookie-facon-coffee-shop",
@@ -4986,7 +5493,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter pépites de chocolat sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "brookie",
@@ -5058,7 +5573,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter chocolat noir sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "brownie-fondant",
@@ -5130,7 +5653,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter chocolat noir sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "blondie-chocolat-blanc",
@@ -5202,7 +5733,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter chocolat blanc sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "fondant-au-chocolat",
@@ -5274,7 +5813,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter chocolat noir sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "mi-cuit-chocolat",
@@ -5346,7 +5893,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter chocolat noir sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "moelleux-chocolat",
@@ -5418,7 +5973,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter chocolat noir sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "muffins-pepites-de-chocolat",
@@ -5490,7 +6053,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter pépites de chocolat sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "muffins-myrtilles",
@@ -5562,7 +6133,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter myrtilles sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "banana-bread",
@@ -5634,7 +6213,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter banane sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "banana-bread-chocolat",
@@ -5706,7 +6293,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter banane et chocolat sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "cake-marbre",
@@ -5778,7 +6373,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter cacao sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "cake-citron",
@@ -5850,7 +6453,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter citron sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "madeleines",
@@ -5922,7 +6533,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter zeste de citron sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "financiers",
@@ -5994,7 +6613,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter poudre d'amande sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "crepes-sucrees",
@@ -6066,7 +6693,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter lait sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "pancakes-epais",
@@ -6138,7 +6773,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter lait sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "pancakes-proteines",
@@ -6210,7 +6853,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter skyr sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "gaufres",
@@ -6282,7 +6933,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter lait sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "pain-perdu",
@@ -6354,7 +7013,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter pain brioché sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "tiramisu-classique",
@@ -6426,7 +7093,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter mascarpone sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "tiramisu-speculoos",
@@ -6498,7 +7173,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter spéculoos sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "cheesecake",
@@ -6570,7 +7253,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter fromage frais sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "cheesecake-caramel",
@@ -6642,7 +7333,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter caramel sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "mousse-au-chocolat",
@@ -6714,7 +7413,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter chocolat noir sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "panna-cotta-vanille",
@@ -6786,7 +7493,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter crème entière sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "riz-au-lait",
@@ -6858,7 +7573,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter riz rond sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "creme-brulee",
@@ -6930,7 +7653,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter crème entière sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "ile-flottante",
@@ -7002,7 +7733,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter lait sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "clafoutis-aux-cerises",
@@ -7074,7 +7813,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter cerises sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "crumble-pommes-cannelle",
@@ -7146,7 +7893,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter pommes sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "tarte-aux-pommes-facile",
@@ -7218,7 +7973,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter pommes sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "tarte-chocolat",
@@ -7290,7 +8053,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter chocolat noir sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "flan-patissier",
@@ -7362,7 +8133,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter lait sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "moelleux-citron",
@@ -7434,7 +8213,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter citron sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "roules-cannelle-express",
@@ -7506,7 +8293,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter cannelle sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "sables-vanille",
@@ -7578,7 +8373,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter vanille sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "sables-chocolat",
@@ -7650,7 +8453,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter cacao sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "rocher-coco",
@@ -7722,7 +8533,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Préchauffer le four à 180 °C.",
+          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter noix de coco râpée sans trop travailler la pâte.",
+          "Cuire jusqu'à coloration puis laisser tiédir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "fromage-blanc-au-sucre-de-canne",
@@ -10055,7 +10874,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire le riz.",
+          "Dorer le poulet en morceaux avec l'oignon et la carotte. Ajouter soja, miel et gingembre puis laisser caraméliser.",
+          "Servir sur le riz."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "jambalaya-poulet-chorizo",
@@ -10143,7 +10970,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Faire revenir poulet et chorizo.",
+          "Ajouter oignon et poivron. Ajouter riz, tomates, bouillon et paprika.",
+          "Cuire à couvert jusqu'à absorption."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "riz-espagnol-au-poulet-et-poivrons",
@@ -10224,7 +11059,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Colorer le poulet.",
+          "Ajouter oignon et poivrons. Verser riz, tomates, bouillon et paprika.",
+          "Laisser cuire à feu doux jusqu'à ce que le riz soit tendre."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "bowl-saumon-riz-avocat",
@@ -10298,7 +11141,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire le riz.",
+          "Cuire le saumon à la poêle ou au four. Couper avocat et concombre.",
+          "Assembler le bowl et assaisonner soja-citron."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "riz-buf-aux-legumes-facon-wok",
@@ -10379,7 +11230,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire le riz.",
+          "Saisir le bœuf très chaud puis réserver. Faire sauter les légumes.",
+          "Remettre le bœuf, ajouter le riz et la sauce soja."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "riz-au-four-poulet-courgette",
@@ -10460,7 +11319,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Déposer riz, courgettes et oignon dans un plat.",
+          "Ajouter le poulet en morceaux et le bouillon. Cuire environ 35 minutes à 190 °C.",
+          "Ajouter crème et parmesan en fin de cuisson."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "risotto-petits-pois-jambon",
@@ -10541,7 +11408,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Faire revenir l'oignon et nacrer le riz.",
+          "Ajouter le bouillon progressivement. Ajouter petits pois et jambon en fin de cuisson.",
+          "Hors du feu, incorporer beurre et parmesan."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "riz-cremeux-champignons-poulet",
@@ -10615,7 +11490,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire le riz.",
+          "Dorer le poulet puis ajouter champignons et oignon. Ajouter la crème et le parmesan.",
+          "Mélanger avec le riz et servir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "poivrons-farcis-buf-riz",
@@ -10689,7 +11572,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Précuire le riz.",
+          "Faire revenir bœuf et oignon puis ajouter la sauce tomate. Mélanger au riz et farcir les poivrons.",
+          "Parsemer de fromage et cuire 30 minutes à 190 °C."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "riz-coco-poulet-curry",
@@ -10763,7 +11654,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire le riz.",
+          "Dorer poulet, carotte et oignon. Ajouter curry et lait de coco puis mijoter 10 minutes.",
+          "Servir avec le riz."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "poulet-roti-pommes-de-terre-et-carottes",
@@ -10837,7 +11736,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Couper les légumes et pommes de terre.",
+          "Tout déposer sur une plaque avec le poulet. Assaisonner d'huile et paprika.",
+          "Rôtir 45 à 50 minutes à 200 °C."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "pommes-de-terre-sautees-buf-poivron",
@@ -10911,7 +11818,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire les pommes de terre en dés jusqu'à tendreté.",
+          "Saisir le bœuf et réserver. Faire revenir oignon et poivron.",
+          "Réunir le tout et faire dorer quelques minutes."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "saumon-roti-pommes-de-terre-et-courgette",
@@ -10978,7 +11893,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Précuire les pommes de terre 8 minutes à l'eau.",
+          "Les déposer avec la courgette sur une plaque. Ajouter le saumon, huile et citron.",
+          "Cuire environ 20 minutes à 200 °C."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "veau-a-la-creme-pommes-de-terre-et-champignons",
@@ -11052,7 +11975,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire les pommes de terre.",
+          "Saisir le veau puis réserver. Cuire oignon et champignons, ajouter crème et moutarde.",
+          "Remettre le veau et servir avec les pommes de terre."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "curry-de-pommes-de-terre-et-pois-chiches",
@@ -11133,7 +12064,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Faire revenir l'oignon et le curry.",
+          "Ajouter pommes de terre et carotte. Ajouter tomates, lait de coco et un peu d'eau puis mijoter.",
+          "Ajouter les pois chiches pour les 10 dernières minutes."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "pommes-de-terre-farcies-jambon-fromage",
@@ -11200,7 +12139,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire les pommes de terre au four jusqu'à tendreté.",
+          "Les couper et retirer une partie de la chair. Mélanger chair, jambon, oignon, crème et fromage.",
+          "Farcir et gratiner 10 minutes."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "wedges-de-pommes-de-terre-et-poulet-paprika",
@@ -11267,7 +12214,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Couper les pommes de terre en quartiers.",
+          "Assaisonner pommes de terre, poulet et poivron. Répartir sur une plaque.",
+          "Cuire 35 minutes à 210 °C en retournant à mi-cuisson."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "tortilla-espagnole-pommes-de-terre-oignons",
@@ -11327,7 +12282,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire doucement pommes de terre et oignons en fines tranches.",
+          "Battre les œufs et les mélanger aux pommes de terre. Verser dans une poêle.",
+          "Cuire des deux côtés ou terminer sous le gril."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "salade-de-pommes-de-terre-thon-uf",
@@ -11401,7 +12364,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire les pommes de terre et les œufs.",
+          "Laisser tiédir puis couper. Ajouter thon et oignon.",
+          "Assaisonner avec yaourt et moutarde."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "bowl-patate-douce-poulet-et-avocat",
@@ -11475,7 +12446,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Rôtir les cubes de patate douce et le poivron.",
+          "Cuire le poulet au paprika. Couper l'avocat.",
+          "Assembler le bowl."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "hachis-de-buf-a-la-patate-douce",
@@ -11549,7 +12528,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire la patate douce et l'écraser avec le beurre.",
+          "Faire revenir bœuf, oignon et carottes puis ajouter la sauce tomate. Mettre la viande dans un plat et couvrir de purée.",
+          "Gratiner 20 minutes à 200 °C."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "poelee-pommes-de-terre-lardons-et-petits-pois",
@@ -11609,7 +12596,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire les pommes de terre en cubes.",
+          "Faire revenir lardons et oignon. Ajouter pommes de terre et petits pois.",
+          "Faire dorer 5 à 8 minutes."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "semoule-poulet-poivron-express",
@@ -11683,7 +12678,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Réhydrater la semoule avec le bouillon.",
+          "Dorer le poulet. Ajouter oignon et poivron puis cuire 8 minutes.",
+          "Servir avec la semoule."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "keftas-de-buf-et-semoule",
@@ -11757,7 +12760,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Mélanger le bœuf avec épices et la moitié de l'oignon, puis former des keftas.",
+          "Cuire les keftas à la poêle. Faire revenir la courgette et le reste d'oignon.",
+          "Préparer la semoule et servir ensemble."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "semoule-aux-legumes-rotis-et-pois-chiches",
@@ -11838,7 +12849,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Rôtir les légumes et pois chiches avec les épices.",
+          "Préparer la semoule. Égrainer avec un peu d'huile d'olive.",
+          "Mélanger ou servir les légumes dessus."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "boulgour-poulet-poivron",
@@ -11912,7 +12931,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire le boulgour.",
+          "Dorer le poulet. Ajouter poivron et oignon.",
+          "Mélanger avec le boulgour et assaisonner."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "boulgour-buf-tomate",
@@ -11986,7 +13013,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire le boulgour.",
+          "Faire revenir bœuf, oignon et poivron. Ajouter la sauce tomate et mijoter 10 minutes.",
+          "Servir sur le boulgour."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "taboule-poulet-citron",
@@ -12067,7 +13102,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire puis refroidir le boulgour.",
+          "Cuire le poulet et le couper. Couper les légumes.",
+          "Mélanger le tout avec citron et huile."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "quinoa-poulet-avocat",
@@ -12141,7 +13184,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire le quinoa.",
+          "Dorer le poulet. Râper la carotte et couper l'avocat.",
+          "Assembler avec citron et huile."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "quinoa-saumon-et-legumes-rotis",
@@ -12215,7 +13266,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire le quinoa.",
+          "Rôtir courgette et poivron. Cuire le saumon.",
+          "Assembler avec un trait de citron."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "poivrons-farcis-quinoa-poulet",
@@ -12289,7 +13348,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire le quinoa.",
+          "Faire revenir le poulet et l'oignon, ajouter la sauce tomate. Mélanger au quinoa et farcir les poivrons.",
+          "Parsemer de fromage et cuire 30 minutes à 190 °C."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "quinoa-buf-facon-mexicaine",
@@ -12370,7 +13437,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire le quinoa.",
+          "Faire revenir le bœuf avec oignon et poivron. Ajouter sauce tomate et haricots rouges.",
+          "Servir sur le quinoa."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "couscous-express-boulettes-carottes",
@@ -12451,7 +13526,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Dorer les boulettes.",
+          "Ajouter légumes, épices et bouillon puis mijoter. Préparer la semoule séparément.",
+          "Servir la semoule avec boulettes, légumes et jus."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "boulgour-saumon-courgette",
@@ -12525,7 +13608,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire le boulgour.",
+          "Faire revenir courgette et oignon. Cuire le saumon.",
+          "Assembler avec le citron."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "polenta-cremeuse-poulet-champignons",
@@ -12606,7 +13697,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire la polenta dans le bouillon.",
+          "Dorer poulet, champignons et oignon. Ajouter la crème à la poêlée.",
+          "Incorporer le parmesan à la polenta et servir ensemble."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "polenta-bolognaise",
@@ -12680,7 +13779,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire la polenta.",
+          "Faire revenir bœuf, carotte et oignon. Ajouter la sauce tomate et mijoter 15 minutes.",
+          "Servir la bolognaise sur la polenta avec parmesan."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "polenta-legumes-rotis-feta",
@@ -12754,7 +13861,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Rôtir les légumes au four.",
+          "Cuire la polenta. Émietter la feta.",
+          "Servir les légumes et la feta sur la polenta."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "polenta-saucisse-tomate",
@@ -12828,7 +13943,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Dorer les saucisses.",
+          "Ajouter oignon et poivron, puis la sauce tomate. Cuire la polenta à part.",
+          "Servir la sauce sur la polenta avec parmesan."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "polenta-croustillante-saumon-epinards",
@@ -12895,7 +14018,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire la polenta puis l'étaler et laisser raffermir.",
+          "Découper et dorer les morceaux de polenta. Cuire le saumon et faire tomber les épinards avec la crème.",
+          "Servir ensemble."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "fajitas-poulet-poivrons",
@@ -12969,7 +14100,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Dorer le poulet en lanières.",
+          "Ajouter poivrons, oignon et paprika. Réchauffer les tortillas.",
+          "Garnir et rouler."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "quesadillas-buf-poivron",
@@ -13043,7 +14182,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Faire revenir bœuf, poivron et oignon.",
+          "Ajouter un peu de sauce tomate. Garnir les tortillas de viande et fromage.",
+          "Plier et dorer à la poêle."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "wrap-saumon-avocat",
@@ -13117,7 +14264,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Tartiner les tortillas de fromage frais.",
+          "Ajouter saumon, avocat et concombre. Arroser de citron.",
+          "Rouler et couper."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "pita-poulet-crudites",
@@ -13198,7 +14353,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire le poulet.",
+          "Couper les crudités. Mélanger yaourt et citron.",
+          "Garnir les pitas avec poulet, crudités et sauce."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "bruschettas-buf-tomate-mozzarella",
@@ -13272,7 +14435,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Griller légèrement le pain.",
+          "Faire revenir le bœuf et l'oignon. Ajouter les tomates sur le pain, puis le bœuf et la mozzarella.",
+          "Passer quelques minutes sous le gril."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "lentilles-saucisse-carottes",
@@ -13339,7 +14510,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Faire revenir oignon, carottes et saucisses.",
+          "Ajouter les lentilles et le bouillon. Laisser mijoter environ 35 minutes.",
+          "Rectifier l'assaisonnement et servir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "salade-lentilles-saumon-uf",
@@ -13420,7 +14599,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire les lentilles et les laisser refroidir.",
+          "Cuire les œufs durs. Ajouter saumon, carotte et oignon.",
+          "Assaisonner moutarde-citron."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "dahl-de-lentilles-corail-et-riz",
@@ -13501,7 +14688,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire le riz.",
+          "Faire revenir oignon, carotte et curry. Ajouter lentilles, tomates, lait de coco et un peu d'eau.",
+          "Mijoter jusqu'à ce que les lentilles soient fondantes et servir avec le riz."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "ble-poulet-legumes",
@@ -13582,7 +14777,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire le blé.",
+          "Dorer le poulet. Ajouter les légumes et cuire jusqu'à tendreté.",
+          "Mélanger avec le blé et assaisonner."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "orge-perle-poulet-champignons",
@@ -13663,7 +14866,15 @@
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": ""
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Faire revenir l'oignon, les champignons et le poulet.",
+          "Ajouter l'orge et le bouillon. Cuire doucement jusqu'à tendreté.",
+          "Ajouter crème et parmesan."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     },
     {
       "id": "pois-chiches-rotis-patate-douce-et-feta",
@@ -13737,7 +14948,1048 @@
       },
       "statut": "À tester",
       "favori": false,
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Rôtir patate douce, pois chiches et poivron avec huile et paprika.",
+          "Émietter la feta. Répartir dans des bols.",
+          "Ajouter la feta au moment de servir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
+    },
+    {
+      "id": "patates-en-barboton-ma-version",
+      "nom": "Patates en barboton — ma version",
+      "categorie": "Salé",
+      "sous_categorie": "Pommes de terre",
+      "tags": [
+        "personnel",
+        "fait-avec-chatgpt",
+        "pomme-de-terre",
+        "tomate",
+        "oignon",
+        "sans-lardons",
+        "traditionnel"
+      ],
+      "temps_minutes": 35,
+      "difficulte": "Facile",
+      "portions": 2,
+      "ingredients": [
+        {
+          "quantite": 500,
+          "unite": "g",
+          "ingredient": "Pommes de terre",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
+        },
+        {
+          "quantite": 3,
+          "unite": "",
+          "ingredient": "Tomates",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
+        },
+        {
+          "quantite": 1,
+          "unite": "",
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
+        },
+        {
+          "quantite": 1,
+          "unite": "c. à soupe",
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 1,
+          "unite": "c. à soupe",
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 250,
+          "unite": "ml",
+          "ingredient": "Eau",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
+        },
+        {
+          "quantite": 1,
+          "unite": "pincée",
+          "ingredient": "Sel",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 1,
+          "unite": "pincée",
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        }
+      ],
+      "etapes": [
+        "Éplucher les pommes de terre et les couper en morceaux. Émincer l'oignon et couper les tomates.",
+        "Faire revenir l'oignon dans l'huile, puis ajouter les tomates et laisser compoter quelques minutes.",
+        "Saupoudrer de farine, mélanger, puis verser l'eau progressivement.",
+        "Ajouter les pommes de terre, couvrir et laisser mijoter environ 20 à 25 minutes, jusqu'à ce qu'elles soient fondantes et la sauce bien liée."
+      ],
+      "nutrition_par_portion_estimee": {
+        "kcal": 330,
+        "proteines_g": 7,
+        "glucides_g": 61,
+        "lipides_g": 7
+      },
+      "statut": "Validée",
+      "favori": false,
+      "note_personnelle": "Version personnelle : pomme de terre, tomate et oignon, sans lardons.",
+      "version_simplifiee": {
+        "etapes": [
+          "Faire revenir l'oignon, puis ajouter les tomates et laisser compoter.",
+          "Ajouter farine et eau, puis les pommes de terre.",
+          "Couvrir et mijoter 20 à 25 minutes jusqu'à ce que les pommes de terre soient fondantes."
+        ],
+        "note": "Version simple pensée pour limiter les manipulations sans changer le plat."
+      }
+    },
+    {
+      "id": "escalope-a-la-creme-et-aux-poivrons-frites",
+      "nom": "Escalope à la crème et aux poivrons, frites",
+      "categorie": "Salé",
+      "sous_categorie": "Viande",
+      "tags": [
+        "personnel",
+        "fait-avec-chatgpt",
+        "escalope",
+        "poivron",
+        "crème",
+        "frites",
+        "gourmand"
+      ],
+      "temps_minutes": 40,
+      "difficulte": "Facile",
+      "portions": 1,
+      "ingredients": [
+        {
+          "quantite": 1,
+          "unite": "",
+          "ingredient": "Escalope de poulet ou de veau",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
+        },
+        {
+          "quantite": 300,
+          "unite": "g",
+          "ingredient": "Pommes de terre",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
+        },
+        {
+          "quantite": 1,
+          "unite": "",
+          "ingredient": "Poivron",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
+        },
+        {
+          "quantite": 100,
+          "unite": "ml",
+          "ingredient": "Crème",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 1,
+          "unite": "c. à café",
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 1,
+          "unite": "pincée",
+          "ingredient": "Sel",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 1,
+          "unite": "pincée",
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        }
+      ],
+      "etapes": [
+        "Couper les pommes de terre en frites, les huiler légèrement et les cuire à l'air fryer jusqu'à ce qu'elles soient dorées.",
+        "Couper le poivron en lanières et le faire revenir à la poêle.",
+        "Cuire l'escalope dans la même poêle, puis la réserver quelques instants.",
+        "Ajouter la crème aux poivrons, poivrer, laisser épaissir légèrement puis remettre l'escalope dans la sauce.",
+        "Servir l'escalope nappée de crème aux poivrons avec les frites."
+      ],
+      "nutrition_par_portion_estimee": {
+        "kcal": 850,
+        "proteines_g": 44,
+        "glucides_g": 65,
+        "lipides_g": 43
+      },
+      "statut": "Validée",
+      "favori": false,
+      "note_personnelle": "Recette pour une personne. L'escalope peut être de poulet ou de veau.",
+      "version_simplifiee": {
+        "etapes": [
+          "Lancer les frites à l'air fryer.",
+          "Faire revenir poivron puis escalope dans la même poêle.",
+          "Ajouter la crème, laisser épaissir et servir avec les frites."
+        ],
+        "note": "Version simple pensée pour limiter les manipulations sans changer le plat."
+      }
+    },
+    {
+      "id": "poelee-de-patate-douce-oignon-ail-et-uf-au-plat",
+      "nom": "Poêlée de patate douce, oignon, ail et œuf au plat",
+      "categorie": "Salé",
+      "sous_categorie": "Poêlée",
+      "tags": [
+        "personnel",
+        "fait-avec-chatgpt",
+        "patate-douce",
+        "œuf",
+        "oignon",
+        "ail",
+        "rapide"
+      ],
+      "temps_minutes": 30,
+      "difficulte": "Facile",
+      "portions": 1,
+      "ingredients": [
+        {
+          "quantite": 300,
+          "unite": "g",
+          "ingredient": "Patate douce",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
+        },
+        {
+          "quantite": 1,
+          "unite": "",
+          "ingredient": "Œuf",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
+        },
+        {
+          "quantite": 0.5,
+          "unite": "",
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
+        },
+        {
+          "quantite": 1,
+          "unite": "gousse",
+          "ingredient": "Ail",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 1,
+          "unite": "c. à café",
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 1,
+          "unite": "pincée",
+          "ingredient": "Sel",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 1,
+          "unite": "pincée",
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        }
+      ],
+      "etapes": [
+        "Couper la patate douce en petits dés et émincer l'oignon.",
+        "Faire revenir patate douce et oignon dans l'huile à feu moyen jusqu'à ce que les dés soient tendres et dorés.",
+        "Ajouter l'ail haché en fin de cuisson et mélanger une minute.",
+        "Cuire l'œuf au plat séparément et le déposer sur la poêlée juste avant de servir."
+      ],
+      "nutrition_par_portion_estimee": {
+        "kcal": 470,
+        "proteines_g": 14,
+        "glucides_g": 61,
+        "lipides_g": 19
+      },
+      "statut": "Validée",
+      "favori": false,
+      "note_personnelle": "La version avec l'œuf au plat directement sur la patate douce.",
+      "version_simplifiee": {
+        "etapes": [
+          "Faire dorer ensemble les dés de patate douce et l'oignon.",
+          "Ajouter l'ail en fin de cuisson.",
+          "Déposer un œuf au plat sur la poêlée."
+        ],
+        "note": "Version simple pensée pour limiter les manipulations sans changer le plat."
+      }
+    },
+    {
+      "id": "patate-douce-farcie-au-buf-et-aux-legumes",
+      "nom": "Patate douce farcie au bœuf et aux légumes",
+      "categorie": "Salé",
+      "sous_categorie": "Patate douce",
+      "tags": [
+        "personnel",
+        "fait-avec-chatgpt",
+        "patate-douce",
+        "bœuf",
+        "aubergine",
+        "poivron"
+      ],
+      "temps_minutes": 40,
+      "difficulte": "Facile",
+      "portions": 1,
+      "ingredients": [
+        {
+          "quantite": 1,
+          "unite": "grosse",
+          "ingredient": "Patate douce",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
+        },
+        {
+          "quantite": 120,
+          "unite": "g",
+          "ingredient": "Bœuf haché",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
+        },
+        {
+          "quantite": 80,
+          "unite": "g",
+          "ingredient": "Aubergine",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
+        },
+        {
+          "quantite": 60,
+          "unite": "g",
+          "ingredient": "Poivron",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
+        },
+        {
+          "quantite": 0.25,
+          "unite": "",
+          "ingredient": "Oignon rouge",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
+        },
+        {
+          "quantite": 120,
+          "unite": "g",
+          "ingredient": "Tomates pelées",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
+        },
+        {
+          "quantite": 1,
+          "unite": "c. à café",
+          "ingredient": "Concentré de tomate",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        }
+      ],
+      "etapes": [
+        "Cuire la patate douce au micro-ondes environ 10 minutes, jusqu'à ce qu'elle soit tendre.",
+        "Pendant ce temps, faire revenir le bœuf avec l'aubergine, le poivron et l'oignon rouge.",
+        "Ajouter les tomates pelées et le concentré de tomate puis laisser réduire.",
+        "Ouvrir la patate douce, écraser légèrement la chair et répartir la garniture.",
+        "Finir 15 à 20 minutes au four ou à l'air fryer."
+      ],
+      "nutrition_par_portion_estimee": {
+        "kcal": 560,
+        "proteines_g": 31,
+        "glucides_g": 68,
+        "lipides_g": 19
+      },
+      "statut": "À refaire",
+      "favori": false,
+      "note_personnelle": "Recette personnelle déjà construite ensemble.",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire la patate douce au micro-ondes environ 10 minutes, jusqu'à ce qu'elle soit tendre.",
+          "Pendant ce temps, faire revenir le bœuf avec l'aubergine, le poivron et l'oignon rouge. Ajouter les tomates pelées et le concentré de tomate puis laisser réduire. Ouvrir la patate douce, écraser légèrement la chair et répartir la garniture.",
+          "Finir 15 à 20 minutes au four ou à l'air fryer."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
+    },
+    {
+      "id": "millefeuille-pomme-de-terre-patate-douce-a-l-air-fryer",
+      "nom": "Millefeuille pomme de terre & patate douce à l'air fryer",
+      "categorie": "Salé",
+      "sous_categorie": "Air fryer",
+      "tags": [
+        "personnel",
+        "fait-avec-chatgpt",
+        "pomme-de-terre",
+        "patate-douce",
+        "air-fryer"
+      ],
+      "temps_minutes": 45,
+      "difficulte": "Facile",
+      "portions": 4,
+      "ingredients": [
+        {
+          "quantite": 3,
+          "unite": "",
+          "ingredient": "Pommes de terre",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
+        },
+        {
+          "quantite": 2,
+          "unite": "",
+          "ingredient": "Patates douces",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
+        },
+        {
+          "quantite": 1,
+          "unite": "c. à soupe",
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 0.5,
+          "unite": "",
+          "ingredient": "Citron",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 1,
+          "unite": "gousse",
+          "ingredient": "Ail",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 1,
+          "unite": "c. à café",
+          "ingredient": "Thym",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 1,
+          "unite": "c. à café",
+          "ingredient": "Persil séché",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        }
+      ],
+      "etapes": [
+        "Couper très finement pommes de terre et patates douces.",
+        "Mélanger avec huile d'olive, citron, ail, thym et persil.",
+        "Disposer les rondelles en couches dans un plat compatible avec l'air fryer.",
+        "Cuire environ 20 minutes à 180 °C puis 10 à 15 minutes à 200 °C pour dorer."
+      ],
+      "nutrition_par_portion_estimee": {
+        "kcal": 260,
+        "proteines_g": 5,
+        "glucides_g": 47,
+        "lipides_g": 7
+      },
+      "statut": "À refaire",
+      "favori": false,
+      "note_personnelle": "Levure nutritionnelle possible en finition.",
+      "version_simplifiee": {
+        "etapes": [
+          "Couper très finement pommes de terre et patates douces.",
+          "Mélanger avec huile d'olive, citron, ail, thym et persil. Disposer les rondelles en couches dans un plat compatible avec l'air fryer.",
+          "Cuire environ 20 minutes à 180 °C puis 10 à 15 minutes à 200 °C pour dorer."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
+    },
+    {
+      "id": "poelee-de-cubes-pomme-de-terre-patate-douce",
+      "nom": "Poêlée de cubes pomme de terre & patate douce",
+      "categorie": "Salé",
+      "sous_categorie": "Poêlée",
+      "tags": [
+        "personnel",
+        "fait-avec-chatgpt",
+        "pomme-de-terre",
+        "patate-douce",
+        "poêlée"
+      ],
+      "temps_minutes": 30,
+      "difficulte": "Très facile",
+      "portions": 1,
+      "ingredients": [
+        {
+          "quantite": 1,
+          "unite": "",
+          "ingredient": "Pomme de terre",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
+        },
+        {
+          "quantite": 1,
+          "unite": "",
+          "ingredient": "Patate douce",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
+        },
+        {
+          "quantite": 1,
+          "unite": "c. à café",
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 1,
+          "unite": "pincée",
+          "ingredient": "Sel",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 1,
+          "unite": "pincée",
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        }
+      ],
+      "etapes": [
+        "Couper la pomme de terre et la patate douce en petits cubes de taille similaire.",
+        "Faire chauffer l'huile dans une poêle puis ajouter les cubes.",
+        "Cuire à feu moyen en remuant régulièrement jusqu'à ce qu'ils soient tendres à cœur et dorés à l'extérieur."
+      ],
+      "nutrition_par_portion_estimee": {
+        "kcal": 360,
+        "proteines_g": 5,
+        "glucides_g": 67,
+        "lipides_g": 8
+      },
+      "statut": "À refaire",
+      "favori": false,
       "note_personnelle": ""
+    },
+    {
+      "id": "escalope-milanaise-spaghetti-tomate-ail",
+      "nom": "Escalope milanaise, spaghetti tomate-ail",
+      "categorie": "Salé",
+      "sous_categorie": "Pâtes",
+      "tags": [
+        "personnel",
+        "fait-avec-chatgpt",
+        "escalope",
+        "spaghetti",
+        "tomate",
+        "italien"
+      ],
+      "temps_minutes": 30,
+      "difficulte": "Facile",
+      "portions": 1,
+      "ingredients": [
+        {
+          "quantite": 1,
+          "unite": "",
+          "ingredient": "Escalope panée",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
+        },
+        {
+          "quantite": 120,
+          "unite": "g",
+          "ingredient": "Spaghetti",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
+        },
+        {
+          "quantite": 200,
+          "unite": "g",
+          "ingredient": "Pulpe de tomate",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
+        },
+        {
+          "quantite": 1,
+          "unite": "gousse",
+          "ingredient": "Ail",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 1,
+          "unite": "c. à café",
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        }
+      ],
+      "etapes": [
+        "Faire revenir l'ail une minute dans un peu d'huile, ajouter la pulpe de tomate et laisser mijoter.",
+        "Cuire les spaghetti environ 9 à 11 minutes puis les mélanger à la sauce tomate.",
+        "Cuire l'escalope panée à la poêle jusqu'à ce qu'elle soit bien dorée et cuite à cœur.",
+        "Servir l'escalope avec les spaghetti tomate-ail."
+      ],
+      "nutrition_par_portion_estimee": {
+        "kcal": 760,
+        "proteines_g": 36,
+        "glucides_g": 91,
+        "lipides_g": 27
+      },
+      "statut": "À refaire",
+      "favori": false,
+      "note_personnelle": "",
+      "version_simplifiee": {
+        "etapes": [
+          "Faire revenir l'ail une minute dans un peu d'huile, ajouter la pulpe de tomate et laisser mijoter.",
+          "Cuire les spaghetti environ 9 à 11 minutes puis les mélanger à la sauce tomate. Cuire l'escalope panée à la poêle jusqu'à ce qu'elle soit bien dorée et cuite à cœur.",
+          "Servir l'escalope avec les spaghetti tomate-ail."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
+    },
+    {
+      "id": "poulet-roti-aux-pommes-de-terre",
+      "nom": "Poulet rôti aux pommes de terre",
+      "categorie": "Salé",
+      "sous_categorie": "Four",
+      "tags": [
+        "personnel",
+        "fait-avec-chatgpt",
+        "poulet",
+        "pomme-de-terre",
+        "four"
+      ],
+      "temps_minutes": 50,
+      "difficulte": "Très facile",
+      "portions": 2,
+      "ingredients": [
+        {
+          "quantite": 400,
+          "unite": "g",
+          "ingredient": "Poulet",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
+        },
+        {
+          "quantite": 500,
+          "unite": "g",
+          "ingredient": "Pommes de terre",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
+        },
+        {
+          "quantite": 1,
+          "unite": "c. à soupe",
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 1,
+          "unite": "gousse",
+          "ingredient": "Ail",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 1,
+          "unite": "c. à café",
+          "ingredient": "Paprika",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 1,
+          "unite": "pincée",
+          "ingredient": "Sel",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 1,
+          "unite": "pincée",
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        }
+      ],
+      "etapes": [
+        "Préchauffer le four à 200 °C.",
+        "Couper les pommes de terre, les mélanger avec le poulet, l'huile, l'ail, le paprika, le sel et le poivre.",
+        "Répartir sur une plaque et cuire 40 à 45 minutes en retournant les pommes de terre à mi-cuisson, jusqu'à cuisson complète du poulet."
+      ],
+      "nutrition_par_portion_estimee": {
+        "kcal": 610,
+        "proteines_g": 43,
+        "glucides_g": 53,
+        "lipides_g": 24
+      },
+      "statut": "À refaire",
+      "favori": false,
+      "note_personnelle": ""
+    },
+    {
+      "id": "frites-a-l-air-fryer",
+      "nom": "Frites à l'air fryer",
+      "categorie": "Salé",
+      "sous_categorie": "Accompagnement",
+      "tags": [
+        "personnel",
+        "fait-avec-chatgpt",
+        "frites",
+        "pomme-de-terre",
+        "air-fryer"
+      ],
+      "temps_minutes": 20,
+      "difficulte": "Très facile",
+      "portions": 1,
+      "ingredients": [
+        {
+          "quantite": 300,
+          "unite": "g",
+          "ingredient": "Pommes de terre",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
+        },
+        {
+          "quantite": 1,
+          "unite": "c. à café",
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 1,
+          "unite": "pincée",
+          "ingredient": "Sel",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        }
+      ],
+      "etapes": [
+        "Couper les pommes de terre en frites et bien les sécher.",
+        "Mélanger avec l'huile d'olive.",
+        "Cuire à l'air fryer à 200 °C environ 12 à 15 minutes en secouant le panier à mi-cuisson.",
+        "Saler après cuisson."
+      ],
+      "nutrition_par_portion_estimee": {
+        "kcal": 290,
+        "proteines_g": 6,
+        "glucides_g": 55,
+        "lipides_g": 6
+      },
+      "statut": "Validée",
+      "favori": false,
+      "note_personnelle": "Ma cuisson air fryer.",
+      "version_simplifiee": {
+        "etapes": [
+          "Couper les pommes de terre en frites et bien les sécher.",
+          "Mélanger avec l'huile d'olive. Cuire à l'air fryer à 200 °C environ 12 à 15 minutes en secouant le panier à mi-cuisson.",
+          "Saler après cuisson."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
+    },
+    {
+      "id": "pomme-au-four-chocolat-cannelle-a-l-air-fryer",
+      "nom": "Pomme au four chocolat-cannelle à l'air fryer",
+      "categorie": "Sucré",
+      "sous_categorie": "Dessert",
+      "tags": [
+        "personnel",
+        "fait-avec-chatgpt",
+        "pomme",
+        "chocolat",
+        "cannelle",
+        "air-fryer"
+      ],
+      "temps_minutes": 20,
+      "difficulte": "Très facile",
+      "portions": 1,
+      "ingredients": [
+        {
+          "quantite": 1,
+          "unite": "",
+          "ingredient": "Pomme",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
+        },
+        {
+          "quantite": 1,
+          "unite": "noisette",
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 1,
+          "unite": "c. à café",
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 1,
+          "unite": "pincée",
+          "ingredient": "Cannelle",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 2,
+          "unite": "carrés",
+          "ingredient": "Chocolat",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        }
+      ],
+      "etapes": [
+        "Évider le cœur de la pomme sans percer complètement le fond.",
+        "Ajouter beurre, sucre, cannelle et chocolat dans le centre.",
+        "Cuire à l'air fryer à 180 °C pendant 12 à 15 minutes."
+      ],
+      "nutrition_par_portion_estimee": {
+        "kcal": 240,
+        "proteines_g": 2,
+        "glucides_g": 37,
+        "lipides_g": 10
+      },
+      "statut": "Validée",
+      "favori": false,
+      "note_personnelle": ""
+    },
+    {
+      "id": "rosti-galettes-de-pommes-de-terre",
+      "nom": "Rösti / galettes de pommes de terre",
+      "categorie": "Salé",
+      "sous_categorie": "Pommes de terre",
+      "tags": [
+        "personnel",
+        "fait-avec-chatgpt",
+        "rösti",
+        "pomme-de-terre",
+        "poêle"
+      ],
+      "temps_minutes": 30,
+      "difficulte": "Facile",
+      "portions": 2,
+      "ingredients": [
+        {
+          "quantite": 500,
+          "unite": "g",
+          "ingredient": "Pommes de terre",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
+        },
+        {
+          "quantite": 1,
+          "unite": "",
+          "ingredient": "Œuf",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
+        },
+        {
+          "quantite": 1,
+          "unite": "c. à soupe",
+          "ingredient": "Farine",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 1,
+          "unite": "c. à soupe",
+          "ingredient": "Maïzena",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 1,
+          "unite": "c. à soupe",
+          "ingredient": "Huile",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 1,
+          "unite": "pincée",
+          "ingredient": "Sel",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 1,
+          "unite": "pincée",
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        }
+      ],
+      "etapes": [
+        "Râper les pommes de terre et les presser pour retirer un maximum d'eau.",
+        "Mélanger avec l'œuf, la farine et la Maïzena, puis assaisonner.",
+        "Former des galettes et les faire dorer à la poêle sur les deux faces jusqu'à ce qu'elles soient croustillantes et cuites à cœur."
+      ],
+      "nutrition_par_portion_estimee": {
+        "kcal": 390,
+        "proteines_g": 10,
+        "glucides_g": 64,
+        "lipides_g": 11
+      },
+      "statut": "À refaire",
+      "favori": false,
+      "note_personnelle": ""
+    },
+    {
+      "id": "steak-frites-maison",
+      "nom": "Steak-frites maison",
+      "categorie": "Salé",
+      "sous_categorie": "Viande",
+      "tags": [
+        "personnel",
+        "fait-avec-chatgpt",
+        "steak",
+        "frites",
+        "air-fryer"
+      ],
+      "temps_minutes": 30,
+      "difficulte": "Très facile",
+      "portions": 1,
+      "ingredients": [
+        {
+          "quantite": 1,
+          "unite": "",
+          "ingredient": "Steak de bœuf",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
+        },
+        {
+          "quantite": 300,
+          "unite": "g",
+          "ingredient": "Frites",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
+        },
+        {
+          "quantite": 1,
+          "unite": "pincée",
+          "ingredient": "Sel",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 1,
+          "unite": "pincée",
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        }
+      ],
+      "etapes": [
+        "Cuire les frites à l'air fryer jusqu'à ce qu'elles soient bien dorées, en les remuant à mi-cuisson.",
+        "Pendant ce temps, cuire le steak à la poêle selon la cuisson souhaitée.",
+        "Saler les frites après cuisson, assaisonner le steak et servir ensemble."
+      ],
+      "nutrition_par_portion_estimee": {
+        "kcal": 700,
+        "proteines_g": 35,
+        "glucides_g": 58,
+        "lipides_g": 33
+      },
+      "statut": "À refaire",
+      "favori": false,
+      "note_personnelle": ""
+    },
+    {
+      "id": "barre-maison-facon-kinder-country",
+      "nom": "Barre maison façon Kinder Country",
+      "categorie": "Snack",
+      "sous_categorie": "Snack sucré",
+      "tags": [
+        "personnel",
+        "fait-avec-chatgpt",
+        "chocolat",
+        "avoine",
+        "whey",
+        "air-fryer",
+        "protéiné"
+      ],
+      "temps_minutes": 20,
+      "difficulte": "Facile",
+      "portions": 6,
+      "ingredients": [
+        {
+          "quantite": 35,
+          "unite": "g",
+          "ingredient": "Flocons d'avoine",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
+        },
+        {
+          "quantite": 30,
+          "unite": "g",
+          "ingredient": "Whey",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 30,
+          "unite": "ml",
+          "ingredient": "Lait",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 210,
+          "unite": "g",
+          "ingredient": "Chocolat noir",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        }
+      ],
+      "etapes": [
+        "Mélanger les flocons d'avoine, la whey et le lait pour former une base.",
+        "Cuire la base à l'air fryer à 160 °C pendant 6 à 8 minutes.",
+        "Faire fondre le chocolat puis l'ajouter après cuisson.",
+        "Laisser prendre avant de découper en barres."
+      ],
+      "nutrition_par_portion_estimee": {
+        "kcal": 245,
+        "proteines_g": 7,
+        "glucides_g": 18,
+        "lipides_g": 16
+      },
+      "statut": "Validée",
+      "favori": false,
+      "note_personnelle": "Quantités réellement utilisées : 210 g chocolat noir, 35 g avoine, 30 g whey, 30 g lait.",
+      "version_simplifiee": {
+        "etapes": [
+          "Mélanger les flocons d'avoine, la whey et le lait pour former une base.",
+          "Cuire la base à l'air fryer à 160 °C pendant 6 à 8 minutes. Faire fondre le chocolat puis l'ajouter après cuisson.",
+          "Laisser prendre avant de découper en barres."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
     }
   ]
 }
