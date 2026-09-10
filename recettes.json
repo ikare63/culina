@@ -1,12 +1,12 @@
 {
   "meta": {
     "nom": "Culina",
-    "version": "5.3",
+    "version": "5.4",
     "description": "Base personnelle de recettes Culina.",
     "nutrition": "Les valeurs nutritionnelles sont des estimations par portion.",
-    "nombre_recettes": 213,
+    "nombre_recettes": 214,
     "categories": {
-      "Salé": 121,
+      "Salé": 122,
       "Sucré": 46,
       "Petit-déjeuner": 15,
       "Boisson": 10,
@@ -37,7 +37,11 @@
       "Ajout des recettes personnelles récupérées dans les anciens échanges avec ChatGPT",
       "Bouton Version simple dans les fiches quand les étapes peuvent être regroupées sans changer le plat",
       "Affichage explicite des calories et macros par portion sur les cartes et dans les fiches recettes.",
-      "Mes stocks enrichi : dinde, blanc de poulet, haricots verts, nombreux légumes et protéines, plus une catégorie Frais & basiques."
+      "Mes stocks enrichi : dinde, blanc de poulet, haricots verts, nombreux légumes et protéines, plus une catégorie Frais & basiques.",
+      "Logo Culina panier gourmand intégré dans l’en-tête et comme favicon.",
+      "Recettes adaptées sans fromage hors fromage blanc.",
+      "Ajout de l’omelette aux lardons.",
+      "Planification d’une recette à une date et une heure avec rappel navigateur local."
     ]
   },
   "recettes": [
@@ -258,27 +262,20 @@
           "ingredient": "Béchamel",
           "type_stock": "secondaire",
           "groupe_stock": "autre"
-        },
-        {
-          "quantite": 120,
-          "unite": "g",
-          "ingredient": "Parmesan",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
         }
       ],
       "etapes": [
         "Faire fondre la pancetta puis ajouter le soffritto carotte-céleri-oignon.",
         "Ajouter le bœuf et bien le colorer. Déglacer au vin.",
         "Ajouter tomates et bouillon, puis mijoter longuement. Terminer avec le lait.",
-        "Monter les couches de ragù, béchamel, pâtes et parmesan.",
+        "Monter les couches de ragù, béchamel, pâtes.",
         "Cuire environ 40 minutes à 180 °C puis laisser reposer 10 minutes."
       ],
       "nutrition_par_portion_estimee": {
-        "kcal": 690,
-        "proteines_g": 38,
-        "glucides_g": 57,
-        "lipides_g": 33
+        "kcal": 625,
+        "proteines_g": 32,
+        "glucides_g": 56,
+        "lipides_g": 29
       },
       "statut": "Validée",
       "favori": false,
@@ -329,13 +326,6 @@
           "groupe_stock": "legume"
         },
         {
-          "quantite": 30,
-          "unite": "g",
-          "ingredient": "Parmesan",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
-        },
-        {
           "quantite": 1,
           "unite": "c. à café",
           "ingredient": "Paprika",
@@ -353,14 +343,14 @@
       "etapes": [
         "Cuire les pâtes al dente.",
         "Faire dorer le poulet pané et le couper en morceaux.",
-        "Faire revenir le poivron, ajouter la crème, le paprika et le parmesan.",
+        "Faire revenir le poivron, ajouter la crème, le paprika.",
         "Mélanger avec les pâtes puis ajouter le poulet juste avant de servir."
       ],
       "nutrition_par_portion_estimee": {
-        "kcal": 830,
-        "proteines_g": 46,
-        "glucides_g": 78,
-        "lipides_g": 37
+        "kcal": 765,
+        "proteines_g": 40,
+        "glucides_g": 77,
+        "lipides_g": 33
       },
       "statut": "Validée",
       "favori": false,
@@ -368,7 +358,7 @@
       "version_simplifiee": {
         "etapes": [
           "Cuire les pâtes al dente.",
-          "Faire dorer le poulet pané et le couper en morceaux. Faire revenir le poivron, ajouter la crème, le paprika et le parmesan.",
+          "Faire dorer le poulet pané et le couper en morceaux. Faire revenir le poivron, ajouter la crème, le paprika.",
           "Mélanger avec les pâtes puis ajouter le poulet juste avant de servir."
         ],
         "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
@@ -588,13 +578,6 @@
           "ingredient": "Oignon",
           "type_stock": "principal",
           "groupe_stock": "legume"
-        },
-        {
-          "quantite": 20,
-          "unite": "g",
-          "ingredient": "Fromage râpé",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -603,10 +586,10 @@
         "Ajouter le fromage, plier l'omelette et terminer la cuisson à feu doux."
       ],
       "nutrition_par_portion_estimee": {
-        "kcal": 360,
-        "proteines_g": 25,
+        "kcal": 284,
+        "proteines_g": 20,
         "glucides_g": 10,
-        "lipides_g": 24
+        "lipides_g": 18
       },
       "statut": "Validée",
       "favori": false,
@@ -767,8 +750,8 @@
       "note_personnelle": ""
     },
     {
-      "id": "pates-poulet-parmesan",
-      "nom": "Pâtes poulet-parmesan",
+      "id": "pates-poulet-creme-et-paprika",
+      "nom": "Pâtes poulet-crème et paprika",
       "categorie": "Salé",
       "sous_categorie": "Pâtes",
       "tags": [
@@ -802,13 +785,6 @@
           "groupe_stock": "basique"
         },
         {
-          "quantite": 30,
-          "unite": "g",
-          "ingredient": "Parmesan",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
-        },
-        {
           "quantite": 1,
           "unite": "c. à soupe",
           "ingredient": "Huile d'olive",
@@ -824,16 +800,16 @@
         }
       ],
       "etapes": [
-        "Cuire les pâtes al dente et garder un peu d'eau de cuisson.",
-        "Cuire ou réchauffer poulet dans une grande poêle.",
-        "Ajouter la crème et le parmesan puis détendre avec un peu d'eau de cuisson.",
-        "Ajouter les pâtes, bien enrober et servir immédiatement."
+        "Cuire les pâtes al dente et garder un peu d’eau de cuisson.",
+        "Faire dorer le poulet avec le paprika.",
+        "Ajouter la crème et un peu d’eau de cuisson.",
+        "Mélanger les pâtes dans la sauce et poivrer."
       ],
       "nutrition_par_portion_estimee": {
-        "kcal": 640,
-        "proteines_g": 30,
-        "glucides_g": 70,
-        "lipides_g": 24
+        "kcal": 575,
+        "proteines_g": 24,
+        "glucides_g": 69,
+        "lipides_g": 20
       },
       "statut": "À tester",
       "favori": false,
@@ -841,7 +817,7 @@
       "version_simplifiee": {
         "etapes": [
           "Cuire les pâtes al dente et garder un peu d'eau de cuisson.",
-          "Cuire ou réchauffer poulet dans une grande poêle. Ajouter la crème et le parmesan puis détendre avec un peu d'eau de cuisson.",
+          "Cuire ou réchauffer poulet dans une grande poêle. Ajouter la crème puis détendre avec un peu d'eau de cuisson.",
           "Ajouter les pâtes, bien enrober et servir immédiatement."
         ],
         "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
@@ -883,13 +859,6 @@
           "groupe_stock": "basique"
         },
         {
-          "quantite": 30,
-          "unite": "g",
-          "ingredient": "Parmesan",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
-        },
-        {
           "quantite": 1,
           "unite": "c. à soupe",
           "ingredient": "Huile d'olive",
@@ -907,14 +876,14 @@
       "etapes": [
         "Cuire les pâtes al dente et garder un peu d'eau de cuisson.",
         "Cuire ou réchauffer saumon dans une grande poêle.",
-        "Ajouter la crème et le parmesan puis détendre avec un peu d'eau de cuisson.",
+        "Ajouter la crème puis détendre avec un peu d'eau de cuisson.",
         "Ajouter les pâtes, bien enrober et servir immédiatement."
       ],
       "nutrition_par_portion_estimee": {
-        "kcal": 640,
-        "proteines_g": 30,
-        "glucides_g": 70,
-        "lipides_g": 24
+        "kcal": 575,
+        "proteines_g": 24,
+        "glucides_g": 69,
+        "lipides_g": 20
       },
       "statut": "À tester",
       "favori": false,
@@ -922,7 +891,7 @@
       "version_simplifiee": {
         "etapes": [
           "Cuire les pâtes al dente et garder un peu d'eau de cuisson.",
-          "Cuire ou réchauffer saumon dans une grande poêle. Ajouter la crème et le parmesan puis détendre avec un peu d'eau de cuisson.",
+          "Cuire ou réchauffer saumon dans une grande poêle. Ajouter la crème puis détendre avec un peu d'eau de cuisson.",
           "Ajouter les pâtes, bien enrober et servir immédiatement."
         ],
         "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
@@ -930,7 +899,7 @@
     },
     {
       "id": "pates-pesto-poulet",
-      "nom": "Pâtes pesto-poulet",
+      "nom": "Pâtes poulet-basilic",
       "categorie": "Salé",
       "sous_categorie": "Pâtes",
       "tags": [
@@ -964,13 +933,6 @@
           "groupe_stock": "basique"
         },
         {
-          "quantite": 30,
-          "unite": "g",
-          "ingredient": "Parmesan",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
-        },
-        {
           "quantite": 1,
           "unite": "c. à soupe",
           "ingredient": "Huile d'olive",
@@ -983,19 +945,26 @@
           "ingredient": "Poivre",
           "type_stock": "basique",
           "groupe_stock": "basique"
+        },
+        {
+          "quantite": 1,
+          "unite": "c. à soupe",
+          "ingredient": "Basilic",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
-        "Cuire les pâtes al dente et garder un peu d'eau de cuisson.",
-        "Cuire ou réchauffer poulet dans une grande poêle.",
-        "Ajouter la crème et le parmesan puis détendre avec un peu d'eau de cuisson.",
-        "Ajouter les pâtes, bien enrober et servir immédiatement."
+        "Cuire les pâtes al dente.",
+        "Faire dorer le poulet.",
+        "Ajouter crème, basilic et un peu d’eau de cuisson.",
+        "Mélanger avec les pâtes."
       ],
       "nutrition_par_portion_estimee": {
-        "kcal": 640,
-        "proteines_g": 30,
-        "glucides_g": 70,
-        "lipides_g": 24
+        "kcal": 575,
+        "proteines_g": 24,
+        "glucides_g": 69,
+        "lipides_g": 20
       },
       "statut": "À tester",
       "favori": false,
@@ -1003,7 +972,7 @@
       "version_simplifiee": {
         "etapes": [
           "Cuire les pâtes al dente et garder un peu d'eau de cuisson.",
-          "Cuire ou réchauffer poulet dans une grande poêle. Ajouter la crème et le parmesan puis détendre avec un peu d'eau de cuisson.",
+          "Cuire ou réchauffer poulet dans une grande poêle. Ajouter la crème puis détendre avec un peu d'eau de cuisson.",
           "Ajouter les pâtes, bien enrober et servir immédiatement."
         ],
         "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
@@ -1045,13 +1014,6 @@
           "groupe_stock": "basique"
         },
         {
-          "quantite": 30,
-          "unite": "g",
-          "ingredient": "Parmesan",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
-        },
-        {
           "quantite": 1,
           "unite": "c. à soupe",
           "ingredient": "Huile d'olive",
@@ -1069,14 +1031,14 @@
       "etapes": [
         "Cuire les pâtes al dente et garder un peu d'eau de cuisson.",
         "Cuire ou réchauffer bœuf haché dans une grande poêle.",
-        "Ajouter la crème et le parmesan puis détendre avec un peu d'eau de cuisson.",
+        "Ajouter la crème puis détendre avec un peu d'eau de cuisson.",
         "Ajouter les pâtes, bien enrober et servir immédiatement."
       ],
       "nutrition_par_portion_estimee": {
-        "kcal": 640,
-        "proteines_g": 30,
-        "glucides_g": 70,
-        "lipides_g": 24
+        "kcal": 575,
+        "proteines_g": 24,
+        "glucides_g": 69,
+        "lipides_g": 20
       },
       "statut": "À tester",
       "favori": false,
@@ -1084,20 +1046,19 @@
       "version_simplifiee": {
         "etapes": [
           "Cuire les pâtes al dente et garder un peu d'eau de cuisson.",
-          "Cuire ou réchauffer bœuf haché dans une grande poêle. Ajouter la crème et le parmesan puis détendre avec un peu d'eau de cuisson.",
+          "Cuire ou réchauffer bœuf haché dans une grande poêle. Ajouter la crème puis détendre avec un peu d'eau de cuisson.",
           "Ajouter les pâtes, bien enrober et servir immédiatement."
         ],
         "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
       }
     },
     {
-      "id": "pates-gratinees-jambon-fromage",
-      "nom": "Pâtes gratinées jambon-fromage",
+      "id": "pates-jambon-creme-au-four",
+      "nom": "Pâtes jambon-crème au four",
       "categorie": "Salé",
       "sous_categorie": "Pâtes",
       "tags": [
         "gratin",
-        "fromage",
         "familial"
       ],
       "temps_minutes": 25,
@@ -1126,13 +1087,6 @@
           "groupe_stock": "basique"
         },
         {
-          "quantite": 30,
-          "unite": "g",
-          "ingredient": "Parmesan",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
-        },
-        {
           "quantite": 1,
           "unite": "c. à soupe",
           "ingredient": "Huile d'olive",
@@ -1148,16 +1102,15 @@
         }
       ],
       "etapes": [
-        "Cuire les pâtes al dente et garder un peu d'eau de cuisson.",
-        "Cuire ou réchauffer jambon dans une grande poêle.",
-        "Ajouter la crème et le parmesan puis détendre avec un peu d'eau de cuisson.",
-        "Ajouter les pâtes, bien enrober et servir immédiatement."
+        "Cuire les pâtes al dente.",
+        "Mélanger jambon et crème avec les pâtes.",
+        "Verser dans un plat et terminer 8 à 10 minutes au four pour faire légèrement dorer le dessus."
       ],
       "nutrition_par_portion_estimee": {
-        "kcal": 640,
-        "proteines_g": 30,
-        "glucides_g": 70,
-        "lipides_g": 24
+        "kcal": 575,
+        "proteines_g": 24,
+        "glucides_g": 69,
+        "lipides_g": 20
       },
       "statut": "À tester",
       "favori": false,
@@ -1165,19 +1118,18 @@
       "version_simplifiee": {
         "etapes": [
           "Cuire les pâtes al dente et garder un peu d'eau de cuisson.",
-          "Cuire ou réchauffer jambon dans une grande poêle. Ajouter la crème et le parmesan puis détendre avec un peu d'eau de cuisson.",
+          "Cuire ou réchauffer jambon dans une grande poêle. Ajouter la crème puis détendre avec un peu d'eau de cuisson.",
           "Ajouter les pâtes, bien enrober et servir immédiatement."
         ],
         "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
       }
     },
     {
-      "id": "mac-cheese",
-      "nom": "Mac & cheese",
+      "id": "macaroni-cremeux-au-poulet",
+      "nom": "Macaroni crémeux au poulet",
       "categorie": "Salé",
       "sous_categorie": "Pâtes",
       "tags": [
-        "fromage",
         "comfort-food"
       ],
       "temps_minutes": 25,
@@ -1187,16 +1139,16 @@
         {
           "quantite": 200,
           "unite": "g",
-          "ingredient": "Pâtes",
+          "ingredient": "Macaroni",
           "type_stock": "principal",
           "groupe_stock": "feculent"
         },
         {
           "quantite": 220,
           "unite": "g",
-          "ingredient": "Cheddar",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
+          "ingredient": "Poulet",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
           "quantite": 150,
@@ -1206,16 +1158,9 @@
           "groupe_stock": "basique"
         },
         {
-          "quantite": 30,
-          "unite": "g",
-          "ingredient": "Parmesan",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
-        },
-        {
           "quantite": 1,
-          "unite": "c. à soupe",
-          "ingredient": "Huile d'olive",
+          "unite": "c. à café",
+          "ingredient": "Paprika",
           "type_stock": "basique",
           "groupe_stock": "basique"
         },
@@ -1228,25 +1173,25 @@
         }
       ],
       "etapes": [
-        "Cuire les pâtes al dente et garder un peu d'eau de cuisson.",
-        "Cuire ou réchauffer cheddar dans une grande poêle.",
-        "Ajouter la crème et le parmesan puis détendre avec un peu d'eau de cuisson.",
-        "Ajouter les pâtes, bien enrober et servir immédiatement."
+        "Cuire les macaroni al dente.",
+        "Faire dorer le poulet avec le paprika.",
+        "Ajouter la crème et un peu d’eau de cuisson.",
+        "Mélanger avec les macaroni et poivrer."
       ],
       "nutrition_par_portion_estimee": {
-        "kcal": 640,
-        "proteines_g": 30,
+        "kcal": 650,
+        "proteines_g": 43,
         "glucides_g": 70,
-        "lipides_g": 24
+        "lipides_g": 23
       },
       "statut": "À tester",
       "favori": false,
       "note_personnelle": "",
       "version_simplifiee": {
         "etapes": [
-          "Cuire les pâtes al dente et garder un peu d'eau de cuisson.",
-          "Cuire ou réchauffer cheddar dans une grande poêle. Ajouter la crème et le parmesan puis détendre avec un peu d'eau de cuisson.",
-          "Ajouter les pâtes, bien enrober et servir immédiatement."
+          "Cuire les macaroni al dente.",
+          "Faire dorer le poulet avec le paprika. Ajouter la crème et un peu d’eau de cuisson.",
+          "Mélanger avec les macaroni et poivrer."
         ],
         "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
       }
@@ -1287,13 +1232,6 @@
           "groupe_stock": "basique"
         },
         {
-          "quantite": 30,
-          "unite": "g",
-          "ingredient": "Parmesan",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
-        },
-        {
           "quantite": 1,
           "unite": "c. à soupe",
           "ingredient": "Huile d'olive",
@@ -1311,14 +1249,14 @@
       "etapes": [
         "Cuire les pâtes al dente et garder un peu d'eau de cuisson.",
         "Cuire ou réchauffer lardons dans une grande poêle.",
-        "Ajouter la crème et le parmesan puis détendre avec un peu d'eau de cuisson.",
+        "Ajouter la crème puis détendre avec un peu d'eau de cuisson.",
         "Ajouter les pâtes, bien enrober et servir immédiatement."
       ],
       "nutrition_par_portion_estimee": {
-        "kcal": 640,
-        "proteines_g": 30,
-        "glucides_g": 70,
-        "lipides_g": 24
+        "kcal": 575,
+        "proteines_g": 24,
+        "glucides_g": 69,
+        "lipides_g": 20
       },
       "statut": "À tester",
       "favori": false,
@@ -1326,7 +1264,7 @@
       "version_simplifiee": {
         "etapes": [
           "Cuire les pâtes al dente et garder un peu d'eau de cuisson.",
-          "Cuire ou réchauffer lardons dans une grande poêle. Ajouter la crème et le parmesan puis détendre avec un peu d'eau de cuisson.",
+          "Cuire ou réchauffer lardons dans une grande poêle. Ajouter la crème puis détendre avec un peu d'eau de cuisson.",
           "Ajouter les pâtes, bien enrober et servir immédiatement."
         ],
         "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
@@ -1368,13 +1306,6 @@
           "groupe_stock": "basique"
         },
         {
-          "quantite": 30,
-          "unite": "g",
-          "ingredient": "Parmesan",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
-        },
-        {
           "quantite": 1,
           "unite": "c. à soupe",
           "ingredient": "Huile d'olive",
@@ -1392,14 +1323,14 @@
       "etapes": [
         "Cuire les pâtes al dente et garder un peu d'eau de cuisson.",
         "Cuire ou réchauffer thon dans une grande poêle.",
-        "Ajouter la crème et le parmesan puis détendre avec un peu d'eau de cuisson.",
+        "Ajouter la crème puis détendre avec un peu d'eau de cuisson.",
         "Ajouter les pâtes, bien enrober et servir immédiatement."
       ],
       "nutrition_par_portion_estimee": {
-        "kcal": 640,
-        "proteines_g": 30,
-        "glucides_g": 70,
-        "lipides_g": 24
+        "kcal": 575,
+        "proteines_g": 24,
+        "glucides_g": 69,
+        "lipides_g": 20
       },
       "statut": "À tester",
       "favori": false,
@@ -1407,15 +1338,15 @@
       "version_simplifiee": {
         "etapes": [
           "Cuire les pâtes al dente et garder un peu d'eau de cuisson.",
-          "Cuire ou réchauffer thon dans une grande poêle. Ajouter la crème et le parmesan puis détendre avec un peu d'eau de cuisson.",
+          "Cuire ou réchauffer thon dans une grande poêle. Ajouter la crème puis détendre avec un peu d'eau de cuisson.",
           "Ajouter les pâtes, bien enrober et servir immédiatement."
         ],
         "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
       }
     },
     {
-      "id": "pates-aux-champignons-et-parmesan",
-      "nom": "Pâtes aux champignons et parmesan",
+      "id": "pates-cremeuses-aux-champignons",
+      "nom": "Pâtes crémeuses aux champignons",
       "categorie": "Salé",
       "sous_categorie": "Pâtes",
       "tags": [
@@ -1448,13 +1379,6 @@
           "groupe_stock": "basique"
         },
         {
-          "quantite": 30,
-          "unite": "g",
-          "ingredient": "Parmesan",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
-        },
-        {
           "quantite": 1,
           "unite": "c. à soupe",
           "ingredient": "Huile d'olive",
@@ -1470,16 +1394,16 @@
         }
       ],
       "etapes": [
-        "Cuire les pâtes al dente et garder un peu d'eau de cuisson.",
-        "Cuire ou réchauffer champignons dans une grande poêle.",
-        "Ajouter la crème et le parmesan puis détendre avec un peu d'eau de cuisson.",
-        "Ajouter les pâtes, bien enrober et servir immédiatement."
+        "Cuire les pâtes al dente.",
+        "Faire revenir les champignons.",
+        "Ajouter la crème puis un peu d’eau de cuisson.",
+        "Mélanger aux pâtes et poivrer."
       ],
       "nutrition_par_portion_estimee": {
-        "kcal": 640,
-        "proteines_g": 30,
-        "glucides_g": 70,
-        "lipides_g": 24
+        "kcal": 575,
+        "proteines_g": 24,
+        "glucides_g": 69,
+        "lipides_g": 20
       },
       "statut": "À tester",
       "favori": false,
@@ -1487,7 +1411,7 @@
       "version_simplifiee": {
         "etapes": [
           "Cuire les pâtes al dente et garder un peu d'eau de cuisson.",
-          "Cuire ou réchauffer champignons dans une grande poêle. Ajouter la crème et le parmesan puis détendre avec un peu d'eau de cuisson.",
+          "Cuire ou réchauffer champignons dans une grande poêle. Ajouter la crème puis détendre avec un peu d'eau de cuisson.",
           "Ajouter les pâtes, bien enrober et servir immédiatement."
         ],
         "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
@@ -1528,13 +1452,6 @@
           "groupe_stock": "basique"
         },
         {
-          "quantite": 30,
-          "unite": "g",
-          "ingredient": "Parmesan",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
-        },
-        {
           "quantite": 1,
           "unite": "c. à soupe",
           "ingredient": "Huile d'olive",
@@ -1552,14 +1469,14 @@
       "etapes": [
         "Cuire les pâtes al dente et garder un peu d'eau de cuisson.",
         "Cuire ou réchauffer chorizo dans une grande poêle.",
-        "Ajouter la crème et le parmesan puis détendre avec un peu d'eau de cuisson.",
+        "Ajouter la crème puis détendre avec un peu d'eau de cuisson.",
         "Ajouter les pâtes, bien enrober et servir immédiatement."
       ],
       "nutrition_par_portion_estimee": {
-        "kcal": 640,
-        "proteines_g": 30,
-        "glucides_g": 70,
-        "lipides_g": 24
+        "kcal": 575,
+        "proteines_g": 24,
+        "glucides_g": 69,
+        "lipides_g": 20
       },
       "statut": "À tester",
       "favori": false,
@@ -1567,15 +1484,15 @@
       "version_simplifiee": {
         "etapes": [
           "Cuire les pâtes al dente et garder un peu d'eau de cuisson.",
-          "Cuire ou réchauffer chorizo dans une grande poêle. Ajouter la crème et le parmesan puis détendre avec un peu d'eau de cuisson.",
+          "Cuire ou réchauffer chorizo dans une grande poêle. Ajouter la crème puis détendre avec un peu d'eau de cuisson.",
           "Ajouter les pâtes, bien enrober et servir immédiatement."
         ],
         "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
       }
     },
     {
-      "id": "pates-citron-parmesan",
-      "nom": "Pâtes citron-parmesan",
+      "id": "pates-cremeuses-citron-ail",
+      "nom": "Pâtes crémeuses citron-ail",
       "categorie": "Salé",
       "sous_categorie": "Pâtes",
       "tags": [
@@ -1595,13 +1512,6 @@
           "groupe_stock": "feculent"
         },
         {
-          "quantite": 220,
-          "unite": "g",
-          "ingredient": "Parmesan",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
-        },
-        {
           "quantite": 150,
           "unite": "ml",
           "ingredient": "Crème légère",
@@ -1609,9 +1519,16 @@
           "groupe_stock": "basique"
         },
         {
-          "quantite": 30,
-          "unite": "g",
-          "ingredient": "Parmesan",
+          "quantite": 1,
+          "unite": "",
+          "ingredient": "Citron",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 1,
+          "unite": "gousse",
+          "ingredient": "Ail",
           "type_stock": "basique",
           "groupe_stock": "basique"
         },
@@ -1631,25 +1548,25 @@
         }
       ],
       "etapes": [
-        "Cuire les pâtes al dente et garder un peu d'eau de cuisson.",
-        "Cuire ou réchauffer parmesan dans une grande poêle.",
-        "Ajouter la crème et le parmesan puis détendre avec un peu d'eau de cuisson.",
-        "Ajouter les pâtes, bien enrober et servir immédiatement."
+        "Cuire les pâtes al dente.",
+        "Faire revenir très brièvement l’ail dans l’huile.",
+        "Ajouter la crème, le zeste et un peu de jus de citron.",
+        "Mélanger avec les pâtes et poivrer."
       ],
       "nutrition_par_portion_estimee": {
-        "kcal": 640,
-        "proteines_g": 30,
-        "glucides_g": 70,
-        "lipides_g": 24
+        "kcal": 555,
+        "proteines_g": 15,
+        "glucides_g": 72,
+        "lipides_g": 22
       },
       "statut": "À tester",
       "favori": false,
       "note_personnelle": "",
       "version_simplifiee": {
         "etapes": [
-          "Cuire les pâtes al dente et garder un peu d'eau de cuisson.",
-          "Cuire ou réchauffer parmesan dans une grande poêle. Ajouter la crème et le parmesan puis détendre avec un peu d'eau de cuisson.",
-          "Ajouter les pâtes, bien enrober et servir immédiatement."
+          "Cuire les pâtes al dente.",
+          "Faire revenir très brièvement l’ail dans l’huile. Ajouter la crème, le zeste et un peu de jus de citron.",
+          "Mélanger avec les pâtes et poivrer."
         ],
         "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
       }
@@ -1690,13 +1607,6 @@
           "groupe_stock": "basique"
         },
         {
-          "quantite": 30,
-          "unite": "g",
-          "ingredient": "Parmesan",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
-        },
-        {
           "quantite": 1,
           "unite": "c. à soupe",
           "ingredient": "Huile d'olive",
@@ -1714,14 +1624,14 @@
       "etapes": [
         "Cuire les pâtes al dente et garder un peu d'eau de cuisson.",
         "Cuire ou réchauffer poulet dans une grande poêle.",
-        "Ajouter la crème et le parmesan puis détendre avec un peu d'eau de cuisson.",
+        "Ajouter la crème puis détendre avec un peu d'eau de cuisson.",
         "Ajouter les pâtes, bien enrober et servir immédiatement."
       ],
       "nutrition_par_portion_estimee": {
-        "kcal": 640,
-        "proteines_g": 30,
-        "glucides_g": 70,
-        "lipides_g": 24
+        "kcal": 575,
+        "proteines_g": 24,
+        "glucides_g": 69,
+        "lipides_g": 20
       },
       "statut": "À tester",
       "favori": false,
@@ -1729,7 +1639,7 @@
       "version_simplifiee": {
         "etapes": [
           "Cuire les pâtes al dente et garder un peu d'eau de cuisson.",
-          "Cuire ou réchauffer poulet dans une grande poêle. Ajouter la crème et le parmesan puis détendre avec un peu d'eau de cuisson.",
+          "Cuire ou réchauffer poulet dans une grande poêle. Ajouter la crème puis détendre avec un peu d'eau de cuisson.",
           "Ajouter les pâtes, bien enrober et servir immédiatement."
         ],
         "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
@@ -1817,14 +1727,13 @@
       }
     },
     {
-      "id": "risotto-champignons-parmesan",
-      "nom": "Risotto champignons-parmesan",
+      "id": "risotto-aux-champignons",
+      "nom": "Risotto aux champignons",
       "categorie": "Salé",
       "sous_categorie": "Riz",
       "tags": [
         "risotto",
-        "végétarien",
-        "parmesan"
+        "végétarien"
       ],
       "temps_minutes": 30,
       "difficulte": "Facile",
@@ -1874,10 +1783,9 @@
         }
       ],
       "etapes": [
-        "Cuire le riz puis l'égoutter.",
-        "Faire revenir champignons avec l'oignon.",
-        "Ajouter les légumes puis le riz.",
-        "Assaisonner, faire sauter 2 à 3 minutes et servir."
+        "Faire revenir l’oignon et les champignons.",
+        "Ajouter le riz puis le bouillon progressivement.",
+        "Cuire en remuant jusqu’à ce que le riz soit tendre et crémeux."
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 560,
@@ -2862,12 +2770,11 @@
       }
     },
     {
-      "id": "poulet-parmesan-au-four",
-      "nom": "Poulet parmesan au four",
+      "id": "poulet-tomate-au-four",
+      "nom": "Poulet tomate au four",
       "categorie": "Salé",
       "sous_categorie": "Poulet",
       "tags": [
-        "parmesan",
         "four"
       ],
       "temps_minutes": 25,
@@ -2918,10 +2825,9 @@
         }
       ],
       "etapes": [
-        "Découper puis dorer le poulet dans l'huile.",
-        "Ajouter l'oignon et laisser fondre.",
-        "Ajouter sauce tomate et assaisonner.",
-        "Laisser mijoter à feu doux jusqu'à ce que le poulet soit cuit."
+        "Dorer rapidement le poulet.",
+        "Ajouter oignon, sauce tomate et paprika.",
+        "Terminer la cuisson au four ou à couvert jusqu’à ce que le poulet soit cuit à cœur."
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 520,
@@ -3022,13 +2928,12 @@
       }
     },
     {
-      "id": "escalope-parmesan",
-      "nom": "Escalope parmesan",
+      "id": "escalope-aux-herbes",
+      "nom": "Escalope aux herbes",
       "categorie": "Salé",
       "sous_categorie": "Viande",
       "tags": [
-        "gourmand",
-        "fromage"
+        "gourmand"
       ],
       "temps_minutes": 35,
       "difficulte": "Facile",
@@ -3078,10 +2983,9 @@
         }
       ],
       "etapes": [
-        "Préparer escalope de poulet et la garniture.",
-        "Faire cuire les éléments selon leur nature.",
-        "Assembler ou laisser mijoter jusqu'à obtenir la texture souhaitée.",
-        "Rectifier l'assaisonnement et servir."
+        "Assaisonner l’escalope avec sel, poivre et herbes.",
+        "La cuire à la poêle avec un peu d’huile.",
+        "Servir avec les légumes ou l’accompagnement choisi."
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 610,
@@ -3267,8 +3171,7 @@
       "categorie": "Salé",
       "sous_categorie": "Burger",
       "tags": [
-        "comfort-food",
-        "fromage"
+        "comfort-food"
       ],
       "temps_minutes": 30,
       "difficulte": "Facile",
@@ -3342,13 +3245,12 @@
       }
     },
     {
-      "id": "cheeseburger-smash",
-      "nom": "Cheeseburger smash",
+      "id": "smash-burger-aux-oignons",
+      "nom": "Smash burger aux oignons",
       "categorie": "Salé",
       "sous_categorie": "Burger",
       "tags": [
-        "smash",
-        "fromage"
+        "smash"
       ],
       "temps_minutes": 25,
       "difficulte": "Facile",
@@ -3398,10 +3300,9 @@
         }
       ],
       "etapes": [
-        "Préparer steak haché et la garniture.",
-        "Faire cuire les éléments selon leur nature.",
-        "Assembler ou laisser mijoter jusqu'à obtenir la texture souhaitée.",
-        "Rectifier l'assaisonnement et servir."
+        "Écraser le steak haché sur une poêle très chaude.",
+        "Faire revenir les oignons dans les sucs.",
+        "Monter le burger avec tomate, oignons et sauce au choix."
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 810,
@@ -3423,12 +3324,11 @@
     },
     {
       "id": "croque-monsieur",
-      "nom": "Croque-monsieur",
+      "nom": "Sandwich chaud jambon-tomate",
       "categorie": "Salé",
       "sous_categorie": "Sandwich",
       "tags": [
-        "rapide",
-        "fromage"
+        "rapide"
       ],
       "temps_minutes": 15,
       "difficulte": "Facile",
@@ -3478,10 +3378,9 @@
         }
       ],
       "etapes": [
-        "Préparer jambon et la garniture.",
-        "Faire cuire les éléments selon leur nature.",
-        "Assembler ou laisser mijoter jusqu'à obtenir la texture souhaitée.",
-        "Rectifier l'assaisonnement et servir."
+        "Garnir le pain de jambon et de tomate.",
+        "Ajouter un peu de moutarde ou de crème si souhaité.",
+        "Faire dorer à la poêle, au four ou à l’air fryer."
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 520,
@@ -3502,88 +3401,72 @@
       }
     },
     {
-      "id": "grilled-cheese",
-      "nom": "Grilled cheese",
+      "id": "toast-chaud-jambon-tomate",
+      "nom": "Toast chaud jambon-tomate",
       "categorie": "Salé",
       "sous_categorie": "Sandwich",
       "tags": [
-        "très-rapide",
-        "fromage"
+        "très-rapide"
       ],
       "temps_minutes": 10,
       "difficulte": "Facile",
       "portions": 2,
       "ingredients": [
         {
-          "quantite": 300,
-          "unite": "g",
-          "ingredient": "Cheddar",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
+          "quantite": 4,
+          "unite": "tranches",
+          "ingredient": "Pain",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
         },
         {
-          "quantite": 1,
+          "quantite": 160,
+          "unite": "g",
+          "ingredient": "Jambon",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
+        },
+        {
+          "quantite": 2,
           "unite": "",
-          "ingredient": "Oignon",
+          "ingredient": "Tomates",
           "type_stock": "principal",
           "groupe_stock": "legume"
         },
         {
           "quantite": 1,
-          "unite": "c. à soupe",
-          "ingredient": "Huile d'olive",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
-        },
-        {
-          "quantite": 120,
-          "unite": "g",
-          "ingredient": "Légumes ou garniture",
-          "type_stock": "secondaire",
-          "groupe_stock": "autre"
-        },
-        {
-          "quantite": 1,
-          "unite": "pincée",
-          "ingredient": "Sel",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
-        },
-        {
-          "quantite": 1,
-          "unite": "pincée",
-          "ingredient": "Poivre",
+          "unite": "c. à café",
+          "ingredient": "Moutarde",
           "type_stock": "basique",
           "groupe_stock": "basique"
         }
       ],
       "etapes": [
-        "Préparer cheddar et la garniture.",
-        "Faire cuire les éléments selon leur nature.",
-        "Assembler ou laisser mijoter jusqu'à obtenir la texture souhaitée.",
-        "Rectifier l'assaisonnement et servir."
+        "Tartiner légèrement le pain de moutarde.",
+        "Ajouter jambon et rondelles de tomate.",
+        "Refermer puis faire dorer à la poêle ou à l’air fryer."
       ],
       "nutrition_par_portion_estimee": {
-        "kcal": 480,
-        "proteines_g": 20,
-        "glucides_g": 50,
-        "lipides_g": 22
+        "kcal": 390,
+        "proteines_g": 25,
+        "glucides_g": 48,
+        "lipides_g": 10
       },
       "statut": "À tester",
       "favori": false,
       "note_personnelle": "",
       "version_simplifiee": {
         "etapes": [
-          "Préparer cheddar et la garniture.",
-          "Faire cuire les éléments selon leur nature. Assembler ou laisser mijoter jusqu'à obtenir la texture souhaitée.",
-          "Rectifier l'assaisonnement et servir."
+          "Tartiner légèrement le pain de moutarde.",
+          "Ajouter jambon et rondelles de tomate.",
+          "Refermer puis faire dorer à la poêle ou à l’air fryer."
         ],
         "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
       }
     },
     {
-      "id": "quesadillas-poulet-fromage",
-      "nom": "Quesadillas poulet-fromage",
+      "id": "quesadillas-poulet-poivron",
+      "nom": "Quesadillas poulet-poivron",
       "categorie": "Salé",
       "sous_categorie": "Wrap",
       "tags": [
@@ -3635,13 +3518,26 @@
           "ingredient": "Poivre",
           "type_stock": "basique",
           "groupe_stock": "basique"
+        },
+        {
+          "quantite": 4,
+          "unite": "",
+          "ingredient": "Tortillas",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
+        },
+        {
+          "quantite": 1,
+          "unite": "",
+          "ingredient": "Poivron rouge",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         }
       ],
       "etapes": [
-        "Préparer poulet et la garniture.",
-        "Faire cuire les éléments selon leur nature.",
-        "Assembler ou laisser mijoter jusqu'à obtenir la texture souhaitée.",
-        "Rectifier l'assaisonnement et servir."
+        "Faire revenir poulet, poivron et oignon.",
+        "Garnir les tortillas avec la préparation.",
+        "Replier puis dorer à la poêle."
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 620,
@@ -3822,20 +3718,26 @@
       }
     },
     {
-      "id": "pizza-jambon-mozzarella",
-      "nom": "Pizza jambon-mozzarella",
+      "id": "pizza-jambon-poivron",
+      "nom": "Pizza jambon-poivron",
       "categorie": "Salé",
       "sous_categorie": "Pizza",
       "tags": [
-        "pizza",
-        "fromage"
+        "pizza"
       ],
       "temps_minutes": 35,
       "difficulte": "Facile",
       "portions": 2,
       "ingredients": [
         {
-          "quantite": 300,
+          "quantite": 1,
+          "unite": "",
+          "ingredient": "Pâte à pizza",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
+        },
+        {
+          "quantite": 160,
           "unite": "g",
           "ingredient": "Jambon",
           "type_stock": "principal",
@@ -3844,50 +3746,28 @@
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon",
+          "ingredient": "Poivron rouge",
           "type_stock": "principal",
           "groupe_stock": "legume"
         },
         {
-          "quantite": 1,
-          "unite": "c. à soupe",
-          "ingredient": "Huile d'olive",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
-        },
-        {
-          "quantite": 120,
+          "quantite": 180,
           "unite": "g",
-          "ingredient": "Légumes ou garniture",
-          "type_stock": "secondaire",
-          "groupe_stock": "autre"
-        },
-        {
-          "quantite": 1,
-          "unite": "pincée",
-          "ingredient": "Sel",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
-        },
-        {
-          "quantite": 1,
-          "unite": "pincée",
-          "ingredient": "Poivre",
+          "ingredient": "Sauce tomate",
           "type_stock": "basique",
           "groupe_stock": "basique"
         }
       ],
       "etapes": [
-        "Préparer jambon et la garniture.",
-        "Faire cuire les éléments selon leur nature.",
-        "Assembler ou laisser mijoter jusqu'à obtenir la texture souhaitée.",
-        "Rectifier l'assaisonnement et servir."
+        "Étaler la pâte et la couvrir de sauce tomate.",
+        "Ajouter jambon et poivron en lamelles.",
+        "Cuire à four très chaud jusqu’à ce que la pâte soit dorée."
       ],
       "nutrition_par_portion_estimee": {
-        "kcal": 700,
-        "proteines_g": 32,
-        "glucides_g": 50,
-        "lipides_g": 22
+        "kcal": 560,
+        "proteines_g": 27,
+        "glucides_g": 72,
+        "lipides_g": 17
       },
       "statut": "À tester",
       "favori": false,
@@ -4222,24 +4102,44 @@
       }
     },
     {
-      "id": "gratin-de-pates-jambon-fromage",
-      "nom": "Gratin de pâtes jambon-fromage",
+      "id": "gratin-de-pates-jambon-tomate-sans-fromage",
+      "nom": "Gratin de pâtes jambon-tomate sans fromage",
       "categorie": "Salé",
       "sous_categorie": "Gratin",
       "tags": [
-        "anti-gaspi",
-        "fromage"
+        "anti-gaspi"
       ],
       "temps_minutes": 40,
       "difficulte": "Facile",
       "portions": 2,
       "ingredients": [
         {
-          "quantite": 300,
+          "quantite": 200,
+          "unite": "g",
+          "ingredient": "Pâtes",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
+        },
+        {
+          "quantite": 180,
           "unite": "g",
           "ingredient": "Jambon",
           "type_stock": "principal",
           "groupe_stock": "proteine"
+        },
+        {
+          "quantite": 200,
+          "unite": "g",
+          "ingredient": "Sauce tomate",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 100,
+          "unite": "ml",
+          "ingredient": "Crème",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
@@ -4247,47 +4147,18 @@
           "ingredient": "Oignon",
           "type_stock": "principal",
           "groupe_stock": "legume"
-        },
-        {
-          "quantite": 1,
-          "unite": "c. à soupe",
-          "ingredient": "Huile d'olive",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
-        },
-        {
-          "quantite": 120,
-          "unite": "g",
-          "ingredient": "Légumes ou garniture",
-          "type_stock": "secondaire",
-          "groupe_stock": "autre"
-        },
-        {
-          "quantite": 1,
-          "unite": "pincée",
-          "ingredient": "Sel",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
-        },
-        {
-          "quantite": 1,
-          "unite": "pincée",
-          "ingredient": "Poivre",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
         }
       ],
       "etapes": [
-        "Préparer jambon et la garniture.",
-        "Faire cuire les éléments selon leur nature.",
-        "Assembler ou laisser mijoter jusqu'à obtenir la texture souhaitée.",
-        "Rectifier l'assaisonnement et servir."
+        "Cuire les pâtes.",
+        "Mélanger avec jambon, tomate et un peu de crème.",
+        "Verser dans un plat et cuire au four jusqu’à légère coloration."
       ],
       "nutrition_par_portion_estimee": {
-        "kcal": 620,
-        "proteines_g": 30,
-        "glucides_g": 50,
-        "lipides_g": 22
+        "kcal": 570,
+        "proteines_g": 31,
+        "glucides_g": 70,
+        "lipides_g": 18
       },
       "statut": "À tester",
       "favori": false,
@@ -4542,8 +4413,8 @@
       }
     },
     {
-      "id": "salade-tomate-mozzarella",
-      "nom": "Salade tomate-mozzarella",
+      "id": "salade-tomate-avocat",
+      "nom": "Salade tomate-avocat",
       "categorie": "Salé",
       "sous_categorie": "Salade",
       "tags": [
@@ -4555,16 +4426,23 @@
       "portions": 2,
       "ingredients": [
         {
-          "quantite": 300,
-          "unite": "g",
-          "ingredient": "Mozzarella",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
+          "quantite": 3,
+          "unite": "",
+          "ingredient": "Tomates",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 1,
           "unite": "",
-          "ingredient": "Oignon",
+          "ingredient": "Avocat",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
+        },
+        {
+          "quantite": 0.5,
+          "unite": "",
+          "ingredient": "Oignon rouge",
           "type_stock": "principal",
           "groupe_stock": "legume"
         },
@@ -4574,13 +4452,6 @@
           "ingredient": "Huile d'olive",
           "type_stock": "basique",
           "groupe_stock": "basique"
-        },
-        {
-          "quantite": 120,
-          "unite": "g",
-          "ingredient": "Légumes ou garniture",
-          "type_stock": "secondaire",
-          "groupe_stock": "autre"
         },
         {
           "quantite": 1,
@@ -4598,25 +4469,24 @@
         }
       ],
       "etapes": [
-        "Préparer mozzarella et la garniture.",
-        "Faire cuire les éléments selon leur nature.",
-        "Assembler ou laisser mijoter jusqu'à obtenir la texture souhaitée.",
-        "Rectifier l'assaisonnement et servir."
+        "Couper tomates, avocat et oignon rouge.",
+        "Mélanger avec l’huile, le sel et le poivre.",
+        "Servir bien frais."
       ],
       "nutrition_par_portion_estimee": {
-        "kcal": 330,
-        "proteines_g": 18,
-        "glucides_g": 50,
-        "lipides_g": 22
+        "kcal": 260,
+        "proteines_g": 4,
+        "glucides_g": 16,
+        "lipides_g": 21
       },
       "statut": "À tester",
       "favori": false,
       "note_personnelle": "",
       "version_simplifiee": {
         "etapes": [
-          "Préparer mozzarella et la garniture.",
-          "Faire cuire les éléments selon leur nature. Assembler ou laisser mijoter jusqu'à obtenir la texture souhaitée.",
-          "Rectifier l'assaisonnement et servir."
+          "Couper tomates, avocat et oignon rouge.",
+          "Mélanger avec l’huile, le sel et le poivre.",
+          "Servir bien frais."
         ],
         "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
       }
@@ -4783,7 +4653,7 @@
     },
     {
       "id": "bowl-mediterraneen",
-      "nom": "Bowl méditerranéen",
+      "nom": "Bowl méditerranéen pois chiches-légumes",
       "categorie": "Salé",
       "sous_categorie": "Bowl",
       "tags": [
@@ -4795,16 +4665,30 @@
       "portions": 2,
       "ingredients": [
         {
-          "quantite": 300,
+          "quantite": 250,
           "unite": "g",
-          "ingredient": "Feta",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
+          "ingredient": "Pois chiches",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
         },
         {
-          "quantite": 1,
+          "quantite": 2,
           "unite": "",
-          "ingredient": "Oignon",
+          "ingredient": "Tomates",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
+        },
+        {
+          "quantite": 0.5,
+          "unite": "",
+          "ingredient": "Concombre",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
+        },
+        {
+          "quantite": 0.5,
+          "unite": "",
+          "ingredient": "Oignon rouge",
           "type_stock": "principal",
           "groupe_stock": "legume"
         },
@@ -4816,47 +4700,32 @@
           "groupe_stock": "basique"
         },
         {
-          "quantite": 120,
-          "unite": "g",
-          "ingredient": "Légumes ou garniture",
-          "type_stock": "secondaire",
-          "groupe_stock": "autre"
-        },
-        {
-          "quantite": 1,
-          "unite": "pincée",
-          "ingredient": "Sel",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
-        },
-        {
-          "quantite": 1,
-          "unite": "pincée",
-          "ingredient": "Poivre",
+          "quantite": 0.5,
+          "unite": "",
+          "ingredient": "Citron",
           "type_stock": "basique",
           "groupe_stock": "basique"
         }
       ],
       "etapes": [
-        "Préparer feta et la garniture.",
-        "Faire cuire les éléments selon leur nature.",
-        "Assembler ou laisser mijoter jusqu'à obtenir la texture souhaitée.",
-        "Rectifier l'assaisonnement et servir."
+        "Rincer les pois chiches.",
+        "Couper tomates, concombre et oignon.",
+        "Assembler le tout avec huile, citron, sel et poivre."
       ],
       "nutrition_par_portion_estimee": {
-        "kcal": 520,
-        "proteines_g": 19,
-        "glucides_g": 50,
-        "lipides_g": 22
+        "kcal": 430,
+        "proteines_g": 16,
+        "glucides_g": 55,
+        "lipides_g": 16
       },
       "statut": "À tester",
       "favori": false,
       "note_personnelle": "",
       "version_simplifiee": {
         "etapes": [
-          "Préparer feta et la garniture.",
-          "Faire cuire les éléments selon leur nature. Assembler ou laisser mijoter jusqu'à obtenir la texture souhaitée.",
-          "Rectifier l'assaisonnement et servir."
+          "Rincer les pois chiches.",
+          "Couper tomates, concombre et oignon.",
+          "Assembler le tout avec huile, citron, sel et poivre."
         ],
         "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
       }
@@ -7026,7 +6895,7 @@
     },
     {
       "id": "tiramisu-classique",
-      "nom": "Tiramisu classique",
+      "nom": "Tiramisu léger au fromage blanc",
       "categorie": "Sucré",
       "sous_categorie": "Dessert",
       "tags": [
@@ -7038,68 +6907,61 @@
       "portions": 6,
       "ingredients": [
         {
-          "quantite": 120,
+          "quantite": 250,
           "unite": "g",
-          "ingredient": "Farine",
+          "ingredient": "Fromage blanc",
           "type_stock": "basique",
           "groupe_stock": "basique"
         },
         {
-          "quantite": 80,
+          "quantite": 12,
+          "unite": "",
+          "ingredient": "Biscuits à la cuillère",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
+        },
+        {
+          "quantite": 150,
+          "unite": "ml",
+          "ingredient": "Café",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 30,
           "unite": "g",
           "ingredient": "Sucre",
           "type_stock": "basique",
           "groupe_stock": "basique"
         },
         {
-          "quantite": 70,
-          "unite": "g",
-          "ingredient": "Beurre",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
-        },
-        {
           "quantite": 1,
-          "unite": "",
-          "ingredient": "Œuf",
-          "type_stock": "secondaire",
-          "groupe_stock": "autre"
-        },
-        {
-          "quantite": 100,
-          "unite": "g",
-          "ingredient": "Mascarpone",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
-        },
-        {
-          "quantite": 1,
-          "unite": "c. à café",
-          "ingredient": "Levure chimique",
+          "unite": "c. à soupe",
+          "ingredient": "Cacao",
           "type_stock": "basique",
           "groupe_stock": "basique"
         }
       ],
       "etapes": [
-        "Préchauffer le four à 180 °C.",
-        "Mélanger les ingrédients secs puis incorporer les ingrédients humides.",
-        "Ajouter mascarpone sans trop travailler la pâte.",
-        "Cuire jusqu'à coloration puis laisser tiédir."
+        "Mélanger le fromage blanc avec le sucre.",
+        "Tremper rapidement les biscuits dans le café.",
+        "Alterner biscuits blanc.",
+        "Saupoudrer de cacao et laisser prendre au frais."
       ],
       "nutrition_par_portion_estimee": {
-        "kcal": 420,
-        "proteines_g": 6,
-        "glucides_g": 43,
-        "lipides_g": 18
+        "kcal": 230,
+        "proteines_g": 10,
+        "glucides_g": 37,
+        "lipides_g": 4
       },
       "statut": "À tester",
       "favori": false,
       "note_personnelle": "",
       "version_simplifiee": {
         "etapes": [
-          "Préchauffer le four à 180 °C.",
-          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter mascarpone sans trop travailler la pâte.",
-          "Cuire jusqu'à coloration puis laisser tiédir."
+          "Mélanger le fromage blanc avec le sucre.",
+          "Tremper rapidement les biscuits dans le café. Alterner biscuits blanc.",
+          "Saupoudrer de cacao et laisser prendre au frais."
         ],
         "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
       }
@@ -7185,12 +7047,11 @@
       }
     },
     {
-      "id": "cheesecake",
-      "nom": "Cheesecake",
+      "id": "cheesecake-au-fromage-blanc",
+      "nom": "Cheesecake au fromage blanc",
       "categorie": "Sucré",
       "sous_categorie": "Dessert",
       "tags": [
-        "cheesecake",
         "crémeux"
       ],
       "temps_minutes": 75,
@@ -7198,79 +7059,71 @@
       "portions": 6,
       "ingredients": [
         {
+          "quantite": 400,
+          "unite": "g",
+          "ingredient": "Fromage blanc",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
+          "ingredient": "Biscuits",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
         },
         {
-          "quantite": 80,
-          "unite": "g",
-          "ingredient": "Sucre",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
-        },
-        {
-          "quantite": 70,
+          "quantite": 45,
           "unite": "g",
           "ingredient": "Beurre",
           "type_stock": "basique",
           "groupe_stock": "basique"
         },
         {
-          "quantite": 1,
+          "quantite": 2,
           "unite": "",
-          "ingredient": "Œuf",
-          "type_stock": "secondaire",
-          "groupe_stock": "autre"
+          "ingredient": "Œufs",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
-          "quantite": 100,
+          "quantite": 60,
           "unite": "g",
-          "ingredient": "Fromage frais",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
-        },
-        {
-          "quantite": 1,
-          "unite": "c. à café",
-          "ingredient": "Levure chimique",
+          "ingredient": "Sucre",
           "type_stock": "basique",
           "groupe_stock": "basique"
         }
       ],
       "etapes": [
-        "Préchauffer le four à 180 °C.",
-        "Mélanger les ingrédients secs puis incorporer les ingrédients humides.",
-        "Ajouter fromage frais sans trop travailler la pâte.",
-        "Cuire jusqu'à coloration puis laisser tiédir."
+        "Écraser les biscuits et les mélanger au beurre, puis tasser au fond du moule.",
+        "Mélanger fromage blanc, œufs et sucre.",
+        "Verser sur la base et cuire jusqu’à ce que le centre soit pris.",
+        "Laisser refroidir puis placer au frais."
       ],
       "nutrition_par_portion_estimee": {
-        "kcal": 440,
-        "proteines_g": 6,
-        "glucides_g": 43,
-        "lipides_g": 18
+        "kcal": 285,
+        "proteines_g": 10,
+        "glucides_g": 31,
+        "lipides_g": 13
       },
       "statut": "À tester",
       "favori": false,
       "note_personnelle": "",
       "version_simplifiee": {
         "etapes": [
-          "Préchauffer le four à 180 °C.",
-          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter fromage frais sans trop travailler la pâte.",
-          "Cuire jusqu'à coloration puis laisser tiédir."
+          "Écraser les biscuits et les mélanger au beurre, puis tasser au fond du moule.",
+          "Mélanger fromage blanc, œufs et sucre. Verser sur la base et cuire jusqu’à ce que le centre soit pris.",
+          "Laisser refroidir puis placer au frais."
         ],
         "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
       }
     },
     {
-      "id": "cheesecake-caramel",
-      "nom": "Cheesecake caramel",
+      "id": "cheesecake-au-fromage-blanc-et-caramel",
+      "nom": "Cheesecake au fromage blanc et caramel",
       "categorie": "Sucré",
       "sous_categorie": "Dessert",
       "tags": [
-        "cheesecake",
         "caramel"
       ],
       "temps_minutes": 80,
@@ -7278,68 +7131,68 @@
       "portions": 6,
       "ingredients": [
         {
+          "quantite": 400,
+          "unite": "g",
+          "ingredient": "Fromage blanc",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
           "quantite": 120,
           "unite": "g",
-          "ingredient": "Farine",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
+          "ingredient": "Biscuits",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
         },
         {
-          "quantite": 80,
-          "unite": "g",
-          "ingredient": "Sucre",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
-        },
-        {
-          "quantite": 70,
+          "quantite": 45,
           "unite": "g",
           "ingredient": "Beurre",
           "type_stock": "basique",
           "groupe_stock": "basique"
         },
         {
-          "quantite": 1,
+          "quantite": 2,
           "unite": "",
-          "ingredient": "Œuf",
-          "type_stock": "secondaire",
-          "groupe_stock": "autre"
+          "ingredient": "Œufs",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
         },
         {
-          "quantite": 100,
+          "quantite": 50,
           "unite": "g",
-          "ingredient": "Caramel",
+          "ingredient": "Sucre",
           "type_stock": "basique",
           "groupe_stock": "basique"
         },
         {
-          "quantite": 1,
-          "unite": "c. à café",
-          "ingredient": "Levure chimique",
+          "quantite": 60,
+          "unite": "g",
+          "ingredient": "Caramel",
           "type_stock": "basique",
           "groupe_stock": "basique"
         }
       ],
       "etapes": [
-        "Préchauffer le four à 180 °C.",
-        "Mélanger les ingrédients secs puis incorporer les ingrédients humides.",
-        "Ajouter caramel sans trop travailler la pâte.",
-        "Cuire jusqu'à coloration puis laisser tiédir."
+        "Préparer une base biscuit-beurre et la tasser.",
+        "Mélanger fromage blanc, œufs et sucre.",
+        "Cuire puis laisser refroidir.",
+        "Ajouter un filet de caramel au moment de servir."
       ],
       "nutrition_par_portion_estimee": {
-        "kcal": 470,
-        "proteines_g": 6,
-        "glucides_g": 43,
-        "lipides_g": 18
+        "kcal": 330,
+        "proteines_g": 10,
+        "glucides_g": 40,
+        "lipides_g": 14
       },
       "statut": "À tester",
       "favori": false,
       "note_personnelle": "",
       "version_simplifiee": {
         "etapes": [
-          "Préchauffer le four à 180 °C.",
-          "Mélanger les ingrédients secs puis incorporer les ingrédients humides. Ajouter caramel sans trop travailler la pâte.",
-          "Cuire jusqu'à coloration puis laisser tiédir."
+          "Préparer une base biscuit-beurre et la tasser.",
+          "Mélanger fromage blanc, œufs et sucre. Cuire puis laisser refroidir.",
+          "Ajouter un filet de caramel au moment de servir."
         ],
         "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
       }
@@ -8746,50 +8599,56 @@
       "note_personnelle": ""
     },
     {
-      "id": "yaourt-facon-cheesecake",
-      "nom": "Yaourt façon cheesecake",
+      "id": "dessert-au-fromage-blanc-facon-cheesecake",
+      "nom": "Dessert au fromage blanc façon cheesecake",
       "categorie": "Petit-déjeuner",
       "sous_categorie": "Bol",
       "tags": [
-        "protéiné",
-        "cheesecake"
+        "protéiné"
       ],
       "temps_minutes": 8,
       "difficulte": "Très facile",
       "portions": 1,
       "ingredients": [
         {
-          "quantite": 1,
-          "unite": "portion",
-          "ingredient": "Skyr",
+          "quantite": 200,
+          "unite": "g",
+          "ingredient": "Fromage blanc",
           "type_stock": "basique",
           "groupe_stock": "basique"
         },
         {
-          "quantite": 1,
-          "unite": "portion",
-          "ingredient": "Garniture adaptée",
-          "type_stock": "secondaire",
-          "groupe_stock": "autre"
+          "quantite": 2,
+          "unite": "",
+          "ingredient": "Biscuits",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
         },
         {
           "quantite": 1,
-          "unite": "pincée",
-          "ingredient": "Assaisonnement ou sucre selon la recette",
+          "unite": "c. à café",
+          "ingredient": "Sucre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 0.25,
+          "unite": "",
+          "ingredient": "Citron",
           "type_stock": "basique",
           "groupe_stock": "basique"
         }
       ],
       "etapes": [
-        "Préparer les ingrédients.",
-        "Assembler ou cuire selon la recette.",
-        "Servir immédiatement."
+        "Émietter un biscuit au fond du bol.",
+        "Mélanger le fromage blanc avec sucre et citron.",
+        "Ajouter le reste du biscuit au-dessus."
       ],
       "nutrition_par_portion_estimee": {
-        "kcal": 260,
-        "proteines_g": 22,
-        "glucides_g": 40,
-        "lipides_g": 12
+        "kcal": 250,
+        "proteines_g": 17,
+        "glucides_g": 34,
+        "lipides_g": 5
       },
       "statut": "À tester",
       "favori": false,
@@ -9046,8 +8905,8 @@
       "note_personnelle": ""
     },
     {
-      "id": "omelette-jambon-fromage",
-      "nom": "Omelette jambon-fromage",
+      "id": "omelette-jambon-oignon",
+      "nom": "Omelette jambon-oignon",
       "categorie": "Petit-déjeuner",
       "sous_categorie": "Œufs",
       "tags": [
@@ -9059,37 +8918,51 @@
       "portions": 1,
       "ingredients": [
         {
-          "quantite": 1,
-          "unite": "portion",
+          "quantite": 3,
+          "unite": "",
           "ingredient": "Œufs",
-          "type_stock": "secondaire",
-          "groupe_stock": "autre"
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
+        },
+        {
+          "quantite": 100,
+          "unite": "g",
+          "ingredient": "Jambon",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
+        },
+        {
+          "quantite": 0.5,
+          "unite": "",
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 1,
-          "unite": "portion",
-          "ingredient": "Garniture adaptée",
-          "type_stock": "secondaire",
-          "groupe_stock": "autre"
+          "unite": "c. à café",
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 1,
           "unite": "pincée",
-          "ingredient": "Assaisonnement ou sucre selon la recette",
+          "ingredient": "Poivre",
           "type_stock": "basique",
           "groupe_stock": "basique"
         }
       ],
       "etapes": [
-        "Préparer les ingrédients.",
-        "Assembler ou cuire selon la recette.",
-        "Servir immédiatement."
+        "Faire revenir l’oignon puis le jambon.",
+        "Battre les œufs et les verser dans la poêle.",
+        "Cuire à feu doux, plier et servir."
       ],
       "nutrition_par_portion_estimee": {
-        "kcal": 410,
-        "proteines_g": 31,
-        "glucides_g": 40,
-        "lipides_g": 12
+        "kcal": 385,
+        "proteines_g": 34,
+        "glucides_g": 7,
+        "lipides_g": 24
       },
       "statut": "À tester",
       "favori": false,
@@ -9797,8 +9670,8 @@
       "note_personnelle": ""
     },
     {
-      "id": "sauce-creme-parmesan",
-      "nom": "Sauce crème-parmesan",
+      "id": "sauce-creme-ail",
+      "nom": "Sauce crème-ail",
       "categorie": "Sauce & base",
       "sous_categorie": "Crème",
       "tags": [
@@ -9832,9 +9705,9 @@
         }
       ],
       "etapes": [
-        "Préparer les ingrédients.",
-        "Faire chauffer ou mixer selon la sauce.",
-        "Rectifier la texture et l'assaisonnement."
+        "Faire chauffer doucement la crème.",
+        "Ajouter ail, poivre et éventuellement des herbes.",
+        "Laisser épaissir quelques minutes."
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 120,
@@ -10597,12 +10470,11 @@
       "note_personnelle": ""
     },
     {
-      "id": "mini-quesadilla-fromage",
-      "nom": "Mini quesadilla fromage",
+      "id": "mini-quesadilla-poulet-tomate",
+      "nom": "Mini quesadilla poulet-tomate",
       "categorie": "Snack",
       "sous_categorie": "Salé",
       "tags": [
-        "fromage",
         "rapide"
       ],
       "temps_minutes": 10,
@@ -10611,36 +10483,42 @@
       "ingredients": [
         {
           "quantite": 1,
-          "unite": "portion",
+          "unite": "",
           "ingredient": "Tortilla",
           "type_stock": "principal",
           "groupe_stock": "feculent"
         },
         {
-          "quantite": 1,
-          "unite": "portion",
-          "ingredient": "Garniture",
-          "type_stock": "secondaire",
-          "groupe_stock": "autre"
+          "quantite": 80,
+          "unite": "g",
+          "ingredient": "Poulet",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
+        },
+        {
+          "quantite": 0.5,
+          "unite": "",
+          "ingredient": "Tomate",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 1,
-          "unite": "pincée",
-          "ingredient": "Assaisonnement",
-          "type_stock": "secondaire",
-          "groupe_stock": "autre"
+          "unite": "c. à café",
+          "ingredient": "Sauce tomate",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
-        "Préparer les ingrédients.",
-        "Assembler ou cuire rapidement.",
-        "Servir."
+        "Garnir la tortilla de poulet, tomate et sauce tomate.",
+        "Replier et faire dorer des deux côtés."
       ],
       "nutrition_par_portion_estimee": {
-        "kcal": 300,
-        "proteines_g": 13,
-        "glucides_g": 28,
-        "lipides_g": 8
+        "kcal": 290,
+        "proteines_g": 25,
+        "glucides_g": 31,
+        "lipides_g": 7
       },
       "statut": "À tester",
       "favori": false,
@@ -11297,26 +11175,19 @@
           "ingredient": "Crème",
           "type_stock": "basique",
           "groupe_stock": "basique"
-        },
-        {
-          "quantite": 50,
-          "unite": "g",
-          "ingredient": "Parmesan",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
         }
       ],
       "etapes": [
         "Déposer riz, courgettes et oignon dans un plat.",
         "Ajouter le poulet en morceaux et le bouillon.",
         "Cuire environ 35 minutes à 190 °C.",
-        "Ajouter crème et parmesan en fin de cuisson."
+        "Ajouter crème en fin de cuisson."
       ],
       "nutrition_par_portion_estimee": {
-        "kcal": 620,
-        "proteines_g": 39,
+        "kcal": 566,
+        "proteines_g": 34,
         "glucides_g": 72,
-        "lipides_g": 19
+        "lipides_g": 15
       },
       "statut": "À tester",
       "favori": false,
@@ -11325,7 +11196,7 @@
         "etapes": [
           "Déposer riz, courgettes et oignon dans un plat.",
           "Ajouter le poulet en morceaux et le bouillon. Cuire environ 35 minutes à 190 °C.",
-          "Ajouter crème et parmesan en fin de cuisson."
+          "Ajouter crème en fin de cuisson."
         ],
         "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
       }
@@ -11381,13 +11252,6 @@
           "groupe_stock": "basique"
         },
         {
-          "quantite": 50,
-          "unite": "g",
-          "ingredient": "Parmesan",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
-        },
-        {
           "quantite": 20,
           "unite": "g",
           "ingredient": "Beurre",
@@ -11399,13 +11263,13 @@
         "Faire revenir l'oignon et nacrer le riz.",
         "Ajouter le bouillon progressivement.",
         "Ajouter petits pois et jambon en fin de cuisson.",
-        "Hors du feu, incorporer beurre et parmesan."
+        "Hors du feu, incorporer beurre."
       ],
       "nutrition_par_portion_estimee": {
-        "kcal": 540,
-        "proteines_g": 25,
-        "glucides_g": 73,
-        "lipides_g": 16
+        "kcal": 486,
+        "proteines_g": 20,
+        "glucides_g": 72,
+        "lipides_g": 12
       },
       "statut": "À tester",
       "favori": false,
@@ -11414,7 +11278,7 @@
         "etapes": [
           "Faire revenir l'oignon et nacrer le riz.",
           "Ajouter le bouillon progressivement. Ajouter petits pois et jambon en fin de cuisson.",
-          "Hors du feu, incorporer beurre et parmesan."
+          "Hors du feu, incorporer beurre."
         ],
         "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
       }
@@ -11468,26 +11332,19 @@
           "ingredient": "Crème",
           "type_stock": "basique",
           "groupe_stock": "basique"
-        },
-        {
-          "quantite": 30,
-          "unite": "g",
-          "ingredient": "Parmesan",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
         }
       ],
       "etapes": [
         "Cuire le riz.",
         "Dorer le poulet puis ajouter champignons et oignon.",
-        "Ajouter la crème et le parmesan.",
+        "Ajouter la crème.",
         "Mélanger avec le riz et servir."
       ],
       "nutrition_par_portion_estimee": {
-        "kcal": 650,
-        "proteines_g": 45,
-        "glucides_g": 69,
-        "lipides_g": 22
+        "kcal": 585,
+        "proteines_g": 39,
+        "glucides_g": 68,
+        "lipides_g": 18
       },
       "statut": "À tester",
       "favori": false,
@@ -11495,7 +11352,7 @@
       "version_simplifiee": {
         "etapes": [
           "Cuire le riz.",
-          "Dorer le poulet puis ajouter champignons et oignon. Ajouter la crème et le parmesan.",
+          "Dorer le poulet puis ajouter champignons et oignon. Ajouter la crème.",
           "Mélanger avec le riz et servir."
         ],
         "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
@@ -11550,13 +11407,6 @@
           "ingredient": "Sauce tomate",
           "type_stock": "basique",
           "groupe_stock": "basique"
-        },
-        {
-          "quantite": 60,
-          "unite": "g",
-          "ingredient": "Fromage râpé",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -11566,10 +11416,10 @@
         "Parsemer de fromage et cuire 30 minutes à 190 °C."
       ],
       "nutrition_par_portion_estimee": {
-        "kcal": 560,
-        "proteines_g": 31,
+        "kcal": 503,
+        "proteines_g": 27,
         "glucides_g": 65,
-        "lipides_g": 19
+        "lipides_g": 14
       },
       "statut": "À tester",
       "favori": false,
@@ -12076,14 +11926,13 @@
       }
     },
     {
-      "id": "pommes-de-terre-farcies-jambon-fromage",
-      "nom": "Pommes de terre farcies jambon-fromage",
+      "id": "pommes-de-terre-farcies-jambon-creme",
+      "nom": "Pommes de terre farcies jambon-crème",
       "categorie": "Salé",
       "sous_categorie": "Four",
       "tags": [
         "pommes-de-terre",
         "jambon",
-        "fromage",
         "gourmand"
       ],
       "temps_minutes": 55,
@@ -12113,13 +11962,6 @@
         },
         {
           "quantite": 100,
-          "unite": "g",
-          "ingredient": "Fromage râpé",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
-        },
-        {
-          "quantite": 100,
           "unite": "ml",
           "ingredient": "Crème",
           "type_stock": "basique",
@@ -12127,16 +11969,16 @@
         }
       ],
       "etapes": [
-        "Cuire les pommes de terre au four jusqu'à tendreté.",
-        "Les couper et retirer une partie de la chair.",
-        "Mélanger chair, jambon, oignon, crème et fromage.",
-        "Farcir et gratiner 10 minutes."
+        "Cuire les pommes de terre au four jusqu’à tendreté.",
+        "Les ouvrir et retirer un peu de chair.",
+        "Mélanger chair, jambon, oignon et crème.",
+        "Farcir puis remettre 10 minutes au four."
       ],
       "nutrition_par_portion_estimee": {
-        "kcal": 620,
-        "proteines_g": 29,
-        "glucides_g": 60,
-        "lipides_g": 29
+        "kcal": 505,
+        "proteines_g": 23,
+        "glucides_g": 58,
+        "lipides_g": 19
       },
       "statut": "À tester",
       "favori": false,
@@ -12144,7 +11986,7 @@
       "version_simplifiee": {
         "etapes": [
           "Cuire les pommes de terre au four jusqu'à tendreté.",
-          "Les couper et retirer une partie de la chair. Mélanger chair, jambon, oignon, crème et fromage.",
+          "Les couper et retirer une partie de la chair. Mélanger chair, jambon, oignon, crème.",
           "Farcir et gratiner 10 minutes."
         ],
         "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
@@ -13326,13 +13168,6 @@
           "ingredient": "Sauce tomate",
           "type_stock": "basique",
           "groupe_stock": "basique"
-        },
-        {
-          "quantite": 60,
-          "unite": "g",
-          "ingredient": "Fromage râpé",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -13342,10 +13177,10 @@
         "Parsemer de fromage et cuire 30 minutes à 190 °C."
       ],
       "nutrition_par_portion_estimee": {
-        "kcal": 520,
-        "proteines_g": 35,
+        "kcal": 463,
+        "proteines_g": 31,
         "glucides_g": 52,
-        "lipides_g": 18
+        "lipides_g": 14
       },
       "statut": "À tester",
       "favori": false,
@@ -13670,13 +13505,6 @@
           "groupe_stock": "basique"
         },
         {
-          "quantite": 40,
-          "unite": "g",
-          "ingredient": "Parmesan",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
-        },
-        {
           "quantite": 100,
           "unite": "ml",
           "ingredient": "Crème",
@@ -13688,13 +13516,13 @@
         "Cuire la polenta dans le bouillon.",
         "Dorer poulet, champignons et oignon.",
         "Ajouter la crème à la poêlée.",
-        "Incorporer le parmesan à la polenta et servir ensemble."
+        "Mélanger la polenta jusqu’à ce qu’elle soit bien crémeuse et servir."
       ],
       "nutrition_par_portion_estimee": {
-        "kcal": 650,
-        "proteines_g": 44,
-        "glucides_g": 58,
-        "lipides_g": 27
+        "kcal": 564,
+        "proteines_g": 36,
+        "glucides_g": 57,
+        "lipides_g": 21
       },
       "statut": "À tester",
       "favori": false,
@@ -13703,7 +13531,7 @@
         "etapes": [
           "Cuire la polenta dans le bouillon.",
           "Dorer poulet, champignons et oignon. Ajouter la crème à la poêlée.",
-          "Incorporer le parmesan à la polenta et servir ensemble."
+          "Mélanger la polenta jusqu’à ce qu’elle soit bien crémeuse et servir."
         ],
         "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
       }
@@ -13757,26 +13585,19 @@
           "ingredient": "Sauce tomate",
           "type_stock": "basique",
           "groupe_stock": "basique"
-        },
-        {
-          "quantite": 40,
-          "unite": "g",
-          "ingredient": "Parmesan",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
         }
       ],
       "etapes": [
         "Cuire la polenta.",
         "Faire revenir bœuf, carotte et oignon.",
         "Ajouter la sauce tomate et mijoter 15 minutes.",
-        "Servir la bolognaise sur la polenta avec parmesan."
+        "Servir la bolognaise sur la polenta."
       ],
       "nutrition_par_portion_estimee": {
-        "kcal": 610,
-        "proteines_g": 34,
-        "glucides_g": 62,
-        "lipides_g": 23
+        "kcal": 553,
+        "proteines_g": 29,
+        "glucides_g": 61,
+        "lipides_g": 19
       },
       "statut": "À tester",
       "favori": false,
@@ -13785,20 +13606,19 @@
         "etapes": [
           "Cuire la polenta.",
           "Faire revenir bœuf, carotte et oignon. Ajouter la sauce tomate et mijoter 15 minutes.",
-          "Servir la bolognaise sur la polenta avec parmesan."
+          "Servir la bolognaise sur la polenta."
         ],
         "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
       }
     },
     {
-      "id": "polenta-legumes-rotis-feta",
-      "nom": "Polenta légumes rôtis-feta",
+      "id": "polenta-aux-legumes-rotis",
+      "nom": "Polenta aux légumes rôtis",
       "categorie": "Salé",
       "sous_categorie": "Polenta",
       "tags": [
         "polenta",
         "légumes",
-        "feta",
         "végétarien"
       ],
       "temps_minutes": 40,
@@ -13834,13 +13654,6 @@
           "groupe_stock": "legume"
         },
         {
-          "quantite": 120,
-          "unite": "g",
-          "ingredient": "Feta",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
-        },
-        {
           "quantite": 1,
           "unite": "c. à soupe",
           "ingredient": "Huile d'olive",
@@ -13849,16 +13662,15 @@
         }
       ],
       "etapes": [
-        "Rôtir les légumes au four.",
+        "Rôtir les légumes au four avec un peu d’huile.",
         "Cuire la polenta.",
-        "Émietter la feta.",
-        "Servir les légumes et la feta sur la polenta."
+        "Servir les légumes rôtis sur la polenta."
       ],
       "nutrition_par_portion_estimee": {
-        "kcal": 520,
-        "proteines_g": 18,
-        "glucides_g": 58,
-        "lipides_g": 23
+        "kcal": 414,
+        "proteines_g": 12,
+        "glucides_g": 56,
+        "lipides_g": 15
       },
       "statut": "À tester",
       "favori": false,
@@ -13866,8 +13678,8 @@
       "version_simplifiee": {
         "etapes": [
           "Rôtir les légumes au four.",
-          "Cuire la polenta. Émietter la feta.",
-          "Servir les légumes et la feta sur la polenta."
+          "Cuire la polenta.",
+          "Servir les légumes sur la polenta."
         ],
         "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
       }
@@ -13921,26 +13733,19 @@
           "ingredient": "Sauce tomate",
           "type_stock": "basique",
           "groupe_stock": "basique"
-        },
-        {
-          "quantite": 30,
-          "unite": "g",
-          "ingredient": "Parmesan",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
         }
       ],
       "etapes": [
         "Dorer les saucisses.",
         "Ajouter oignon et poivron, puis la sauce tomate.",
         "Cuire la polenta à part.",
-        "Servir la sauce sur la polenta avec parmesan."
+        "Servir la sauce sur la polenta."
       ],
       "nutrition_par_portion_estimee": {
-        "kcal": 680,
-        "proteines_g": 29,
+        "kcal": 637,
+        "proteines_g": 25,
         "glucides_g": 60,
-        "lipides_g": 34
+        "lipides_g": 31
       },
       "statut": "À tester",
       "favori": false,
@@ -13949,7 +13754,7 @@
         "etapes": [
           "Dorer les saucisses.",
           "Ajouter oignon et poivron, puis la sauce tomate. Cuire la polenta à part.",
-          "Servir la sauce sur la polenta avec parmesan."
+          "Servir la sauce sur la polenta."
         ],
         "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
       }
@@ -13991,13 +13796,6 @@
           "groupe_stock": "legume"
         },
         {
-          "quantite": 40,
-          "unite": "g",
-          "ingredient": "Parmesan",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
-        },
-        {
           "quantite": 100,
           "unite": "ml",
           "ingredient": "Crème",
@@ -14012,10 +13810,10 @@
         "Servir ensemble."
       ],
       "nutrition_par_portion_estimee": {
-        "kcal": 670,
-        "proteines_g": 39,
-        "glucides_g": 55,
-        "lipides_g": 32
+        "kcal": 584,
+        "proteines_g": 31,
+        "glucides_g": 54,
+        "lipides_g": 26
       },
       "statut": "À tester",
       "favori": false,
@@ -14078,13 +13876,6 @@
           "ingredient": "Paprika",
           "type_stock": "basique",
           "groupe_stock": "basique"
-        },
-        {
-          "quantite": 80,
-          "unite": "g",
-          "ingredient": "Fromage râpé",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
         }
       ],
       "etapes": [
@@ -14094,10 +13885,10 @@
         "Garnir et rouler."
       ],
       "nutrition_par_portion_estimee": {
-        "kcal": 590,
-        "proteines_g": 37,
-        "glucides_g": 57,
-        "lipides_g": 22
+        "kcal": 489,
+        "proteines_g": 30,
+        "glucides_g": 56,
+        "lipides_g": 14
       },
       "statut": "À tester",
       "favori": false,
@@ -14119,8 +13910,7 @@
       "tags": [
         "tortilla",
         "bœuf",
-        "poivron",
-        "fromage"
+        "poivron"
       ],
       "temps_minutes": 25,
       "difficulte": "Facile",
@@ -14157,13 +13947,6 @@
         {
           "quantite": 150,
           "unite": "g",
-          "ingredient": "Fromage râpé",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
-        },
-        {
-          "quantite": 150,
-          "unite": "g",
           "ingredient": "Sauce tomate",
           "type_stock": "basique",
           "groupe_stock": "basique"
@@ -14172,14 +13955,14 @@
       "etapes": [
         "Faire revenir bœuf, poivron et oignon.",
         "Ajouter un peu de sauce tomate.",
-        "Garnir les tortillas de viande et fromage.",
+        "Garnir les tortillas de viande.",
         "Plier et dorer à la poêle."
       ],
       "nutrition_par_portion_estimee": {
-        "kcal": 660,
-        "proteines_g": 37,
-        "glucides_g": 53,
-        "lipides_g": 31
+        "kcal": 470,
+        "proteines_g": 24,
+        "glucides_g": 52,
+        "lipides_g": 16
       },
       "statut": "À tester",
       "favori": false,
@@ -14187,7 +13970,7 @@
       "version_simplifiee": {
         "etapes": [
           "Faire revenir bœuf, poivron et oignon.",
-          "Ajouter un peu de sauce tomate. Garnir les tortillas de viande et fromage.",
+          "Ajouter un peu de sauce tomate. Garnir les tortillas de viande.",
           "Plier et dorer à la poêle."
         ],
         "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
@@ -14239,7 +14022,7 @@
         {
           "quantite": 100,
           "unite": "g",
-          "ingredient": "Fromage frais",
+          "ingredient": "Fromage blanc",
           "type_stock": "basique",
           "groupe_stock": "basique"
         },
@@ -14252,23 +14035,23 @@
         }
       ],
       "etapes": [
-        "Tartiner les tortillas de fromage frais.",
+        "Tartiner les tortillas d’un peu de sauce citronnée au fromage blanc.",
         "Ajouter saumon, avocat et concombre.",
         "Arroser de citron.",
         "Rouler et couper."
       ],
       "nutrition_par_portion_estimee": {
-        "kcal": 560,
-        "proteines_g": 28,
-        "glucides_g": 47,
-        "lipides_g": 29
+        "kcal": 435,
+        "proteines_g": 25,
+        "glucides_g": 45,
+        "lipides_g": 17
       },
       "statut": "À tester",
       "favori": false,
       "note_personnelle": "",
       "version_simplifiee": {
         "etapes": [
-          "Tartiner les tortillas de fromage frais.",
+          "Tartiner les tortillas d’un peu de sauce citronnée au fromage blanc.",
           "Ajouter saumon, avocat et concombre. Arroser de citron.",
           "Rouler et couper."
         ],
@@ -14365,15 +14148,14 @@
       }
     },
     {
-      "id": "bruschettas-buf-tomate-mozzarella",
-      "nom": "Bruschettas bœuf-tomate-mozzarella",
+      "id": "bruschettas-buf-tomate",
+      "nom": "Bruschettas bœuf-tomate",
       "categorie": "Salé",
       "sous_categorie": "Tartine",
       "tags": [
         "pain",
         "bœuf",
-        "tomate",
-        "mozzarella"
+        "tomate"
       ],
       "temps_minutes": 25,
       "difficulte": "Facile",
@@ -14408,13 +14190,6 @@
           "groupe_stock": "legume"
         },
         {
-          "quantite": 120,
-          "unite": "g",
-          "ingredient": "Mozzarella",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
-        },
-        {
           "quantite": 1,
           "unite": "c. à soupe",
           "ingredient": "Huile d'olive",
@@ -14424,15 +14199,15 @@
       ],
       "etapes": [
         "Griller légèrement le pain.",
-        "Faire revenir le bœuf et l'oignon.",
-        "Ajouter les tomates sur le pain, puis le bœuf et la mozzarella.",
+        "Faire revenir le bœuf et l’oignon.",
+        "Ajouter tomate puis bœuf sur le pain.",
         "Passer quelques minutes sous le gril."
       ],
       "nutrition_par_portion_estimee": {
-        "kcal": 590,
-        "proteines_g": 34,
-        "glucides_g": 44,
-        "lipides_g": 29
+        "kcal": 422,
+        "proteines_g": 17,
+        "glucides_g": 42,
+        "lipides_g": 19
       },
       "statut": "À tester",
       "favori": false,
@@ -14440,7 +14215,7 @@
       "version_simplifiee": {
         "etapes": [
           "Griller légèrement le pain.",
-          "Faire revenir le bœuf et l'oignon. Ajouter les tomates sur le pain, puis le bœuf et la mozzarella.",
+          "Faire revenir le bœuf et l'oignon. Ajouter les tomates sur le pain, puis le bœuf.",
           "Passer quelques minutes sous le gril."
         ],
         "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
@@ -14844,26 +14619,19 @@
           "ingredient": "Crème",
           "type_stock": "basique",
           "groupe_stock": "basique"
-        },
-        {
-          "quantite": 40,
-          "unite": "g",
-          "ingredient": "Parmesan",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
         }
       ],
       "etapes": [
         "Faire revenir l'oignon, les champignons et le poulet.",
         "Ajouter l'orge et le bouillon.",
         "Cuire doucement jusqu'à tendreté.",
-        "Ajouter crème et parmesan."
+        "Ajouter crème."
       ],
       "nutrition_par_portion_estimee": {
-        "kcal": 620,
-        "proteines_g": 38,
-        "glucides_g": 65,
-        "lipides_g": 21
+        "kcal": 563,
+        "proteines_g": 33,
+        "glucides_g": 64,
+        "lipides_g": 17
       },
       "statut": "À tester",
       "favori": false,
@@ -14872,20 +14640,19 @@
         "etapes": [
           "Faire revenir l'oignon, les champignons et le poulet.",
           "Ajouter l'orge et le bouillon. Cuire doucement jusqu'à tendreté.",
-          "Ajouter crème et parmesan."
+          "Ajouter crème."
         ],
         "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
       }
     },
     {
-      "id": "pois-chiches-rotis-patate-douce-et-feta",
-      "nom": "Pois chiches rôtis, patate douce et feta",
+      "id": "pois-chiches-rotis-et-patate-douce",
+      "nom": "Pois chiches rôtis et patate douce",
       "categorie": "Salé",
       "sous_categorie": "Bowl",
       "tags": [
         "patate-douce",
         "pois-chiches",
-        "feta",
         "végétarien"
       ],
       "temps_minutes": 40,
@@ -14914,13 +14681,6 @@
           "groupe_stock": "legume"
         },
         {
-          "quantite": 120,
-          "unite": "g",
-          "ingredient": "Feta",
-          "type_stock": "basique",
-          "groupe_stock": "basique"
-        },
-        {
           "quantite": 1,
           "unite": "c. à soupe",
           "ingredient": "Huile",
@@ -14937,15 +14697,13 @@
       ],
       "etapes": [
         "Rôtir patate douce, pois chiches et poivron avec huile et paprika.",
-        "Émietter la feta.",
-        "Répartir dans des bols.",
-        "Ajouter la feta au moment de servir."
+        "Répartir dans des bols et servir bien chaud."
       ],
       "nutrition_par_portion_estimee": {
-        "kcal": 560,
-        "proteines_g": 19,
-        "glucides_g": 71,
-        "lipides_g": 22
+        "kcal": 454,
+        "proteines_g": 13,
+        "glucides_g": 69,
+        "lipides_g": 14
       },
       "statut": "À tester",
       "favori": false,
@@ -14953,8 +14711,7 @@
       "version_simplifiee": {
         "etapes": [
           "Rôtir patate douce, pois chiches et poivron avec huile et paprika.",
-          "Émietter la feta. Répartir dans des bols.",
-          "Ajouter la feta au moment de servir."
+          "Répartir dans des bols."
         ],
         "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
       }
@@ -15051,9 +14808,9 @@
       "note_personnelle": "Version personnelle : pomme de terre, tomate et oignon, sans lardons.",
       "version_simplifiee": {
         "etapes": [
-          "Faire revenir l'oignon, puis ajouter les tomates et laisser compoter.",
-          "Ajouter farine et eau, puis les pommes de terre.",
-          "Couvrir et mijoter 20 à 25 minutes jusqu'à ce que les pommes de terre soient fondantes."
+          "Éplucher les pommes de terre et les couper en morceaux. Émincer l'oignon et couper les tomates.",
+          "Faire revenir l'oignon dans l'huile, puis ajouter les tomates et laisser compoter quelques minutes. Saupoudrer de farine, mélanger, puis verser l'eau progressivement.",
+          "Ajouter les pommes de terre, couvrir et laisser mijoter environ 20 à 25 minutes, jusqu'à ce qu'elles soient fondantes et la sauce bien liée."
         ],
         "note": "Version simple pensée pour limiter les manipulations sans changer le plat."
       }
@@ -15144,9 +14901,9 @@
       "note_personnelle": "Recette pour une personne. L'escalope peut être de poulet ou de veau.",
       "version_simplifiee": {
         "etapes": [
-          "Lancer les frites à l'air fryer.",
-          "Faire revenir poivron puis escalope dans la même poêle.",
-          "Ajouter la crème, laisser épaissir et servir avec les frites."
+          "Couper les pommes de terre en frites, les huiler légèrement et les cuire à l'air fryer jusqu'à ce qu'elles soient dorées.",
+          "Couper le poivron en lanières et le faire revenir à la poêle. Cuire l'escalope dans la même poêle, puis la réserver quelques instants. Ajouter la crème aux poivrons, poivrer, laisser épaissir légèrement puis remettre l'escalope dans la sauce.",
+          "Servir l'escalope nappée de crème aux poivrons avec les frites."
         ],
         "note": "Version simple pensée pour limiter les manipulations sans changer le plat."
       }
@@ -15236,9 +14993,9 @@
       "note_personnelle": "La version avec l'œuf au plat directement sur la patate douce.",
       "version_simplifiee": {
         "etapes": [
-          "Faire dorer ensemble les dés de patate douce et l'oignon.",
-          "Ajouter l'ail en fin de cuisson.",
-          "Déposer un œuf au plat sur la poêlée."
+          "Couper la patate douce en petits dés et émincer l'oignon.",
+          "Faire revenir patate douce et oignon dans l'huile à feu moyen jusqu'à ce que les dés soient tendres et dorés. Ajouter l'ail haché en fin de cuisson et mélanger une minute.",
+          "Cuire l'œuf au plat séparément et le déposer sur la poêlée juste avant de servir."
         ],
         "note": "Version simple pensée pour limiter les manipulations sans changer le plat."
       }
@@ -15990,6 +15747,75 @@
           "Laisser prendre avant de découper en barres."
         ],
         "note": "Même recette et mêmes ingrédients : les étapes sont simplement regroupées pour aller à l’essentiel."
+      }
+    },
+    {
+      "id": "omelette-aux-lardons",
+      "nom": "Omelette aux lardons",
+      "categorie": "Salé",
+      "sous_categorie": "Œufs",
+      "tags": [
+        "personnel",
+        "omelette",
+        "lardons",
+        "œufs",
+        "rapide",
+        "protéiné"
+      ],
+      "temps_minutes": 12,
+      "difficulte": "Très facile",
+      "portions": 1,
+      "ingredients": [
+        {
+          "quantite": 3,
+          "unite": "",
+          "ingredient": "Œufs",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
+        },
+        {
+          "quantite": 70,
+          "unite": "g",
+          "ingredient": "Lardons",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
+        },
+        {
+          "quantite": 1,
+          "unite": "c. à café",
+          "ingredient": "Beurre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 1,
+          "unite": "pincée",
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        }
+      ],
+      "etapes": [
+        "Faire revenir les lardons à la poêle et retirer l’excès de gras si nécessaire.",
+        "Battre les œufs avec un peu de poivre.",
+        "Verser sur les lardons et cuire à feu moyen-doux jusqu’à la cuisson souhaitée, puis plier l’omelette."
+      ],
+      "nutrition_par_portion_estimee": {
+        "kcal": 450,
+        "proteines_g": 31,
+        "glucides_g": 2,
+        "lipides_g": 35
+      },
+      "statut": "À tester",
+      "favori": false,
+      "note_personnelle": "Sans fromage.",
+      "version_simplifiee": {
+        "etapes": [
+          "Faire dorer les lardons.",
+          "Verser les œufs battus et cuire doucement.",
+          "Plier et servir."
+        ],
+        "note": "Version simple en 3 étapes."
       }
     }
   ]
