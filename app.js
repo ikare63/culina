@@ -364,11 +364,53 @@ function armNearestReminder(){
   if(reminderTimer)clearTimeout(reminderTimer);const next=state.planned.filter(p=>!p.notified&&p.at>Date.now()).sort((a,b)=>a.at-b.at)[0];if(!next)return;
   const delay=Math.min(2147480000,Math.max(500,next.at-Date.now()));reminderTimer=setTimeout(()=>{checkRecipeReminders();armNearestReminder()},delay)
 }
+function capMealTypeForNow(date=new Date()){
+  const h=date.getHours();
+  if(h<10)return 'breakfast';
+  if(h<15)return 'lunch';
+  if(h<18)return 'snack';
+  return 'dinner';
+}
+function recipeComponentsForCap(r){
+  const portions=Math.max(1,Number(r.portions)||1);
+  return (r.ingredients||[])
+    .filter(i=>i&&i.ingredient&&i.type_stock==='principal')
+    .map(i=>{
+      const q=Number(i.quantite);
+      return {
+        name:i.ingredient,
+        amount:Number.isFinite(q)?Math.round((q/portions)*10)/10:null,
+        unit:i.unite||'pièce',
+        group:i.groupe_stock||null
+      };
+    });
+}
+function proposeRecipeToCap(r){
+  if(!window.LenaicBus||!r)return null;
+  const n=r.nutrition_par_portion_estimee||{};
+  if(n.kcal==null&&n.proteines_g==null&&n.glucides_g==null&&n.lipides_g==null)return null;
+  return LenaicBus.publish('meal.proposed',{
+    name:r.nom,
+    recipeId:r.id,
+    mealType:capMealTypeForNow(),
+    portions:1,
+    calories:Number(n.kcal)||0,
+    protein:Number(n.proteines_g)||0,
+    carbs:Number(n.glucides_g)||0,
+    fat:Number(n.lipides_g)||0,
+    components:recipeComponentsForCap(r),
+    eatenAt:new Date().toISOString(),
+    nutritionBasis:'1 portion',
+    sourceLabel:'Culina'
+  },{source:'culina',target:'cap'});
+}
+
 function markCooked(id){
   const r=state.recipes.find(x=>x.id===id);if(!r)return;
   state.history.unshift({id:r.id,nom:r.nom,at:Date.now()});state.history=state.history.slice(0,60);saveHistory();
   state.prefs[id]={...pref(r),statut:statusOf(r)==="À tester"?"Validée":statusOf(r)};savePrefs();
-  state.pendingCooked=r.id;document.getElementById("cookedDialogText").textContent=`Tu viens d’enregistrer « ${r.nom} ». Culina peut aussi mémoriser une portion restante.`;
+  const capEvent=proposeRecipeToCap(r);
+  state.pendingCooked=r.id;document.getElementById("cookedDialogText").textContent=`Tu viens d’enregistrer « ${r.nom} ». ${capEvent?'CAP te proposera aussi d’ajouter 1 portion à ta journée. ':''}Culina peut mémoriser une portion restante.`;
   document.getElementById("detailDialog").close();document.getElementById("cookedDialog").showModal();renderAll();
 }
 function finishCookedNoLeftover(){state.pendingCooked=null;document.getElementById("cookedDialog").close();toast("Repas mémorisé")}
