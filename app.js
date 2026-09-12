@@ -27,6 +27,9 @@ const state={
   pendingCooked:null
 };
 
+const CULINA_SNAPSHOT_KEY="lenaic-culina-snapshot-v1";
+const CAP_SNAPSHOT_KEY="lenaic-cap-snapshot-v1";
+
 const categories=["Toutes","Salé","Sucré","Petit-déjeuner","Snack","Boisson","Sauce & base"];
 const emoji={"Salé":"🍝","Sucré":"🍪","Petit-déjeuner":"🥞","Boisson":"☕","Sauce & base":"🥣","Snack":"🍿"};
 const days=["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"];
@@ -64,15 +67,82 @@ const groupLabels={
 function normalize(s){return(s||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g," ").trim()}
 function esc(s){return String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"}[m]))}
 function savePrefs(){localStorage.setItem("culina-prefs",JSON.stringify(state.prefs))}
-function saveStock(){localStorage.setItem("culina-stock-v1",JSON.stringify(state.stock))}
+function saveStock(){localStorage.setItem("culina-stock-v1",JSON.stringify(state.stock));publishCulinaSnapshot()}
 function saveShopping(){localStorage.setItem("culina-shopping-v1",JSON.stringify(state.shopping))}
 function saveHistory(){localStorage.setItem("culina-history-v1",JSON.stringify(state.history))}
 function saveLeftovers(){localStorage.setItem("culina-leftovers-v1",JSON.stringify(state.leftovers))}
 function saveWeek(){localStorage.setItem("culina-week-v1",JSON.stringify(state.weekPlan))}
-function savePlanned(){localStorage.setItem("culina-planned-v1",JSON.stringify(state.planned))}
+function savePlanned(){localStorage.setItem("culina-planned-v1",JSON.stringify(state.planned));publishCulinaSnapshot()}
 function localDateTimeValue(ts){const d=new Date(ts);const p=n=>String(n).padStart(2,"0");return `${d.getFullYear()}-${p(d.getMonth()+1)}-${p(d.getDate())}T${p(d.getHours())}:${p(d.getMinutes())}`}
 function defaultPlanValue(){const d=new Date();if(d.getHours()<19){d.setHours(19,0,0,0)}else{d.setDate(d.getDate()+1);d.setHours(19,0,0,0)}return localDateTimeValue(d.getTime())}
 function formatPlannedDate(ts){return new Date(ts).toLocaleString("fr-FR",{weekday:"short",day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"})}
+function planMealType(at){
+  const h=new Date(at).getHours();
+  if(h<10)return "breakfast";
+  if(h<15)return "lunch";
+  if(h<18)return "snack";
+  return "dinner";
+}
+function readCapSnapshot(){
+  try{return JSON.parse(localStorage.getItem(CAP_SNAPSHOT_KEY)||"null")}catch(e){return null}
+}
+function todayKeyLocal(date=new Date()){
+  const d=new Date(date),p=n=>String(n).padStart(2,"0");
+  return `${d.getFullYear()}-${p(d.getMonth()+1)}-${p(d.getDate())}`;
+}
+function currentCapNutrition(){
+  const snap=readCapSnapshot();
+  if(!snap||snap.date!==todayKeyLocal()||!snap.nutrition)return null;
+  return snap.nutrition;
+}
+function plannedSnapshotItem(p){
+  const r=state.recipes.find(x=>x.id===p.recipeId)||null;
+  const n=r?.nutrition_par_portion_estimee||{};
+  const m=r?matchInfo(r):{missing:[]};
+  return {
+    id:p.id,recipeId:p.recipeId,name:p.name||r?.nom||"Repas Culina",at:Number(p.at)||0,
+    mealType:planMealType(p.at),
+    calories:Number(n.kcal)||0,protein:Number(n.proteines_g)||0,carbs:Number(n.glucides_g)||0,fat:Number(n.lipides_g)||0,
+    missingCount:m.missing.length,missing:m.missing.slice(0,6).map(i=>i.ingredient),
+    notified:Boolean(p.notified)
+  };
+}
+function publishCulinaSnapshot(){
+  try{
+    const snap={
+      version:1,updatedAt:new Date().toISOString(),
+      planned:state.planned.slice().sort((a,b)=>a.at-b.at).map(plannedSnapshotItem),
+      stockCount:Object.values(state.stock).filter(Boolean).length,
+      shoppingOpen:state.shopping.filter(x=>!x.checked).length
+    };
+    localStorage.setItem(CULINA_SNAPSHOT_KEY,JSON.stringify(snap));
+  }catch(e){}
+}
+function capNeedBadge(r){
+  const cap=currentCapNutrition();if(!cap)return "";
+  const rem=cap.remaining||{},n=r.nutrition_par_portion_estimee||{};
+  const protein=Number(n.proteines_g)||0,cal=Number(n.kcal)||0;
+  if(Number(rem.protein)>=20 && protein>=25)return `<div class="cap-fit">CAP · ${Math.round(protein)} g de protéines / portion</div>`;
+  if(Number(rem.calories)>=650 && cal>=450 && cal<=Math.max(850,Number(rem.calories)+150))return `<div class="cap-fit">CAP · ${Math.round(cal)} kcal / portion</div>`;
+  return "";
+}
+function renderCapNeeds(){
+  const panel=document.getElementById("capNeedsPanel");if(!panel)return;
+  const cap=currentCapNutrition();
+  if(!cap){panel.classList.add("empty");panel.innerHTML=`<div><b>CAP n’a pas encore publié les besoins du jour.</b><span>Ouvre CAP une fois pour synchroniser calories et macros.</span></div><a href="../cap/">Ouvrir CAP →</a>`;return}
+  panel.classList.remove("empty");
+  const r=cap.remaining||{},g=cap.goals||{},t=cap.totals||{};
+  const protein=Math.max(0,Math.round(Number(r.protein)||0));
+  let advice="Objectifs nutritionnels bien avancés.";
+  if(protein>=20)advice=`Il te reste environ ${protein} g de protéines : Culina signale les recettes qui peuvent aider.`;
+  else if(Number(r.calories)>=500)advice=`Il te reste environ ${Math.round(Number(r.calories)||0)} kcal pour aujourd’hui.`;
+  panel.innerHTML=`<div class="cap-needs-copy"><span class="cap-needs-kicker">CAP → CULINA</span><b>${esc(advice)}</b><div class="cap-needs-grid">
+    <span><strong>${Math.max(0,Math.round(Number(r.calories)||0))}</strong> kcal restantes</span>
+    <span><strong>${Math.max(0,Math.round(Number(r.protein)||0))}</strong> g prot.</span>
+    <span><strong>${Math.max(0,Math.round(Number(r.carbs)||0))}</strong> g gluc.</span>
+    <span><strong>${Math.max(0,Math.round(Number(r.fat)||0))}</strong> g lip.</span>
+  </div><small>${Math.round(Number(t.calories)||0)} / ${Math.round(Number(g.calories)||0)} kcal consommées</small></div><a href="../cap/">Voir CAP →</a>`;
+}
 function purgeCheeseStocks(){const banned=["parmesan","mozzarella","cheddar","feta","fromage rape","fromage frais","gruyere","emmental","mascarpone"];let changed=false;Object.keys(state.stock).forEach(k=>{const n=normalize(state.stock[k]?.name||k);if(!n.includes("fromage blanc")&&banned.some(x=>n.includes(x))){delete state.stock[k];changed=true}});if(changed)saveStock()}
 
 function pref(r){return state.prefs[r.id]||{}}
@@ -137,7 +207,7 @@ async function boot(){
   catch(e){base=JSON.parse(document.getElementById("culinaFallback").textContent)}
   state.recipes=base.recettes;
   migrateStockGroups();
-  drawChips();setupTabs();wireEvents();renderAll();
+  drawChips();setupTabs();wireEvents();renderAll();publishCulinaSnapshot();
 }
 function activateView(view){
   document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("active",x.dataset.view===view));
@@ -190,7 +260,7 @@ function recipeCard(r,force=false,reasons=[]){
   el.innerHTML=`<button class="fav">${isFav(r)?"♥":"♡"}</button><div class="emoji">${emoji[r.categorie]||"🍴"}</div>
     <h4>${esc(r.nom)}</h4><div class="meta"><span>⏱ ${r.temps_minutes||"—"} min</span><span>👥 ${r.portions||"—"}</span></div>
     ${n.kcal!=null?`<div class="nutrition-line"><b>Par portion</b> · ${n.kcal} kcal · P ${n.proteines_g} g · G ${n.glucides_g} g · L ${n.lipides_g} g</div>`:""}
-    ${matchBadge(r,force)}${reasons.length?`<div class="reasonbox">${reasons.map(esc).join(" · ")}</div>`:""}
+    ${capNeedBadge(r)}${matchBadge(r,force)}${reasons.length?`<div class="reasonbox">${reasons.map(esc).join(" · ")}</div>`:""}
     <div class="tags">${(r.tags||[]).slice(0,3).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>`;
   el.querySelector(".fav").onclick=e=>{e.stopPropagation();toggleFav(r.id)};
   el.onclick=()=>openDetail(r.id);return el;
@@ -567,6 +637,7 @@ function updateMealMoment(){
 function renderForYou(){
   updateMealMoment();
   renderPlanned();
+  renderCapNeeds();
   document.getElementById("fyStockStat").textContent=Object.values(state.stock).filter(Boolean).length;
   document.getElementById("fyLeftoverStat").textContent=state.leftovers.length;
   document.getElementById("fyHistoryStat").textContent=state.history.length;
@@ -650,7 +721,7 @@ function addWeekShopping(){
   saveShopping();renderShopping();updateBadges();toast(missing.length?missing.length+" produit"+(missing.length>1?"s":"")+" ajouté"+(missing.length>1?"s":"")+" aux courses":"Tout le principal est déjà disponible");
 }
 
-function renderAll(){renderRecipes();renderStocks();renderShopping();renderCulinaMatch();renderForYou();renderWeek();updateBadges()}
+function renderAll(){renderRecipes();renderStocks();renderShopping();renderCulinaMatch();renderForYou();renderWeek();updateBadges();publishCulinaSnapshot()}
 function wireEvents(){
   document.getElementById("themeBtn").onclick=toggleTheme;
   document.getElementById("search").oninput=e=>{state.query=e.target.value;renderRecipes()};
@@ -677,3 +748,5 @@ if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.se
 setInterval(updateMealMoment,60000);
 setInterval(checkRecipeReminders,30000);
 document.addEventListener("visibilitychange",()=>{if(!document.hidden){updateMealMoment();checkRecipeReminders();armNearestReminder()}});
+window.addEventListener("storage",e=>{if(e.key===CAP_SNAPSHOT_KEY){renderCapNeeds();renderForYou()}});
+setInterval(renderCapNeeds,3000);

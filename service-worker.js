@@ -1,4 +1,4 @@
-const CACHE="culina-v5-4-3-bus";
+const CACHE="culina-v5-4-4-sync";
 const CORE=["./","index.html","style.css","lenaic-bus.js","app.js","recettes.json","img/icon-192.png","img/favicon-32.png","favicon.ico","manifest.webmanifest"];
 self.addEventListener("install",e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(CORE)).catch(()=>{})));
 self.addEventListener("activate",e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k))))));

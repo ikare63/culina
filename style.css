@@ -316,3 +316,23 @@ footer{padding:26px 0 8px;text-align:center;color:var(--muted);font-size:10px}
 .planner-row{display:grid;grid-template-columns:1fr auto;gap:7px}.planner-row input{min-width:0;border:1px solid var(--line);border-radius:11px;padding:9px;background:var(--paper);color:var(--text)}
 .planned-list{display:flex;flex-direction:column;gap:7px}.planned-item{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;background:var(--paper-2);border:1px solid var(--line);border-radius:13px;padding:10px}.planned-item b{display:block;font-size:12px;color:var(--ink-strong)}.planned-item small{display:block;margin-top:3px;color:var(--muted);font-size:10px}.planned-actions{display:flex;gap:5px;flex-wrap:wrap;justify-content:flex-end}.planned-due{border-color:var(--orange);background:var(--orange-soft)}
 @media(max-width:480px){.planner-row{grid-template-columns:1fr}.planned-item{grid-template-columns:1fr}.planned-actions{justify-content:flex-start}}
+
+/* ===== Culina 5.4.4 — synchro CAP / 3615 ===== */
+.cap-needs-panel{
+  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:center;
+  margin:10px 0;padding:12px 14px;border:1px solid var(--line);border-radius:15px;
+  background:linear-gradient(135deg,var(--paper),var(--paper-2));
+}
+.cap-needs-panel>div{display:grid;gap:4px}.cap-needs-panel b{font-size:12px;color:var(--ink-strong)}
+.cap-needs-panel>div>span,.cap-needs-panel small{font-size:10px;color:var(--muted);line-height:1.4}
+.cap-needs-panel>a{font-size:10px;font-weight:800;color:var(--green);white-space:nowrap}
+.cap-needs-kicker{font-size:9px!important;letter-spacing:.10em;color:var(--green)!important;font-weight:900}
+.cap-needs-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin:6px 0 2px}
+.cap-needs-grid span{padding:7px 6px;border:1px solid var(--line);border-radius:10px;background:var(--paper);font-size:9px;color:var(--muted);text-align:center}
+.cap-needs-grid strong{display:block;color:var(--ink-strong);font-size:13px}
+.cap-needs-panel.empty{opacity:.82}
+.cap-fit{margin:7px 0 0;padding:6px 8px;border-radius:9px;background:var(--good-soft);color:var(--good);font-size:9px;font-weight:800}
+@media(max-width:560px){
+  .cap-needs-panel{grid-template-columns:1fr;gap:7px}.cap-needs-panel>a{justify-self:start}
+  .cap-needs-grid{grid-template-columns:repeat(2,1fr)}
+}
