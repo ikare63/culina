@@ -95,6 +95,41 @@ function currentCapNutrition(){
   if(!snap||snap.date!==todayKeyLocal()||!snap.nutrition)return null;
   return snap.nutrition;
 }
+function capDinnerFit(r){
+  const cap=currentCapNutrition();
+  const n=r?.nutrition_par_portion_estimee||{};
+  if(!cap||!n||r?.categorie!=="Salé")return{score:0,reasons:[]};
+  const rem=cap.remaining||{};
+  const cal=Math.max(0,Number(n.kcal)||0),protein=Math.max(0,Number(n.proteines_g)||0),carbs=Math.max(0,Number(n.glucides_g)||0),fat=Math.max(0,Number(n.lipides_g)||0);
+  const rCal=Math.max(0,Number(rem.calories)||0),rProtein=Math.max(0,Number(rem.protein)||0),rCarbs=Math.max(0,Number(rem.carbs)||0),rFat=Math.max(0,Number(rem.fat)||0);
+  let score=0;
+  const reasons=[];
+  // Le soir, la protéine est prioritaire : on récompense la part du déficit couverte.
+  if(rProtein>=10&&protein>0){
+    const cover=Math.min(1,protein/rProtein);
+    score+=cover*42;
+    if(protein>=Math.min(25,rProtein*.45))reasons.push(`CAP · ${Math.round(protein)}/${Math.round(rProtein)} g prot.`);
+  }
+  // Un dîner proche de 80 % des calories restantes laisse un peu de marge pour un dessert/collation.
+  if(rCal>=250&&cal>0){
+    const ratio=cal/rCal,target=.82;
+    const closeness=Math.max(0,1-Math.abs(ratio-target)/target);
+    score+=closeness*26;
+    if(ratio>.45&&ratio<=1.08)reasons.push(`CAP · ${Math.round(cal)}/${Math.round(rCal)} kcal`);
+    if(ratio>1.12)score-=Math.min(34,(ratio-1.12)*45);
+  }
+  if(rCarbs>=20&&carbs>0){
+    const ratio=carbs/rCarbs;
+    score+=Math.min(1,ratio)*10;
+    if(ratio>1.25)score-=Math.min(10,(ratio-1.25)*12);
+  }
+  if(rFat>=10&&fat>0){
+    const ratio=fat/rFat;
+    score+=Math.min(1,ratio)*8;
+    if(ratio>1.18)score-=Math.min(14,(ratio-1.18)*18);
+  }
+  return{score,reasons:[...new Set(reasons)].slice(0,2)};
+}
 function plannedSnapshotItem(p){
   const r=state.recipes.find(x=>x.id===p.recipeId)||null;
   const n=r?.nutrition_par_portion_estimee||{};
@@ -122,6 +157,10 @@ function capNeedBadge(r){
   const cap=currentCapNutrition();if(!cap)return "";
   const rem=cap.remaining||{},n=r.nutrition_par_portion_estimee||{};
   const protein=Number(n.proteines_g)||0,cal=Number(n.kcal)||0;
+  if(mealMomentLabel()==="Ce soir"){
+    const fit=capDinnerFit(r);
+    if(fit.score>=20&&fit.reasons.length)return `<div class="cap-fit">${fit.reasons.map(esc).join(" · ")}</div>`;
+  }
   if(Number(rem.protein)>=20 && protein>=25)return `<div class="cap-fit">CAP · ${Math.round(protein)} g de protéines / portion</div>`;
   if(Number(rem.calories)>=650 && cal>=450 && cal<=Math.max(850,Number(rem.calories)+150))return `<div class="cap-fit">CAP · ${Math.round(cal)} kcal / portion</div>`;
   return "";
@@ -134,7 +173,10 @@ function renderCapNeeds(){
   const r=cap.remaining||{},g=cap.goals||{},t=cap.totals||{};
   const protein=Math.max(0,Math.round(Number(r.protein)||0));
   let advice="Objectifs nutritionnels bien avancés.";
-  if(protein>=20)advice=`Il te reste environ ${protein} g de protéines : Culina signale les recettes qui peuvent aider.`;
+  const dinner=mealMomentLabel()==="Ce soir";
+  if(protein>=20&&dinner)advice=`Il te reste environ ${protein} g de protéines : les recettes « Ce soir » sont classées pour combler au mieux ton déficit CAP.`;
+  else if(protein>=20)advice=`Il te reste environ ${protein} g de protéines : Culina signale les recettes qui peuvent aider.`;
+  else if(Number(r.calories)>=500&&dinner)advice=`Il te reste environ ${Math.round(Number(r.calories)||0)} kcal : les recettes « Ce soir » privilégient maintenant le meilleur équilibre avec CAP.`;
   else if(Number(r.calories)>=500)advice=`Il te reste environ ${Math.round(Number(r.calories)||0)} kcal pour aujourd’hui.`;
   panel.innerHTML=`<div class="cap-needs-copy"><span class="cap-needs-kicker">CAP → CULINA</span><b>${esc(advice)}</b><div class="cap-needs-grid">
     <span><strong>${Math.max(0,Math.round(Number(r.calories)||0))}</strong> kcal restantes</span>
@@ -586,6 +628,7 @@ function personalizedInfo(r,opts={}){
   if(m.total){score+=m.score*(opts.stockHeavy?.62:.46);if(!m.missing.length)reasons.push("tout le principal est disponible");else if(m.missing.length===1)reasons.push("un seul ingrédient principal manque")}
   const ta=tasteAffinity(r);score+=ta.score;reasons.push(...ta.reasons);
   const ms=moodScore(r,opts.mood||"any");score+=ms.score;if(ms.reason)reasons.push(ms.reason);
+  if(opts.capFit){const cf=capDinnerFit(r);score+=cf.score;if(cf.reasons.length)reasons.unshift(...cf.reasons)}
   if(r.temps_minutes<=15){score+=10;reasons.push("très rapide")}else if(r.temps_minutes<=30){score+=7;reasons.push(r.temps_minutes+" min")}else if(r.temps_minutes<=45)score+=3;
   if(isFav(r)){score+=10;reasons.push("favori")}
   const st=statusOf(r);if(st==="Validée")score+=6;if(st==="À refaire")score+=10;if(st==="Bof")score-=35;
@@ -631,8 +674,9 @@ function mealMomentLabel(){
   return "Ce soir";
 }
 function updateMealMoment(){
-  const title=document.getElementById("mealMomentTitle");
-  if(title)title.textContent="🍽 "+mealMomentLabel();
+  const title=document.getElementById("mealMomentTitle"),sub=document.getElementById("mealMomentSub"),label=mealMomentLabel();
+  if(title)title.textContent="🍽 "+label;
+  if(sub)sub.textContent=label==="Ce soir"&&currentCapNutrition()?"selon CAP + tes stocks":"selon toi + tes stocks";
 }
 function renderForYou(){
   updateMealMoment();
@@ -655,7 +699,8 @@ function renderForYou(){
   const pp=document.getElementById("portionPrompt"),portion=state.leftovers.find(x=>x.type==="portion");
   pp.innerHTML=portion?`<div class="notice good"><b>♻️ À finir d’abord :</b> il reste ${esc(fmtQty(portion.quantity))} ${esc(portion.unit)} de <b>${esc(portion.name)}</b>. <button class="btn small good" style="margin-left:7px" onclick="eatLeftoverPortion('${portion.id}')">Je la mange</button></div>`:"";
   const tonight=document.getElementById("forYouTonight");tonight.innerHTML="";
-  personalizedRanking({maxTime:60,maxMissing:2,limit:4,stockHeavy:true}).forEach(x=>tonight.appendChild(recipeCard(x.r,true,x.reasons)));
+  const capFit=mealMomentLabel()==="Ce soir"&&Boolean(currentCapNutrition());
+  personalizedRanking({maxTime:60,maxMissing:2,limit:4,stockHeavy:true,capFit}).forEach(x=>tonight.appendChild(recipeCard(x.r,true,x.reasons)));
   renderLeftovers();renderLeftoverSuggestions();renderTasteProfile();
   const recent=recentRecipeIds(8),rediscover=document.getElementById("rediscoverGrid");rediscover.innerHTML="";
   const oldies=state.recipes.filter(r=>(isFav(r)||["Validée","À refaire"].includes(statusOf(r)))&&!recent.has(r.id)&&r.categorie==="Salé")
@@ -739,8 +784,8 @@ function wireEvents(){
   document.getElementById("generateWeekBtn").onclick=generateWeek;
   document.getElementById("weekShoppingBtn").onclick=addWeekShopping;
   document.getElementById("exportBtn").onclick=()=>{
-    const payload={meta:{nom:"Culina",version:"5.4"},recettes:state.recipes,stocks:state.stock,liste_courses:state.shopping,historique:state.history,culina_match:state.matchPrefs,restes:state.leftovers,menu_semaine:state.weekPlan,recettes_programmees:state.planned};
-    const blob=new Blob([JSON.stringify(payload,null,2)],{type:"application/json"}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="culina-sauvegarde-v5.4.json";a.click();URL.revokeObjectURL(a.href);
+    const payload={meta:{nom:"Culina",version:"5.4.5"},recettes:state.recipes,stocks:state.stock,liste_courses:state.shopping,historique:state.history,culina_match:state.matchPrefs,restes:state.leftovers,menu_semaine:state.weekPlan,recettes_programmees:state.planned};
+    const blob=new Blob([JSON.stringify(payload,null,2)],{type:"application/json"}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="culina-sauvegarde-v5.4.5.json";a.click();URL.revokeObjectURL(a.href);
   };
 }
 boot();
