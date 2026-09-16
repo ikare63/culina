@@ -1,7 +1,7 @@
 {
   "meta": {
     "nom": "Culina",
-    "version": "5.4.7",
+    "version": "5.5.0",
     "description": "Base personnelle de recettes Culina.",
     "nutrition": "Les valeurs nutritionnelles sont des estimations par portion.",
     "nombre_recettes": 397,

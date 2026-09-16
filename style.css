@@ -336,3 +336,34 @@ footer{padding:26px 0 8px;text-align:center;color:var(--muted);font-size:10px}
   .cap-needs-panel{grid-template-columns:1fr;gap:7px}.cap-needs-panel>a{justify-self:start}
   .cap-needs-grid{grid-template-columns:repeat(2,1fr)}
 }
+
+/* CAP ↔ Culina — fourchettes, simulation et suggestions intelligentes */
+.cap-needs-grid span{display:grid;gap:3px;align-content:center;min-height:66px}
+.cap-needs-grid span strong{font-size:11px;line-height:1.25}
+.cap-needs-grid span small{font-size:8px!important;line-height:1.2;color:var(--muted)}
+.cap-smart-panel{margin:10px 0 16px;padding:14px;border:1px solid var(--line);border-radius:16px;background:var(--paper)}
+.cap-smart-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;margin-bottom:10px}
+.cap-smart-head h3{margin:3px 0 2px;font-size:16px;color:var(--ink-strong)}
+.cap-smart-head p{margin:0;color:var(--muted);font-size:10px;line-height:1.4}
+.cap-smart-count{font-size:9px;font-weight:900;color:var(--green);white-space:nowrap;padding-top:2px}
+.cap-smart-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.cap-smart-card{position:relative;text-align:left;border:1px solid var(--line);border-radius:13px;background:var(--bg);color:var(--text);padding:11px 10px 10px 34px;display:grid;gap:4px;min-height:100px}
+.cap-smart-card:hover{border-color:color-mix(in srgb,var(--green) 45%,var(--line));transform:translateY(-1px)}
+.cap-smart-card b{font-size:12px;line-height:1.25;color:var(--ink-strong)}
+.cap-smart-card>span:not(.cap-smart-rank){font-size:10px;font-weight:800;color:var(--green)}
+.cap-smart-card small{font-size:8px;line-height:1.35;color:var(--muted)}
+.cap-smart-rank{position:absolute;left:9px;top:10px;width:19px;height:19px;border-radius:50%;display:grid;place-items:center;background:var(--good-soft);color:var(--good);font-size:9px;font-weight:900}
+.cap-simulation{margin:14px 0;padding:13px;border:1px solid color-mix(in srgb,var(--green) 35%,var(--line));border-radius:15px;background:color-mix(in srgb,var(--good-soft) 55%,var(--paper))}
+.cap-sim-head{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.cap-sim-head h3{margin:2px 0 0;font-size:15px;color:var(--ink-strong)}
+.cap-sim-head>strong{font-size:18px;color:var(--green)}
+.cap-serving-row{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:10px;font-size:10px;color:var(--muted)}
+.cap-serving-row>div{display:flex;align-items:center;gap:8px}.cap-serving-row b{min-width:24px;text-align:center;color:var(--ink-strong)}
+.cap-sim-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin-top:10px}
+.cap-sim-chip{border:1px solid var(--line);border-radius:10px;background:var(--paper);padding:8px 6px;text-align:center;display:grid;gap:2px}
+.cap-sim-chip b{font-size:12px;color:var(--ink-strong)}.cap-sim-chip small{font-size:7.5px;line-height:1.25;color:var(--muted)}
+.cap-sim-chip.in{border-color:color-mix(in srgb,var(--good) 50%,var(--line));background:var(--good-soft)}
+.cap-sim-chip.high{border-color:color-mix(in srgb,#c26843 50%,var(--line))}.cap-sim-chip.low{border-color:color-mix(in srgb,var(--gold) 55%,var(--line))}
+.cap-sim-foot{margin-top:9px;display:flex;justify-content:flex-end;align-items:center}.cap-sim-ok{font-size:9px;font-weight:850;color:var(--good)}
+.cap-adjust-btn{border-color:color-mix(in srgb,var(--green) 40%,var(--line));color:var(--green)}
+@media(max-width:720px){.cap-smart-grid{grid-template-columns:1fr}.cap-smart-card{min-height:auto}.cap-sim-grid{grid-template-columns:repeat(2,1fr)}}

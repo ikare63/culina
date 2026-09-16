@@ -95,40 +95,127 @@ function currentCapNutrition(){
   if(!snap||snap.date!==todayKeyLocal()||!snap.nutrition)return null;
   return snap.nutrition;
 }
+const CAP_METRICS={
+  calories:{label:"kcal",weight:.32,fallbackTolerance:.10},
+  protein:{label:"g prot.",weight:.38,fallbackTolerance:.10},
+  carbs:{label:"g gluc.",weight:.16,fallbackTolerance:.10},
+  fat:{label:"g lip.",weight:.14,fallbackTolerance:.10}
+};
+function capNum(v){const n=Number(v);return Number.isFinite(n)?n:null}
+function capRangeObject(raw){
+  if(raw==null)return null;
+  if(typeof raw==='number')return{ideal:raw};
+  if(typeof raw!=='object')return null;
+  const pick=(...keys)=>{for(const k of keys){const v=capNum(raw[k]);if(v!=null)return v}return null};
+  return{
+    min:pick('min','lower','low','from','goodMin','targetMin','lowerBound'),
+    max:pick('max','upper','high','to','goodMax','targetMax','upperBound'),
+    ideal:pick('ideal','target','goal','value','center','mid')
+  };
+}
+function capMetricBand(cap,key){
+  const aliases={calories:['calories','kcal','cal'],protein:['protein','proteins','proteines'],carbs:['carbs','glucides','carbohydrates'],fat:['fat','lipids','lipides']};
+  const containers=[cap?.ranges,cap?.goalRanges,cap?.targetRanges,cap?.targets,cap?.goals];
+  let parsed=null;
+  for(const box of containers){
+    if(!box||typeof box!=='object')continue;
+    for(const alias of aliases[key]){if(box[alias]!=null){parsed=capRangeObject(box[alias]);if(parsed)break}}
+    if(parsed)break;
+  }
+  if(!parsed&&cap?.goals){for(const alias of aliases[key]){const v=capNum(cap.goals[alias]);if(v!=null){parsed={ideal:v};break}}}
+  if(!parsed){
+    const rem=cap?.remaining||{},tot=cap?.totals||{};
+    for(const alias of aliases[key]){
+      const r=capNum(rem[alias]),t=capNum(tot[alias]);
+      if(r!=null&&t!=null){parsed={ideal:r+t};break}
+    }
+  }
+  if(!parsed)return null;
+  let {min,max,ideal}=parsed;
+  if(ideal==null&&min!=null&&max!=null)ideal=(min+max)/2;
+  if(ideal==null)ideal=min??max;
+  const tol=CAP_METRICS[key].fallbackTolerance;
+  if(min==null&&ideal!=null)min=ideal*(1-tol);
+  if(max==null&&ideal!=null)max=ideal*(1+tol);
+  if(min!=null&&max!=null&&min>max)[min,max]=[max,min];
+  return{min:Math.max(0,min||0),max:Math.max(0,max||0),ideal:Math.max(0,ideal||0)};
+}
+function capBands(cap){return Object.fromEntries(Object.keys(CAP_METRICS).map(k=>[k,capMetricBand(cap,k)]))}
+function capMetricValue(obj,key){
+  const aliases={calories:['calories','kcal','cal'],protein:['protein','proteins','proteines'],carbs:['carbs','glucides','carbohydrates'],fat:['fat','lipids','lipides']};
+  for(const alias of aliases[key]){const v=capNum(obj?.[alias]);if(v!=null)return v}
+  return 0;
+}
+function capMetricStatus(value,band){
+  if(!band)return'unknown';
+  if(value<band.min)return'low';
+  if(value>band.max)return'high';
+  return'in';
+}
+function capMetricFit(value,band){
+  if(!band)return .5;
+  if(value>=band.min&&value<=band.max)return 1;
+  const width=Math.max(1,band.max-band.min,band.ideal*.15);
+  const distance=value<band.min?band.min-value:value-band.max;
+  return Math.max(0,1-distance/(width*2.2));
+}
+function capNeeds(cap=currentCapNutrition()){
+  if(!cap)return null;
+  const totals=cap.totals||{},bands=capBands(cap),out={};
+  for(const key of Object.keys(CAP_METRICS)){
+    const total=capMetricValue(totals,key),band=bands[key];
+    if(!band){out[key]={total,band:null,minRemaining:0,maxRemaining:0,idealRemaining:0,status:'unknown'};continue}
+    out[key]={
+      total,band,status:capMetricStatus(total,band),
+      minRemaining:Math.max(0,band.min-total),
+      maxRemaining:Math.max(0,band.max-total),
+      idealRemaining:Math.max(0,band.ideal-total)
+    };
+  }
+  return out;
+}
+function recipeNutrition(r,serving=1){
+  const n=r?.nutrition_par_portion_estimee||{};
+  return{
+    calories:(Number(n.kcal)||0)*serving,protein:(Number(n.proteines_g)||0)*serving,
+    carbs:(Number(n.glucides_g)||0)*serving,fat:(Number(n.lipides_g)||0)*serving
+  };
+}
+function capSimulationForNutrition(extra,cap=currentCapNutrition()){
+  if(!cap)return null;
+  const bands=capBands(cap),totals=cap.totals||{},after={},statuses={};
+  let score=0,weightTotal=0;
+  for(const [key,meta] of Object.entries(CAP_METRICS)){
+    const value=capMetricValue(totals,key)+(Number(extra?.[key])||0);
+    after[key]=value;statuses[key]=capMetricStatus(value,bands[key]);
+    score+=capMetricFit(value,bands[key])*meta.weight;weightTotal+=meta.weight;
+  }
+  return{after,statuses,bands,score:weightTotal?Math.round(score/weightTotal*100):0};
+}
+function capServingFit(r,serving=1){
+  const sim=capSimulationForNutrition(recipeNutrition(r,serving));
+  return sim?{...sim,serving}:null;
+}
+function bestServingForCap(r){
+  const candidates=[.5,.75,1,1.25,1.5,1.75,2];
+  const all=candidates.map(serving=>capServingFit(r,serving)).filter(Boolean);
+  if(!all.length)return null;
+  all.sort((a,b)=>b.score-a.score||Math.abs(a.serving-1)-Math.abs(b.serving-1));
+  return all[0];
+}
+function servingLabel(v){const n=Math.round(v*100)/100;return Number.isInteger(n)?String(n):String(n).replace('.25','¼').replace('.5','½').replace('.75','¾')}
 function capDinnerFit(r){
   const cap=currentCapNutrition();
-  const n=r?.nutrition_par_portion_estimee||{};
-  if(!cap||!n||r?.categorie!=="Salé")return{score:0,reasons:[]};
-  const rem=cap.remaining||{};
-  const cal=Math.max(0,Number(n.kcal)||0),protein=Math.max(0,Number(n.proteines_g)||0),carbs=Math.max(0,Number(n.glucides_g)||0),fat=Math.max(0,Number(n.lipides_g)||0);
-  const rCal=Math.max(0,Number(rem.calories)||0),rProtein=Math.max(0,Number(rem.protein)||0),rCarbs=Math.max(0,Number(rem.carbs)||0),rFat=Math.max(0,Number(rem.fat)||0);
-  let score=0;
+  if(!cap||r?.categorie!=="Salé")return{score:0,reasons:[]};
+  const best=bestServingForCap(r);if(!best)return{score:0,reasons:[]};
+  const info=matchInfo(r),stockPenalty=Math.min(18,info.missing.length*7);
+  const score=Math.max(0,(best.score-45)*1.05-stockPenalty);
   const reasons=[];
-  // Le soir, la protéine est prioritaire : on récompense la part du déficit couverte.
-  if(rProtein>=10&&protein>0){
-    const cover=Math.min(1,protein/rProtein);
-    score+=cover*42;
-    if(protein>=Math.min(25,rProtein*.45))reasons.push(`CAP · ${Math.round(protein)}/${Math.round(rProtein)} g prot.`);
-  }
-  // Un dîner proche de 80 % des calories restantes laisse un peu de marge pour un dessert/collation.
-  if(rCal>=250&&cal>0){
-    const ratio=cal/rCal,target=.82;
-    const closeness=Math.max(0,1-Math.abs(ratio-target)/target);
-    score+=closeness*26;
-    if(ratio>.45&&ratio<=1.08)reasons.push(`CAP · ${Math.round(cal)}/${Math.round(rCal)} kcal`);
-    if(ratio>1.12)score-=Math.min(34,(ratio-1.12)*45);
-  }
-  if(rCarbs>=20&&carbs>0){
-    const ratio=carbs/rCarbs;
-    score+=Math.min(1,ratio)*10;
-    if(ratio>1.25)score-=Math.min(10,(ratio-1.25)*12);
-  }
-  if(rFat>=10&&fat>0){
-    const ratio=fat/rFat;
-    score+=Math.min(1,ratio)*8;
-    if(ratio>1.18)score-=Math.min(14,(ratio-1.18)*18);
-  }
-  return{score,reasons:[...new Set(reasons)].slice(0,2)};
+  if(best.score>=86)reasons.push(`CAP · ${servingLabel(best.serving)} portion${best.serving>1?'s':''} → zone idéale`);
+  else if(best.score>=72)reasons.push(`CAP · bon équilibre à ${servingLabel(best.serving)} portion${best.serving>1?'s':''}`);
+  const p=recipeNutrition(r,best.serving);
+  if(p.protein>=25)reasons.push(`${Math.round(p.protein)} g prot.`);
+  return{score,reasons:[...new Set(reasons)].slice(0,2),best};
 }
 function plannedSnapshotItem(p){
   const r=state.recipes.find(x=>x.id===p.recipeId)||null;
@@ -155,35 +242,61 @@ function publishCulinaSnapshot(){
 }
 function capNeedBadge(r){
   const cap=currentCapNutrition();if(!cap)return "";
-  const rem=cap.remaining||{},n=r.nutrition_par_portion_estimee||{};
-  const protein=Number(n.proteines_g)||0,cal=Number(n.kcal)||0;
-  if(mealMomentLabel()==="Ce soir"){
-    const fit=capDinnerFit(r);
-    if(fit.score>=20&&fit.reasons.length)return `<div class="cap-fit">${fit.reasons.map(esc).join(" · ")}</div>`;
-  }
-  if(Number(rem.protein)>=20 && protein>=25)return `<div class="cap-fit">CAP · ${Math.round(protein)} g de protéines / portion</div>`;
-  if(Number(rem.calories)>=650 && cal>=450 && cal<=Math.max(850,Number(rem.calories)+150))return `<div class="cap-fit">CAP · ${Math.round(cal)} kcal / portion</div>`;
+  const fit=capDinnerFit(r);
+  if(mealMomentLabel()==="Ce soir"&&fit.score>=18&&fit.reasons.length)return `<div class="cap-fit">${fit.reasons.map(esc).join(" · ")}</div>`;
+  const best=bestServingForCap(r);
+  if(best&&best.score>=82)return `<div class="cap-fit">CAP · ${servingLabel(best.serving)} portion${best.serving>1?'s':''} te rapproche de la zone</div>`;
   return "";
+}
+function capRemainingText(need,key){
+  const x=need?.[key];if(!x||!x.band)return'—';
+  if(x.status==='high')return'zone dépassée';
+  if(x.status==='in')return'dans la zone';
+  const unit=key==='calories'?'kcal':'g';
+  const lo=Math.round(x.minRemaining),hi=Math.round(x.maxRemaining);
+  if(hi<=0)return'dans la zone';
+  return `${lo}–${hi} ${unit} à viser`;
+}
+function capSmartCandidates(limit=3){
+  const cap=currentCapNutrition();if(!cap)return[];
+  return state.recipes.filter(r=>r.categorie==='Salé').map(r=>{
+    const best=bestServingForCap(r),m=matchInfo(r);if(!best)return null;
+    const stockBonus=m.missing.length===0?14:m.missing.length===1?6:m.missing.length===2?1:-10;
+    const timeBonus=(r.temps_minutes||999)<=30?4:0;
+    return{r,best,m,rank:best.score+stockBonus+timeBonus};
+  }).filter(x=>x&&x.m.missing.length<=2).sort((a,b)=>b.rank-a.rank).slice(0,limit);
+}
+function renderCapSmartSuggestions(){
+  const host=document.getElementById('capSmartPanel');if(!host)return;
+  const cap=currentCapNutrition();if(!cap){host.style.display='none';host.innerHTML='';return}
+  const rows=capSmartCandidates(3);if(!rows.length){host.style.display='none';host.innerHTML='';return}
+  host.style.display='block';
+  host.innerHTML=`<div class="cap-smart-head"><div><span class="cap-needs-kicker">CULINA × CAP</span><h3>Combler intelligemment</h3><p>Les portions sont ajustées pour finir la journée au plus près de tes fourchettes.</p></div><span class="cap-smart-count">${rows.length} idées</span></div><div class="cap-smart-grid">${rows.map((x,i)=>{
+    const a=x.best.after,s=x.best.statuses;
+    const zoneCount=Object.values(s).filter(v=>v==='in').length;
+    const missing=x.m.missing.length?`${x.m.missing.length} ingrédient${x.m.missing.length>1?'s':''} principal${x.m.missing.length>1?'aux':''} manque${x.m.missing.length>1?'nt':''}`:'stocks OK';
+    return `<button class="cap-smart-card" onclick="openDetail('${x.r.id}',${x.best.serving})"><span class="cap-smart-rank">${i+1}</span><b>${esc(x.r.nom)}</b><span>${servingLabel(x.best.serving)} portion${x.best.serving>1?'s':''} conseillée${x.best.serving>1?'s':''}</span><small>Après : ${Math.round(a.calories)} kcal · ${Math.round(a.protein)} g prot. · ${zoneCount}/4 zones · ${esc(missing)}</small></button>`;
+  }).join('')}</div>`;
 }
 function renderCapNeeds(){
   const panel=document.getElementById("capNeedsPanel");if(!panel)return;
   const cap=currentCapNutrition();
-  if(!cap){panel.classList.add("empty");panel.innerHTML=`<div><b>CAP n’a pas encore publié les besoins du jour.</b><span>Ouvre CAP une fois pour synchroniser calories et macros.</span></div><a href="../cap/">Ouvrir CAP →</a>`;return}
+  if(!cap){panel.classList.add("empty");panel.innerHTML=`<div><b>CAP n’a pas encore publié les besoins du jour.</b><span>Ouvre CAP une fois pour synchroniser calories et macros.</span></div><a href="../cap/">Ouvrir CAP →</a>`;renderCapSmartSuggestions();return}
   panel.classList.remove("empty");
-  const r=cap.remaining||{},g=cap.goals||{},t=cap.totals||{};
-  const protein=Math.max(0,Math.round(Number(r.protein)||0));
-  let advice="Objectifs nutritionnels bien avancés.";
-  const dinner=mealMomentLabel()==="Ce soir";
-  if(protein>=20&&dinner)advice=`Il te reste environ ${protein} g de protéines : les recettes « Ce soir » sont classées pour combler au mieux ton déficit CAP.`;
-  else if(protein>=20)advice=`Il te reste environ ${protein} g de protéines : Culina signale les recettes qui peuvent aider.`;
-  else if(Number(r.calories)>=500&&dinner)advice=`Il te reste environ ${Math.round(Number(r.calories)||0)} kcal : les recettes « Ce soir » privilégient maintenant le meilleur équilibre avec CAP.`;
-  else if(Number(r.calories)>=500)advice=`Il te reste environ ${Math.round(Number(r.calories)||0)} kcal pour aujourd’hui.`;
+  const need=capNeeds(cap),g=capBands(cap),t=cap.totals||{};
+  const p=need.protein,c=need.calories;
+  let advice='Tes fourchettes CAP sont déjà bien avancées.';
+  if(p?.status==='low'&&c?.status==='low')advice=`Pour entrer dans tes zones, vise encore environ ${Math.round(c.minRemaining)}–${Math.round(c.maxRemaining)} kcal et ${Math.round(p.minRemaining)}–${Math.round(p.maxRemaining)} g de protéines.`;
+  else if(p?.status==='low')advice=`Priorité protéines : vise encore ${Math.round(p.minRemaining)}–${Math.round(p.maxRemaining)} g sans sortir de tes autres zones.`;
+  else if(c?.status==='low')advice=`Il te reste de la marge énergétique : vise encore ${Math.round(c.minRemaining)}–${Math.round(c.maxRemaining)} kcal.`;
+  else if(p?.status==='in'&&c?.status==='in')advice='Calories et protéines sont déjà dans leurs zones : Culina privilégie maintenant l’équilibre global.';
   panel.innerHTML=`<div class="cap-needs-copy"><span class="cap-needs-kicker">CAP → CULINA</span><b>${esc(advice)}</b><div class="cap-needs-grid">
-    <span><strong>${Math.max(0,Math.round(Number(r.calories)||0))}</strong> kcal restantes</span>
-    <span><strong>${Math.max(0,Math.round(Number(r.protein)||0))}</strong> g prot.</span>
-    <span><strong>${Math.max(0,Math.round(Number(r.carbs)||0))}</strong> g gluc.</span>
-    <span><strong>${Math.max(0,Math.round(Number(r.fat)||0))}</strong> g lip.</span>
-  </div><small>${Math.round(Number(t.calories)||0)} / ${Math.round(Number(g.calories)||0)} kcal consommées</small></div><a href="../cap/">Voir CAP →</a>`;
+    <span><strong>${capRemainingText(need,'calories')}</strong><small>${Math.round(capMetricValue(t,'calories'))} / ${Math.round(g.calories?.min||0)}–${Math.round(g.calories?.max||0)}</small></span>
+    <span><strong>${capRemainingText(need,'protein')}</strong><small>${Math.round(capMetricValue(t,'protein'))} / ${Math.round(g.protein?.min||0)}–${Math.round(g.protein?.max||0)} g</small></span>
+    <span><strong>${capRemainingText(need,'carbs')}</strong><small>${Math.round(capMetricValue(t,'carbs'))} / ${Math.round(g.carbs?.min||0)}–${Math.round(g.carbs?.max||0)} g</small></span>
+    <span><strong>${capRemainingText(need,'fat')}</strong><small>${Math.round(capMetricValue(t,'fat'))} / ${Math.round(g.fat?.min||0)}–${Math.round(g.fat?.max||0)} g</small></span>
+  </div></div><a href="../cap/">Voir CAP →</a>`;
+  renderCapSmartSuggestions();
 }
 function purgeCheeseStocks(){const banned=["parmesan","mozzarella","cheddar","feta","fromage rape","fromage frais","gruyere","emmental","mascarpone"];let changed=false;Object.keys(state.stock).forEach(k=>{const n=normalize(state.stock[k]?.name||k);if(!n.includes("fromage blanc")&&banned.some(x=>n.includes(x))){delete state.stock[k];changed=true}});if(changed)saveStock()}
 
@@ -400,16 +513,41 @@ function toggleSimpleRecipe(){
   if(btn)btn.textContent=simple?"↩ Version détaillée":"⚡ Version simple";
   if(note){note.style.display=simple?"block":"none";note.textContent=r.version_simplifiee.note||"Étapes regroupées pour aller à l’essentiel."}
 }
-function openDetail(id){
+function capStatusLabel(status){return status==='in'?'✓ zone':status==='low'?'encore bas':status==='high'?'au-dessus':'—'}
+function capDetailBoxHTML(r,serving=1){
+  const cap=currentCapNutrition();if(!cap)return'';
+  const sim=capServingFit(r,serving),best=bestServingForCap(r);if(!sim)return'';
+  const a=sim.after;
+  const chips=Object.entries(CAP_METRICS).map(([key,meta])=>`<span class="cap-sim-chip ${sim.statuses[key]}"><b>${Math.round(a[key])}${key==='calories'?'':' g'}</b><small>${meta.label} · ${capStatusLabel(sim.statuses[key])}</small></span>`).join('');
+  const adjust=best&&Math.abs(best.serving-serving)>=.01?`<button class="btn small cap-adjust-btn" onclick="setCapServing(${best.serving})">Ajuster à CAP → ${servingLabel(best.serving)} portion${best.serving>1?'s':''}</button>`:`<span class="cap-sim-ok">✓ Portion déjà bien ajustée</span>`;
+  return `<div class="cap-simulation" id="capSimulation"><div class="cap-sim-head"><div><span class="cap-needs-kicker">APRÈS CE REPAS</span><h3>Simulation CAP</h3></div><strong>${sim.score}/100</strong></div><div class="cap-serving-row"><span>Portion mangée</span><div><button class="btn small" onclick="changeCapServing(-0.25)">−</button><b id="capServingValue">${servingLabel(serving)}</b><button class="btn small" onclick="changeCapServing(0.25)">+</button></div></div><div class="cap-sim-grid">${chips}</div><div class="cap-sim-foot">${adjust}</div></div>`;
+}
+function renderCapDetailSimulation(){
+  const d=document.getElementById('detailContent');if(!d||!d.dataset.id)return;
+  const r=state.recipes.find(x=>x.id===d.dataset.id),host=document.getElementById('capSimulationWrap');if(!r||!host)return;
+  const serving=Math.max(.25,Number(d.dataset.capServing)||1);
+  host.innerHTML=capDetailBoxHTML(r,serving);
+}
+function setCapServing(value){
+  const d=document.getElementById('detailContent');if(!d)return;
+  d.dataset.capServing=String(Math.max(.25,Math.min(3,Math.round(Number(value)*4)/4)));renderCapDetailSimulation();
+}
+function changeCapServing(delta){
+  const d=document.getElementById('detailContent');if(!d)return;
+  setCapServing((Number(d.dataset.capServing)||1)+delta);
+}
+
+function openDetail(id,capServing=1){
   const r=state.recipes.find(x=>x.id===id);if(!r)return;const m=matchInfo(r),n=r.nutrition_par_portion_estimee||{},d=document.getElementById("detailContent");
-  d.dataset.id=id;d.dataset.basePortions=r.portions||1;d.dataset.portions=r.portions||1;d.dataset.simple="0";
+  d.dataset.id=id;d.dataset.basePortions=r.portions||1;d.dataset.portions=r.portions||1;d.dataset.simple="0";const initialCapServing=Math.max(.25,Math.min(3,Math.round((Number(capServing)||1)*4)/4));d.dataset.capServing=String(initialCapServing);
   let stockNotice="";
   if(m.total)stockNotice=!m.missing.length?`<div class="notice good">✓ Tu as tous les ingrédients principaux nécessaires.</div>`:`<div class="notice">Il te manque : <b>${m.missing.map(x=>esc(x.ingredient)).join(", ")}</b>. Les basiques comme crème, sauces et épices ne bloquent pas la proposition.</div>`;
   d.innerHTML=`<div class="modal-head"><div><div class="subtitle">${esc(r.categorie)} · ${esc(r.sous_categorie||"Recette")}</div><h2>${esc(r.nom)}</h2><div class="meta"><span>⏱ ${r.temps_minutes||"—"} min</span><span>· ${esc(r.difficulte||"—")}</span></div></div><button class="close" onclick="detailDialog.close()">×</button></div>
   <div class="modal-body">${stockNotice}
     <div class="nutrition-title">Nutrition par portion · estimation</div>
     <div class="nutrition"><div class="nut"><b>${n.kcal??"—"}</b><span>kcal</span></div><div class="nut"><b>${n.proteines_g??"—"} g</b><span>protéines</span></div><div class="nut"><b>${n.glucides_g??"—"} g</b><span>glucides</span></div><div class="nut"><b>${n.lipides_g??"—"} g</b><span>lipides</span></div></div>
-    <div class="portionbox"><b>Portions</b><button onclick="changePortions(-1)">−</button><span id="portionVal">${r.portions}</span><button onclick="changePortions(1)">+</button></div>
+    <div id="capSimulationWrap">${capDetailBoxHTML(r,initialCapServing)}</div>
+    <div class="portionbox"><b>Portions à préparer</b><button onclick="changePortions(-1)">−</button><span id="portionVal">${r.portions}</span><button onclick="changePortions(1)">+</button></div>
     <div class="detail-grid"><div><h3>Ingrédients</h3><ul class="ingredients" id="ingredientsList">${ingredientHTML(r,1)}</ul></div><div><h3>Préparation</h3>${r.version_simplifiee?`<button class="btn small" id="simpleRecipeBtn" onclick="toggleSimpleRecipe()">⚡ Version simple</button><div class="simple-note" id="simpleRecipeNote" style="display:none"></div>`:""}<ol class="steps" id="recipeSteps">${preparationHTML(r,false)}</ol></div></div>
     <div class="planner"><h3>⏰ Faire cette recette plus tard</h3><p>Choisis une date et une heure. Culina l’enregistre et te rappelle quand l’heure arrive.</p><div class="planner-row"><input type="datetime-local" id="recipePlanDate" value="${defaultPlanValue()}" min="${localDateTimeValue(Date.now())}"><button class="btn primary" onclick="scheduleRecipe('${r.id}')">Programmer</button></div></div>
     <div class="statusbar"><button class="btn" onclick="toggleFav('${r.id}');openDetail('${r.id}')">${isFav(r)?"♥ Favori":"♡ Favori"}</button>
@@ -497,32 +635,36 @@ function recipeComponentsForCap(r){
       };
     });
 }
-function proposeRecipeToCap(r){
+function proposeRecipeToCap(r,serving=1){
   if(!window.LenaicBus||!r)return null;
   const n=r.nutrition_par_portion_estimee||{};
   if(n.kcal==null&&n.proteines_g==null&&n.glucides_g==null&&n.lipides_g==null)return null;
+  serving=Math.max(.25,Math.min(3,Number(serving)||1));
+  const nutr=recipeNutrition(r,serving);
   return LenaicBus.publish('meal.proposed',{
     name:r.nom,
     recipeId:r.id,
     mealType:capMealTypeForNow(),
-    portions:1,
-    calories:Number(n.kcal)||0,
-    protein:Number(n.proteines_g)||0,
-    carbs:Number(n.glucides_g)||0,
-    fat:Number(n.lipides_g)||0,
-    components:recipeComponentsForCap(r),
+    portions:serving,
+    calories:Math.round(nutr.calories*10)/10,
+    protein:Math.round(nutr.protein*10)/10,
+    carbs:Math.round(nutr.carbs*10)/10,
+    fat:Math.round(nutr.fat*10)/10,
+    components:recipeComponentsForCap(r).map(c=>({...c,amount:c.amount==null?null:Math.round(c.amount*serving*10)/10})),
     eatenAt:new Date().toISOString(),
-    nutritionBasis:'1 portion',
+    nutritionBasis:`${servingLabel(serving)} portion${serving>1?'s':''}`,
     sourceLabel:'Culina'
   },{source:'culina',target:'cap'});
 }
 
 function markCooked(id){
   const r=state.recipes.find(x=>x.id===id);if(!r)return;
-  state.history.unshift({id:r.id,nom:r.nom,at:Date.now()});state.history=state.history.slice(0,60);saveHistory();
+  const detail=document.getElementById('detailContent');
+  const serving=detail?.dataset.id===id?Math.max(.25,Number(detail.dataset.capServing)||1):1;
+  state.history.unshift({id:r.id,nom:r.nom,at:Date.now(),serving});state.history=state.history.slice(0,60);saveHistory();
   state.prefs[id]={...pref(r),statut:statusOf(r)==="À tester"?"Validée":statusOf(r)};savePrefs();
-  const capEvent=proposeRecipeToCap(r);
-  state.pendingCooked=r.id;document.getElementById("cookedDialogText").textContent=`Tu viens d’enregistrer « ${r.nom} ». ${capEvent?'CAP te proposera aussi d’ajouter 1 portion à ta journée. ':''}Culina peut mémoriser une portion restante.`;
+  const capEvent=proposeRecipeToCap(r,serving);
+  state.pendingCooked=r.id;document.getElementById("cookedDialogText").textContent=`Tu viens d’enregistrer « ${r.nom} » (${servingLabel(serving)} portion${serving>1?'s':''}). ${capEvent?`CAP te proposera aussi d’ajouter cette quantité à ta journée. `:''}Culina peut mémoriser une portion restante.`;
   document.getElementById("detailDialog").close();document.getElementById("cookedDialog").showModal();renderAll();
 }
 function finishCookedNoLeftover(){state.pendingCooked=null;document.getElementById("cookedDialog").close();toast("Repas mémorisé")}
@@ -784,8 +926,8 @@ function wireEvents(){
   document.getElementById("generateWeekBtn").onclick=generateWeek;
   document.getElementById("weekShoppingBtn").onclick=addWeekShopping;
   document.getElementById("exportBtn").onclick=()=>{
-    const payload={meta:{nom:"Culina",version:"5.4.5"},recettes:state.recipes,stocks:state.stock,liste_courses:state.shopping,historique:state.history,culina_match:state.matchPrefs,restes:state.leftovers,menu_semaine:state.weekPlan,recettes_programmees:state.planned};
-    const blob=new Blob([JSON.stringify(payload,null,2)],{type:"application/json"}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="culina-sauvegarde-v5.4.5.json";a.click();URL.revokeObjectURL(a.href);
+    const payload={meta:{nom:"Culina",version:"5.5.0"},recettes:state.recipes,stocks:state.stock,liste_courses:state.shopping,historique:state.history,culina_match:state.matchPrefs,restes:state.leftovers,menu_semaine:state.weekPlan,recettes_programmees:state.planned};
+    const blob=new Blob([JSON.stringify(payload,null,2)],{type:"application/json"}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="culina-sauvegarde-v5.5.0.json";a.click();URL.revokeObjectURL(a.href);
   };
 }
 boot();
