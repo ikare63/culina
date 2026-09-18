@@ -24,6 +24,7 @@ const state={
   leftovers:JSON.parse(localStorage.getItem("culina-leftovers-v1")||"[]"),
   weekPlan:JSON.parse(localStorage.getItem("culina-week-v1")||"[]"),
   planned:JSON.parse(localStorage.getItem("culina-planned-v1")||"[]"),
+  recipeCustom:JSON.parse(localStorage.getItem("culina-recipes-custom-v1")||'{"added":[],"overrides":{},"deleted":[]}'),
   pendingCooked:null
 };
 
@@ -73,6 +74,17 @@ function saveHistory(){localStorage.setItem("culina-history-v1",JSON.stringify(s
 function saveLeftovers(){localStorage.setItem("culina-leftovers-v1",JSON.stringify(state.leftovers))}
 function saveWeek(){localStorage.setItem("culina-week-v1",JSON.stringify(state.weekPlan))}
 function savePlanned(){localStorage.setItem("culina-planned-v1",JSON.stringify(state.planned));publishCulinaSnapshot()}
+function saveRecipeCustom(){localStorage.setItem("culina-recipes-custom-v1",JSON.stringify(state.recipeCustom))}
+function normalizedRecipeCustom(){
+ const s=state.recipeCustom&&typeof state.recipeCustom==='object'?state.recipeCustom:{};
+ s.added=Array.isArray(s.added)?s.added:[];s.overrides=s.overrides&&typeof s.overrides==='object'?s.overrides:{};s.deleted=Array.isArray(s.deleted)?s.deleted:[];state.recipeCustom=s;return s;
+}
+function applyRecipeCustomizations(baseRecipes){
+ const s=normalizedRecipeCustom(),deleted=new Set(s.deleted||[]),over=s.overrides||{};
+ const base=(baseRecipes||[]).filter(r=>r&&r.id&&!deleted.has(r.id)).map(r=>over[r.id]?{...r,...over[r.id],id:r.id,__custom:'modified'}:r);
+ const ids=new Set(base.map(r=>r.id));for(const r of s.added||[]){if(r&&r.id&&!deleted.has(r.id)&&!ids.has(r.id)){base.push({...r,__custom:'added'});ids.add(r.id)}}
+ return base;
+}
 function localDateTimeValue(ts){const d=new Date(ts);const p=n=>String(n).padStart(2,"0");return `${d.getFullYear()}-${p(d.getMonth()+1)}-${p(d.getDate())}T${p(d.getHours())}:${p(d.getMinutes())}`}
 function defaultPlanValue(){const d=new Date();if(d.getHours()<19){d.setHours(19,0,0,0)}else{d.setDate(d.getDate()+1);d.setHours(19,0,0,0)}return localDateTimeValue(d.getTime())}
 function formatPlannedDate(ts){return new Date(ts).toLocaleString("fr-FR",{weekday:"short",day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"})}
@@ -360,7 +372,7 @@ async function boot(){
   let base;
   try{const r=await fetch("recettes.json",{cache:"no-store"});if(!r.ok)throw 0;base=await r.json()}
   catch(e){base=JSON.parse(document.getElementById("culinaFallback").textContent)}
-  state.recipes=base.recettes;
+  state.recipes=applyRecipeCustomizations(base.recettes);
   migrateStockGroups();
   drawChips();setupTabs();wireEvents();renderAll();publishCulinaSnapshot();
 }
@@ -551,6 +563,7 @@ function openDetail(id,capServing=1){
     <div class="detail-grid"><div><h3>Ingrédients</h3><ul class="ingredients" id="ingredientsList">${ingredientHTML(r,1)}</ul></div><div><h3>Préparation</h3>${r.version_simplifiee?`<button class="btn small" id="simpleRecipeBtn" onclick="toggleSimpleRecipe()">⚡ Version simple</button><div class="simple-note" id="simpleRecipeNote" style="display:none"></div>`:""}<ol class="steps" id="recipeSteps">${preparationHTML(r,false)}</ol></div></div>
     <div class="planner"><h3>⏰ Faire cette recette plus tard</h3><p>Choisis une date et une heure. Culina l’enregistre et te rappelle quand l’heure arrive.</p><div class="planner-row"><input type="datetime-local" id="recipePlanDate" value="${defaultPlanValue()}" min="${localDateTimeValue(Date.now())}"><button class="btn primary" onclick="scheduleRecipe('${r.id}')">Programmer</button></div></div>
     <div class="statusbar"><button class="btn" onclick="toggleFav('${r.id}');openDetail('${r.id}')">${isFav(r)?"♥ Favori":"♡ Favori"}</button>
+      <button class="btn" onclick="openRecipeEditor('${r.id}')">✎ Modifier</button><button class="btn danger" onclick="deleteRecipe('${r.id}')">Supprimer</button>
       ${m.missing.length?`<button class="btn primary" onclick="addMissingFromRecipe('${r.id}')">🛒 Ajouter les manquants</button>`:""}
       <button class="btn good" onclick="markCooked('${r.id}')">🍽 Je l’ai cuisinée</button>
       <select onchange="setStatus('${r.id}',this.value)"><option ${statusOf(r)==="À tester"?"selected":""}>À tester</option><option ${statusOf(r)==="Validée"?"selected":""}>Validée</option><option ${statusOf(r)==="À refaire"?"selected":""}>À refaire</option><option ${statusOf(r)==="Bof"?"selected":""}>Bof</option></select>
@@ -563,12 +576,77 @@ function changePortions(delta){
   let p=Math.max(1,Number(d.dataset.portions)+delta);d.dataset.portions=p;document.getElementById("portionVal").textContent=p;
   document.getElementById("ingredientsList").innerHTML=ingredientHTML(r,p/Number(d.dataset.basePortions));
 }
+function recipeSlug(s){return normalize(s).replace(/\s+/g,'-').replace(/^-+|-+$/g,'')||('recette-'+Date.now())}
+function recipeIngredientLines(r){return (r.ingredients||[]).map(i=>{const q=i.quantite??'',u=i.unite||'',name=i.ingredient||'';return `${q}${u?' '+u:''} | ${name}`.trim()}).join('\n')}
+function parseRecipeIngredients(text){
+ return String(text||'').split(/\n+/).map(x=>x.trim()).filter(Boolean).map(line=>{
+   const parts=line.split('|').map(x=>x.trim());let left=parts.length>1?parts.shift():'';const ingredient=(parts.join('|')||left).trim();if(!parts.length&&!line.includes('|'))left='';
+   let quantite=0,unite='';if(left){const m=left.match(/^([0-9]+(?:[.,][0-9]+)?)\s*(.*)$/);if(m){quantite=Number(m[1].replace(',','.'))||0;unite=m[2].trim()}else unite=left}
+   return {quantite,unite,ingredient,type_stock:'principal',groupe_stock:groupForName(ingredient)};
+ });
+}
+function openRecipeEditor(id=''){
+ const d=document.getElementById('recipeEditorDialog'),r=id?state.recipes.find(x=>x.id===id):null;if(!d)return;
+ document.getElementById('recipeEditorTitle').textContent=r?'Modifier la recette':'Ajouter une recette';document.getElementById('recipeEditorId').value=r?.id||'';
+ document.getElementById('recipeEditName').value=r?.nom||'';document.getElementById('recipeEditCategory').value=r?.categorie||'Salé';document.getElementById('recipeEditSubcategory').value=r?.sous_categorie||'';
+ document.getElementById('recipeEditTime').value=Number(r?.temps_minutes)||20;document.getElementById('recipeEditPortions').value=Number(r?.portions)||2;
+ const n=r?.nutrition_par_portion_estimee||{};document.getElementById('recipeEditKcal').value=Number(n.kcal)||0;document.getElementById('recipeEditProtein').value=Number(n.proteines_g)||0;document.getElementById('recipeEditCarbs').value=Number(n.glucides_g)||0;document.getElementById('recipeEditFat').value=Number(n.lipides_g)||0;
+ document.getElementById('recipeEditTags').value=(r?.tags||[]).join(', ');document.getElementById('recipeEditIngredients').value=r?recipeIngredientLines(r):'';document.getElementById('recipeEditSteps').value=(r?.etapes||[]).join('\n');document.getElementById('recipeEditNote').value=r?.note_personnelle||'';
+ if(document.getElementById('detailDialog')?.open)document.getElementById('detailDialog').close();d.showModal();setTimeout(()=>document.getElementById('recipeEditName')?.focus(),50);
+}
+function collectRecipeEditor(){
+ const existingId=document.getElementById('recipeEditorId').value.trim(),name=document.getElementById('recipeEditName').value.trim();if(!name)return null;
+ let id=existingId||recipeSlug(name),suffix=2;while(!existingId&&state.recipes.some(r=>r.id===id))id=`${recipeSlug(name)}-${suffix++}`;
+ const ingredients=parseRecipeIngredients(document.getElementById('recipeEditIngredients').value),steps=document.getElementById('recipeEditSteps').value.split(/\n+/).map(x=>x.trim()).filter(Boolean);if(!ingredients.length||!steps.length)return null;
+ const previous=existingId?state.recipes.find(x=>x.id===existingId):null;
+ return {id,nom:name,categorie:document.getElementById('recipeEditCategory').value,sous_categorie:document.getElementById('recipeEditSubcategory').value.trim(),tags:document.getElementById('recipeEditTags').value.split(',').map(x=>x.trim()).filter(Boolean),temps_minutes:Number(document.getElementById('recipeEditTime').value)||0,difficulte:previous?.difficulte||'Facile',portions:Math.max(1,Number(document.getElementById('recipeEditPortions').value)||1),ingredients,etapes:steps,nutrition_par_portion_estimee:{kcal:Number(document.getElementById('recipeEditKcal').value)||0,proteines_g:Number(document.getElementById('recipeEditProtein').value)||0,glucides_g:Number(document.getElementById('recipeEditCarbs').value)||0,lipides_g:Number(document.getElementById('recipeEditFat').value)||0},statut:statusOf(previous||{}),favori:isFav(previous||{}),note_personnelle:document.getElementById('recipeEditNote').value.trim()};
+}
+function saveRecipeEditor(){
+ const recipe=collectRecipeEditor();if(!recipe){toast('Renseigne au moins le nom, un ingrédient et une étape');return false}
+ const s=normalizedRecipeCustom(),existing=state.recipes.find(r=>r.id===recipe.id),addedIndex=s.added.findIndex(r=>r.id===recipe.id);
+ if(addedIndex>=0)s.added[addedIndex]=recipe;else if(existing&&existing.__custom==='added')s.added.push(recipe);else if(existing)s.overrides[recipe.id]=recipe;else s.added.push(recipe);
+ s.deleted=s.deleted.filter(id=>id!==recipe.id);saveRecipeCustom();
+ const baseNow=state.recipes.filter(r=>r.__custom!=='added'&&r.__custom!=='modified').concat(Object.values(s.overrides||{}).filter(r=>!state.recipes.some(x=>x.id===r.id&&x.__custom!=='modified')));
+ // Recompose sans dépendre du fichier source : remplace/ajoute la recette directement dans l'état courant.
+ const i=state.recipes.findIndex(r=>r.id===recipe.id);const tagged={...recipe,__custom:i>=0?'modified':'added'};if(i>=0)state.recipes[i]=tagged;else state.recipes.push(tagged);
+ renderAll();drawChips();publishCulinaSnapshot();document.getElementById('recipeEditorDialog').close();toast(existing?'Recette modifiée':'Recette ajoutée');return true;
+}
+function deleteRecipe(id){
+ const r=state.recipes.find(x=>x.id===id);if(!r||!confirm(`Supprimer « ${r.nom} » ?`))return;
+ const s=normalizedRecipeCustom(),added=s.added.some(x=>x.id===id);if(added)s.added=s.added.filter(x=>x.id!==id);else if(!s.deleted.includes(id))s.deleted.push(id);delete s.overrides[id];saveRecipeCustom();
+ delete state.prefs[id];savePrefs();state.history=state.history.filter(x=>x.id!==id);saveHistory();state.weekPlan=state.weekPlan.filter(x=>x.recipeId!==id);saveWeek();state.planned=state.planned.filter(x=>x.recipeId!==id);savePlanned();state.leftovers=state.leftovers.filter(x=>x.recipeId!==id);saveLeftovers();state.recipes=state.recipes.filter(x=>x.id!==id);
+ document.getElementById('detailDialog')?.close();renderAll();drawChips();toast('Recette supprimée');
+}
+
 function setStatus(id,v){const r=state.recipes.find(x=>x.id===id);if(!r)return;state.prefs[id]={...pref(r),statut:v};savePrefs();renderAll()}
 function addMissingFromRecipe(id){
   const r=state.recipes.find(x=>x.id===id),missing=matchInfo(r).missing;
   missing.forEach(i=>addShopping(i.ingredient,i.groupe_stock||groupForName(i.ingredient),"Pour "+r.nom,false));saveShopping();updateBadges();
   toast(missing.length+" ingrédient"+(missing.length>1?"s":"")+" ajouté"+(missing.length>1?"s":"")+" aux courses");
 }
+
+const CULINA_FRUIT_KEY='culina-fruit-reminders-v1';
+function fruitReminderStore(){try{return JSON.parse(localStorage.getItem(CULINA_FRUIT_KEY)||'{}')}catch(e){return {}}}
+function fruitReminderSlot(now=new Date()){
+ const h=now.getHours(),m=now.getMinutes(),mins=h*60+m;
+ if(mins>=12*60+45&&mins<14*60)return 'lunch';
+ if(mins>=20*60&&mins<22*60)return 'dinner';
+ return null;
+}
+async function showCulinaFruitNotification(slot){
+ try{if('Notification' in window&&Notification.permission==='granted'){
+   const title='Culina — pense au fruit 🍎',body=slot==='lunch'?'Un fruit pour terminer le déjeuner ?':'Un fruit pour terminer le dîner ?';
+   if('serviceWorker' in navigator){const reg=await navigator.serviceWorker.ready;await reg.showNotification(title,{body,icon:'img/icon-192.png',badge:'img/favicon-32.png',tag:'culina-fruit-'+todayKeyLocal()+'-'+slot})}else new Notification(title,{body});
+ }}catch(e){}
+}
+function checkFruitHabitReminder(){
+ const slot=fruitReminderSlot(),box=document.getElementById('fruitHabitReminder');if(!box)return;if(!slot){box.hidden=true;return}
+ const key=`${todayKeyLocal()}:${slot}`,s=fruitReminderStore(),snooze=Number(s[key]?.snoozeUntil)||0;if(s[key]?.done||snooze>Date.now()){box.hidden=true;return}
+ box.hidden=false;document.getElementById('fruitHabitText').textContent=slot==='lunch'?'Il est passé 12 h 45 : pense à un fruit après le déjeuner.':'Il est 20 h ou plus : pense à un fruit après le dîner.';
+ if(!s[key]?.notified){s[key]={...(s[key]||{}),notified:new Date().toISOString()};localStorage.setItem(CULINA_FRUIT_KEY,JSON.stringify(s));showCulinaFruitNotification(slot)}
+}
+function completeFruitHabit(){const slot=fruitReminderSlot();if(!slot)return;const key=`${todayKeyLocal()}:${slot}`,s=fruitReminderStore();s[key]={...(s[key]||{}),done:new Date().toISOString()};localStorage.setItem(CULINA_FRUIT_KEY,JSON.stringify(s));checkFruitHabitReminder()}
+function snoozeFruitHabit(){const slot=fruitReminderSlot();if(!slot)return;const key=`${todayKeyLocal()}:${slot}`,s=fruitReminderStore();s[key]={...(s[key]||{}),snoozeUntil:Date.now()+15*60*1000};localStorage.setItem(CULINA_FRUIT_KEY,JSON.stringify(s));checkFruitHabitReminder();toast('Rappel fruit repoussé de 15 min')}
 
 async function requestReminderPermission(){
   if(!("Notification" in window))return "unsupported";
@@ -911,6 +989,9 @@ function addWeekShopping(){
 function renderAll(){renderRecipes();renderStocks();renderShopping();renderCulinaMatch();renderForYou();renderWeek();updateBadges();publishCulinaSnapshot()}
 function wireEvents(){
   document.getElementById("themeBtn").onclick=toggleTheme;
+  document.getElementById("addRecipeBtn").onclick=()=>openRecipeEditor();
+  document.getElementById("fruitHabitDone").onclick=completeFruitHabit;document.getElementById("fruitHabitSnooze").onclick=snoozeFruitHabit;
+  document.getElementById("recipeEditorForm").addEventListener("submit",e=>{if(e.submitter?.value==='cancel')return;e.preventDefault();saveRecipeEditor()});
   document.getElementById("search").oninput=e=>{state.query=e.target.value;renderRecipes()};
   document.getElementById("favOnly").onclick=()=>{state.favOnly=!state.favOnly;document.getElementById("favOnly").textContent=state.favOnly?"♥ Favoris":"♡ Favoris";renderRecipes()};
   document.getElementById("stockMode").onclick=()=>{state.stockMode=!state.stockMode;renderRecipes()};
@@ -926,14 +1007,16 @@ function wireEvents(){
   document.getElementById("generateWeekBtn").onclick=generateWeek;
   document.getElementById("weekShoppingBtn").onclick=addWeekShopping;
   document.getElementById("exportBtn").onclick=()=>{
-    const payload={meta:{nom:"Culina",version:"5.5.0"},recettes:state.recipes,stocks:state.stock,liste_courses:state.shopping,historique:state.history,culina_match:state.matchPrefs,restes:state.leftovers,menu_semaine:state.weekPlan,recettes_programmees:state.planned};
-    const blob=new Blob([JSON.stringify(payload,null,2)],{type:"application/json"}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="culina-sauvegarde-v5.5.0.json";a.click();URL.revokeObjectURL(a.href);
+    const payload={meta:{nom:"Culina",version:"5.6.0"},recettes:state.recipes,stocks:state.stock,liste_courses:state.shopping,historique:state.history,culina_match:state.matchPrefs,restes:state.leftovers,menu_semaine:state.weekPlan,recettes_programmees:state.planned,recettes_personnelles:state.recipeCustom};
+    const blob=new Blob([JSON.stringify(payload,null,2)],{type:"application/json"}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="culina-sauvegarde-v5.6.0.json";a.click();URL.revokeObjectURL(a.href);
   };
 }
 boot();
+checkFruitHabitReminder();
 if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("service-worker.js").catch(()=>{}))}
 setInterval(updateMealMoment,60000);
 setInterval(checkRecipeReminders,30000);
-document.addEventListener("visibilitychange",()=>{if(!document.hidden){updateMealMoment();checkRecipeReminders();armNearestReminder()}});
+setInterval(checkFruitHabitReminder,30000);
+document.addEventListener("visibilitychange",()=>{if(!document.hidden){updateMealMoment();checkRecipeReminders();armNearestReminder();checkFruitHabitReminder()}});
 window.addEventListener("storage",e=>{if(e.key===CAP_SNAPSHOT_KEY){renderCapNeeds();renderForYou()}});
 setInterval(renderCapNeeds,3000);
