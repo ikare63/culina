@@ -93,6 +93,17 @@ button{touch-action:manipulation}
 }
 .tab .nav-icon{font-size:20px;line-height:1}
 .tab.active{color:var(--green);background:var(--green-soft)}
+.nav-add-recipe{
+  align-self:center;justify-self:center;width:56px;height:56px;margin:-20px 0 0;
+  border:0;border-radius:50%;background:#18864b;color:#fff;
+  display:grid;place-items:center;cursor:pointer;box-shadow:0 8px 22px rgba(24,134,75,.34);
+  font:500 38px/1 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  transition:transform .16s ease,box-shadow .16s ease,filter .16s ease;
+}
+.nav-add-recipe span{display:block;transform:translateY(-2px)}
+.nav-add-recipe:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(24,134,75,.42);filter:brightness(1.04)}
+.nav-add-recipe:active{transform:translateY(1px);box-shadow:0 5px 15px rgba(24,134,75,.3)}
+.nav-add-recipe:focus-visible{outline:3px solid color-mix(in srgb,#18864b 35%,white);outline-offset:3px}
 .badge{
   display:inline-grid;place-items:center;min-width:18px;height:18px;padding:0 5px;
   border-radius:99px;background:var(--red);color:#fff;font-size:9px;margin-left:2px
@@ -294,7 +305,7 @@ footer{padding:26px 0 8px;text-align:center;color:var(--muted);font-size:10px}
   .home-hero{min-height:198px}.home-hero-content{max-width:73%}.home-hero h2{font-size:27px}.home-hero p{font-size:11px}
   .home-hero::after{inset:0 0 0 45%;opacity:.78}
   .grid{grid-template-columns:1fr}.card{min-height:142px}
-  .bottom-nav{width:100%}.tab{font-size:9px}.tab .nav-icon{font-size:19px}
+  .bottom-nav{width:100%}.tab{font-size:9px}.tab .nav-icon{font-size:19px}.nav-add-recipe{width:54px;height:54px;font-size:36px;margin-top:-19px}
   .week-grid{grid-template-columns:1fr}
 }
 

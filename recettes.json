@@ -4,11 +4,11 @@
     "version": "5.5.0",
     "description": "Base personnelle de recettes Culina.",
     "nutrition": "Les valeurs nutritionnelles sont des estimations par portion.",
-    "nombre_recettes": 397,
+    "nombre_recettes": 400,
     "categories": {
       "Boisson": 12,
       "Petit-déjeuner": 25,
-      "Salé": 255,
+      "Salé": 258,
       "Sauce & base": 10,
       "Snack": 13,
       "Sucré": 82
@@ -15962,8 +15962,8 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 466,
-        "proteines_g": 46.0,
-        "glucides_g": 60.0,
+        "proteines_g": 46,
+        "glucides_g": 60,
         "lipides_g": 3.5
       },
       "statut": "À tester",
@@ -16128,9 +16128,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 504,
-        "proteines_g": 51.0,
-        "glucides_g": 46.0,
-        "lipides_g": 7.0
+        "proteines_g": 51,
+        "glucides_g": 46,
+        "lipides_g": 7
       },
       "statut": "À tester",
       "favori": false,
@@ -16296,8 +16296,8 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 472,
-        "proteines_g": 47.0,
-        "glucides_g": 63.0,
+        "proteines_g": 47,
+        "glucides_g": 63,
         "lipides_g": 3.5
       },
       "statut": "À tester",
@@ -16463,9 +16463,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 507,
-        "proteines_g": 60.0,
-        "glucides_g": 48.0,
-        "lipides_g": 6.0
+        "proteines_g": 60,
+        "glucides_g": 48,
+        "lipides_g": 6
       },
       "statut": "À tester",
       "favori": false,
@@ -16594,9 +16594,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 441,
-        "proteines_g": 42.0,
-        "glucides_g": 52.0,
-        "lipides_g": 5.0
+        "proteines_g": 42,
+        "glucides_g": 52,
+        "lipides_g": 5
       },
       "statut": "À tester",
       "favori": false,
@@ -16699,9 +16699,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 435,
-        "proteines_g": 42.0,
-        "glucides_g": 44.0,
-        "lipides_g": 8.0
+        "proteines_g": 42,
+        "glucides_g": 44,
+        "lipides_g": 8
       },
       "statut": "À tester",
       "favori": false,
@@ -16812,9 +16812,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 452,
-        "proteines_g": 52.0,
-        "glucides_g": 42.0,
-        "lipides_g": 6.0
+        "proteines_g": 52,
+        "glucides_g": 42,
+        "lipides_g": 6
       },
       "statut": "À tester",
       "favori": false,
@@ -16941,9 +16941,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 460,
-        "proteines_g": 42.0,
-        "glucides_g": 38.0,
-        "lipides_g": 14.0
+        "proteines_g": 42,
+        "glucides_g": 38,
+        "lipides_g": 14
       },
       "statut": "À tester",
       "favori": false,
@@ -17018,9 +17018,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 210,
-        "proteines_g": 33.0,
-        "glucides_g": 9.0,
-        "lipides_g": 4.0
+        "proteines_g": 33,
+        "glucides_g": 9,
+        "lipides_g": 4
       },
       "statut": "À tester",
       "favori": false,
@@ -17080,9 +17080,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 120,
-        "proteines_g": 14.0,
-        "glucides_g": 10.0,
-        "lipides_g": 2.0
+        "proteines_g": 14,
+        "glucides_g": 10,
+        "lipides_g": 2
       },
       "statut": "À tester",
       "favori": false,
@@ -17178,9 +17178,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 420,
-        "proteines_g": 48.0,
-        "glucides_g": 25.0,
-        "lipides_g": 10.0
+        "proteines_g": 48,
+        "glucides_g": 25,
+        "lipides_g": 10
       },
       "statut": "À tester",
       "favori": false,
@@ -17293,9 +17293,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 380,
-        "proteines_g": 40.0,
-        "glucides_g": 30.0,
-        "lipides_g": 8.0
+        "proteines_g": 40,
+        "glucides_g": 30,
+        "lipides_g": 8
       },
       "statut": "À tester",
       "favori": false,
@@ -17355,9 +17355,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 180,
-        "proteines_g": 11.0,
-        "glucides_g": 27.0,
-        "lipides_g": 2.0
+        "proteines_g": 11,
+        "glucides_g": 27,
+        "lipides_g": 2
       },
       "statut": "À tester",
       "favori": false,
@@ -17432,9 +17432,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 290,
-        "proteines_g": 38.0,
-        "glucides_g": 18.0,
-        "lipides_g": 6.0
+        "proteines_g": 38,
+        "glucides_g": 18,
+        "lipides_g": 6
       },
       "statut": "À tester",
       "favori": false,
@@ -17529,9 +17529,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 340,
-        "proteines_g": 38.0,
-        "glucides_g": 30.0,
-        "lipides_g": 7.0
+        "proteines_g": 38,
+        "glucides_g": 30,
+        "lipides_g": 7
       },
       "statut": "À tester",
       "favori": false,
@@ -17633,9 +17633,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 370,
-        "proteines_g": 45.0,
-        "glucides_g": 35.0,
-        "lipides_g": 5.0
+        "proteines_g": 45,
+        "glucides_g": 35,
+        "lipides_g": 5
       },
       "statut": "À tester",
       "favori": false,
@@ -17743,9 +17743,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 400,
-        "proteines_g": 42.0,
-        "glucides_g": 28.0,
-        "lipides_g": 12.0
+        "proteines_g": 42,
+        "glucides_g": 28,
+        "lipides_g": 12
       },
       "statut": "À tester",
       "favori": false,
@@ -17802,9 +17802,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 124,
-        "proteines_g": 3.0,
-        "glucides_g": 27.0,
-        "lipides_g": 0.0
+        "proteines_g": 3,
+        "glucides_g": 27,
+        "lipides_g": 0
       },
       "statut": "À tester",
       "favori": false,
@@ -17901,9 +17901,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 420,
-        "proteines_g": 45.0,
-        "glucides_g": 28.0,
-        "lipides_g": 11.0
+        "proteines_g": 45,
+        "glucides_g": 28,
+        "lipides_g": 11
       },
       "statut": "À tester",
       "favori": false,
@@ -17994,9 +17994,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 420,
-        "proteines_g": 55.0,
-        "glucides_g": 25.0,
-        "lipides_g": 9.0
+        "proteines_g": 55,
+        "glucides_g": 25,
+        "lipides_g": 9
       },
       "statut": "À tester",
       "favori": false,
@@ -18116,9 +18116,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 480,
-        "proteines_g": 48.0,
-        "glucides_g": 35.0,
-        "lipides_g": 14.0
+        "proteines_g": 48,
+        "glucides_g": 35,
+        "lipides_g": 14
       },
       "statut": "À tester",
       "favori": false,
@@ -18214,9 +18214,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 160,
-        "proteines_g": 18.0,
-        "glucides_g": 10.0,
-        "lipides_g": 3.0
+        "proteines_g": 18,
+        "glucides_g": 10,
+        "lipides_g": 3
       },
       "statut": "À tester",
       "favori": false,
@@ -18299,9 +18299,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 500,
-        "proteines_g": 45.0,
-        "glucides_g": 45.0,
-        "lipides_g": 10.0
+        "proteines_g": 45,
+        "glucides_g": 45,
+        "lipides_g": 10
       },
       "statut": "À tester",
       "favori": false,
@@ -18411,9 +18411,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 380,
-        "proteines_g": 45.0,
-        "glucides_g": 30.0,
-        "lipides_g": 9.0
+        "proteines_g": 45,
+        "glucides_g": 30,
+        "lipides_g": 9
       },
       "statut": "À tester",
       "favori": false,
@@ -18499,9 +18499,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 380,
-        "proteines_g": 35.0,
-        "glucides_g": 28.0,
-        "lipides_g": 12.0
+        "proteines_g": 35,
+        "glucides_g": 28,
+        "lipides_g": 12
       },
       "statut": "À tester",
       "favori": false,
@@ -18625,9 +18625,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 150,
-        "proteines_g": 12.0,
-        "glucides_g": 15.0,
-        "lipides_g": 4.0
+        "proteines_g": 12,
+        "glucides_g": 15,
+        "lipides_g": 4
       },
       "statut": "À tester",
       "favori": false,
@@ -18693,9 +18693,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 135,
-        "proteines_g": 7.0,
-        "glucides_g": 22.0,
-        "lipides_g": 2.0
+        "proteines_g": 7,
+        "glucides_g": 22,
+        "lipides_g": 2
       },
       "statut": "À tester",
       "favori": false,
@@ -18820,9 +18820,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 170,
-        "proteines_g": 13.0,
-        "glucides_g": 15.0,
-        "lipides_g": 5.0
+        "proteines_g": 13,
+        "glucides_g": 15,
+        "lipides_g": 5
       },
       "statut": "À tester",
       "favori": false,
@@ -18939,9 +18939,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 280,
-        "proteines_g": 30.0,
-        "glucides_g": 25.0,
-        "lipides_g": 6.0
+        "proteines_g": 30,
+        "glucides_g": 25,
+        "lipides_g": 6
       },
       "statut": "À tester",
       "favori": false,
@@ -19014,9 +19014,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 280,
-        "proteines_g": 25.0,
-        "glucides_g": 18.0,
-        "lipides_g": 10.0
+        "proteines_g": 25,
+        "glucides_g": 18,
+        "lipides_g": 10
       },
       "statut": "À tester",
       "favori": false,
@@ -19119,9 +19119,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 140,
-        "proteines_g": 9.0,
-        "glucides_g": 15.0,
-        "lipides_g": 4.0
+        "proteines_g": 9,
+        "glucides_g": 15,
+        "lipides_g": 4
       },
       "statut": "À tester",
       "favori": false,
@@ -19201,9 +19201,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 180,
-        "proteines_g": 20.0,
-        "glucides_g": 15.0,
-        "lipides_g": 5.0
+        "proteines_g": 20,
+        "glucides_g": 15,
+        "lipides_g": 5
       },
       "statut": "À tester",
       "favori": false,
@@ -19271,9 +19271,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 95,
-        "proteines_g": 1.0,
-        "glucides_g": 18.0,
-        "lipides_g": 1.0
+        "proteines_g": 1,
+        "glucides_g": 18,
+        "lipides_g": 1
       },
       "statut": "À tester",
       "favori": false,
@@ -19337,9 +19337,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 280,
-        "proteines_g": 33.0,
-        "glucides_g": 27.0,
-        "lipides_g": 4.0
+        "proteines_g": 33,
+        "glucides_g": 27,
+        "lipides_g": 4
       },
       "statut": "À tester",
       "favori": false,
@@ -19455,9 +19455,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 120,
-        "proteines_g": 9.0,
-        "glucides_g": 14.0,
-        "lipides_g": 2.0
+        "proteines_g": 9,
+        "glucides_g": 14,
+        "lipides_g": 2
       },
       "statut": "À tester",
       "favori": false,
@@ -19555,9 +19555,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 175,
-        "proteines_g": 19.0,
-        "glucides_g": 14.0,
-        "lipides_g": 4.0
+        "proteines_g": 19,
+        "glucides_g": 14,
+        "lipides_g": 4
       },
       "statut": "À tester",
       "favori": false,
@@ -19620,9 +19620,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 365,
-        "proteines_g": 36.0,
-        "glucides_g": 37.0,
-        "lipides_g": 5.0
+        "proteines_g": 36,
+        "glucides_g": 37,
+        "lipides_g": 5
       },
       "statut": "À tester",
       "favori": false,
@@ -19679,9 +19679,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 335,
-        "proteines_g": 22.0,
-        "glucides_g": 43.0,
-        "lipides_g": 8.0
+        "proteines_g": 22,
+        "glucides_g": 43,
+        "lipides_g": 8
       },
       "statut": "À tester",
       "favori": false,
@@ -19760,9 +19760,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 230,
-        "proteines_g": 26.0,
-        "glucides_g": 14.0,
-        "lipides_g": 7.0
+        "proteines_g": 26,
+        "glucides_g": 14,
+        "lipides_g": 7
       },
       "statut": "À tester",
       "favori": false,
@@ -19812,9 +19812,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 120,
-        "proteines_g": 1.0,
-        "glucides_g": 28.0,
-        "lipides_g": 0.0
+        "proteines_g": 1,
+        "glucides_g": 28,
+        "lipides_g": 0
       },
       "statut": "À tester",
       "favori": false,
@@ -19896,9 +19896,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 120,
-        "proteines_g": 20.0,
-        "glucides_g": 3.0,
-        "lipides_g": 2.0
+        "proteines_g": 20,
+        "glucides_g": 3,
+        "lipides_g": 2
       },
       "statut": "À tester",
       "favori": false,
@@ -20009,9 +20009,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 225,
-        "proteines_g": 31.0,
-        "glucides_g": 18.0,
-        "lipides_g": 5.0
+        "proteines_g": 31,
+        "glucides_g": 18,
+        "lipides_g": 5
       },
       "statut": "À tester",
       "favori": false,
@@ -20092,9 +20092,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 275,
-        "proteines_g": 27.0,
-        "glucides_g": 33.0,
-        "lipides_g": 4.0
+        "proteines_g": 27,
+        "glucides_g": 33,
+        "lipides_g": 4
       },
       "statut": "À tester",
       "favori": false,
@@ -20186,9 +20186,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 220,
-        "proteines_g": 22.0,
-        "glucides_g": 15.0,
-        "lipides_g": 5.0
+        "proteines_g": 22,
+        "glucides_g": 15,
+        "lipides_g": 5
       },
       "statut": "À tester",
       "favori": false,
@@ -20260,9 +20260,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 120,
-        "proteines_g": 5.0,
-        "glucides_g": 10.0,
-        "lipides_g": 6.0
+        "proteines_g": 5,
+        "glucides_g": 10,
+        "lipides_g": 6
       },
       "statut": "À tester",
       "favori": false,
@@ -20384,9 +20384,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 290,
-        "proteines_g": 33.0,
-        "glucides_g": 20.0,
-        "lipides_g": 7.0
+        "proteines_g": 33,
+        "glucides_g": 20,
+        "lipides_g": 7
       },
       "statut": "À tester",
       "favori": false,
@@ -20493,9 +20493,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 280,
-        "proteines_g": 34.0,
-        "glucides_g": 30.0,
-        "lipides_g": 3.0
+        "proteines_g": 34,
+        "glucides_g": 30,
+        "lipides_g": 3
       },
       "statut": "À tester",
       "favori": false,
@@ -20544,9 +20544,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 280,
-        "proteines_g": 25.0,
-        "glucides_g": 40.0,
-        "lipides_g": 3.0
+        "proteines_g": 25,
+        "glucides_g": 40,
+        "lipides_g": 3
       },
       "statut": "À tester",
       "favori": false,
@@ -20642,9 +20642,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 330,
-        "proteines_g": 35.0,
-        "glucides_g": 32.0,
-        "lipides_g": 7.0
+        "proteines_g": 35,
+        "glucides_g": 32,
+        "lipides_g": 7
       },
       "statut": "À tester",
       "favori": false,
@@ -20709,9 +20709,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 250,
-        "proteines_g": 10.0,
-        "glucides_g": 42.0,
-        "lipides_g": 5.0
+        "proteines_g": 10,
+        "glucides_g": 42,
+        "lipides_g": 5
       },
       "statut": "À tester",
       "favori": false,
@@ -20783,9 +20783,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 230,
-        "proteines_g": 38.0,
-        "glucides_g": 8.0,
-        "lipides_g": 2.0
+        "proteines_g": 38,
+        "glucides_g": 8,
+        "lipides_g": 2
       },
       "statut": "À tester",
       "favori": false,
@@ -20858,9 +20858,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 370,
-        "proteines_g": 8.0,
-        "glucides_g": 64.0,
-        "lipides_g": 8.0
+        "proteines_g": 8,
+        "glucides_g": 64,
+        "lipides_g": 8
       },
       "statut": "À tester",
       "favori": false,
@@ -20941,9 +20941,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 430,
-        "proteines_g": 33.0,
-        "glucides_g": 52.0,
-        "lipides_g": 9.0
+        "proteines_g": 33,
+        "glucides_g": 52,
+        "lipides_g": 9
       },
       "statut": "À tester",
       "favori": false,
@@ -21017,9 +21017,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 315,
-        "proteines_g": 30.0,
-        "glucides_g": 36.0,
-        "lipides_g": 4.0
+        "proteines_g": 30,
+        "glucides_g": 36,
+        "lipides_g": 4
       },
       "statut": "À tester",
       "favori": false,
@@ -21126,9 +21126,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 265,
-        "proteines_g": 28.0,
-        "glucides_g": 14.0,
-        "lipides_g": 10.0
+        "proteines_g": 28,
+        "glucides_g": 14,
+        "lipides_g": 10
       },
       "statut": "À tester",
       "favori": false,
@@ -21202,9 +21202,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 125,
-        "proteines_g": 1.0,
-        "glucides_g": 28.0,
-        "lipides_g": 1.0
+        "proteines_g": 1,
+        "glucides_g": 28,
+        "lipides_g": 1
       },
       "statut": "À tester",
       "favori": false,
@@ -21261,9 +21261,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 100,
-        "proteines_g": 1.0,
-        "glucides_g": 25.0,
-        "lipides_g": 0.0
+        "proteines_g": 1,
+        "glucides_g": 25,
+        "lipides_g": 0
       },
       "statut": "À tester",
       "favori": false,
@@ -21335,9 +21335,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 377,
-        "proteines_g": 21.0,
-        "glucides_g": 22.0,
-        "lipides_g": 22.0
+        "proteines_g": 21,
+        "glucides_g": 22,
+        "lipides_g": 22
       },
       "statut": "À tester",
       "favori": false,
@@ -21413,9 +21413,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 275,
-        "proteines_g": 33.0,
-        "glucides_g": 19.0,
-        "lipides_g": 6.0
+        "proteines_g": 33,
+        "glucides_g": 19,
+        "lipides_g": 6
       },
       "statut": "À tester",
       "favori": false,
@@ -21506,9 +21506,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 280,
-        "proteines_g": 27.0,
-        "glucides_g": 5.0,
-        "lipides_g": 17.0
+        "proteines_g": 27,
+        "glucides_g": 5,
+        "lipides_g": 17
       },
       "statut": "À tester",
       "favori": false,
@@ -21585,8 +21585,8 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 245,
-        "proteines_g": 17.0,
-        "glucides_g": 34.0,
+        "proteines_g": 17,
+        "glucides_g": 34,
         "lipides_g": 3.5
       },
       "statut": "À tester",
@@ -21681,9 +21681,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 220,
-        "proteines_g": 18.0,
-        "glucides_g": 7.0,
-        "lipides_g": 13.0
+        "proteines_g": 18,
+        "glucides_g": 7,
+        "lipides_g": 13
       },
       "statut": "À tester",
       "favori": false,
@@ -21806,9 +21806,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 410,
-        "proteines_g": 28.0,
-        "glucides_g": 24.0,
-        "lipides_g": 22.0
+        "proteines_g": 28,
+        "glucides_g": 24,
+        "lipides_g": 22
       },
       "statut": "À tester",
       "favori": false,
@@ -21902,9 +21902,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 320,
-        "proteines_g": 18.0,
-        "glucides_g": 20.0,
-        "lipides_g": 20.0
+        "proteines_g": 18,
+        "glucides_g": 20,
+        "lipides_g": 20
       },
       "statut": "À tester",
       "favori": false,
@@ -22033,9 +22033,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 420,
-        "proteines_g": 32.0,
-        "glucides_g": 22.0,
-        "lipides_g": 23.0
+        "proteines_g": 32,
+        "glucides_g": 22,
+        "lipides_g": 23
       },
       "statut": "À tester",
       "favori": false,
@@ -22163,9 +22163,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 430,
-        "proteines_g": 35.0,
-        "glucides_g": 28.0,
-        "lipides_g": 20.0
+        "proteines_g": 35,
+        "glucides_g": 28,
+        "lipides_g": 20
       },
       "statut": "À tester",
       "favori": false,
@@ -22290,9 +22290,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 475,
-        "proteines_g": 35.0,
-        "glucides_g": 28.0,
-        "lipides_g": 24.0
+        "proteines_g": 35,
+        "glucides_g": 28,
+        "lipides_g": 24
       },
       "statut": "À tester",
       "favori": false,
@@ -22423,7 +22423,7 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 180,
-        "proteines_g": 27.0,
+        "proteines_g": 27,
         "glucides_g": 10.4,
         "lipides_g": 4.8
       },
@@ -22529,9 +22529,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 475,
-        "proteines_g": 34.0,
-        "glucides_g": 35.0,
-        "lipides_g": 20.0
+        "proteines_g": 34,
+        "glucides_g": 35,
+        "lipides_g": 20
       },
       "statut": "À tester",
       "favori": false,
@@ -22668,9 +22668,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 460,
-        "proteines_g": 26.0,
-        "glucides_g": 50.0,
-        "lipides_g": 16.0
+        "proteines_g": 26,
+        "glucides_g": 50,
+        "lipides_g": 16
       },
       "statut": "À tester",
       "favori": false,
@@ -22816,9 +22816,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 495,
-        "proteines_g": 35.0,
-        "glucides_g": 36.0,
-        "lipides_g": 23.0
+        "proteines_g": 35,
+        "glucides_g": 36,
+        "lipides_g": 23
       },
       "statut": "À tester",
       "favori": false,
@@ -22949,9 +22949,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 420,
-        "proteines_g": 30.0,
-        "glucides_g": 34.0,
-        "lipides_g": 20.0
+        "proteines_g": 30,
+        "glucides_g": 34,
+        "lipides_g": 20
       },
       "statut": "À tester",
       "favori": false,
@@ -23102,9 +23102,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 410,
-        "proteines_g": 28.0,
-        "glucides_g": 32.0,
-        "lipides_g": 20.0
+        "proteines_g": 28,
+        "glucides_g": 32,
+        "lipides_g": 20
       },
       "statut": "À tester",
       "favori": false,
@@ -23194,9 +23194,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 475,
-        "proteines_g": 36.0,
-        "glucides_g": 39.0,
-        "lipides_g": 19.0
+        "proteines_g": 36,
+        "glucides_g": 39,
+        "lipides_g": 19
       },
       "statut": "À tester",
       "favori": false,
@@ -23321,9 +23321,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 310,
-        "proteines_g": 30.0,
-        "glucides_g": 22.0,
-        "lipides_g": 14.0
+        "proteines_g": 30,
+        "glucides_g": 22,
+        "lipides_g": 14
       },
       "statut": "À tester",
       "favori": false,
@@ -23461,9 +23461,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 430,
-        "proteines_g": 32.0,
-        "glucides_g": 43.0,
-        "lipides_g": 14.0
+        "proteines_g": 32,
+        "glucides_g": 43,
+        "lipides_g": 14
       },
       "statut": "À tester",
       "favori": false,
@@ -23557,9 +23557,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 475,
-        "proteines_g": 26.0,
-        "glucides_g": 54.0,
-        "lipides_g": 16.0
+        "proteines_g": 26,
+        "glucides_g": 54,
+        "lipides_g": 16
       },
       "statut": "À tester",
       "favori": false,
@@ -23650,9 +23650,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 245,
-        "proteines_g": 26.0,
-        "glucides_g": 9.0,
-        "lipides_g": 12.0
+        "proteines_g": 26,
+        "glucides_g": 9,
+        "lipides_g": 12
       },
       "statut": "À tester",
       "favori": false,
@@ -23775,9 +23775,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 420,
-        "proteines_g": 14.0,
-        "glucides_g": 40.0,
-        "lipides_g": 22.0
+        "proteines_g": 14,
+        "glucides_g": 40,
+        "lipides_g": 22
       },
       "statut": "À tester",
       "favori": false,
@@ -23840,9 +23840,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 360,
-        "proteines_g": 19.0,
-        "glucides_g": 52.0,
-        "lipides_g": 5.0
+        "proteines_g": 19,
+        "glucides_g": 52,
+        "lipides_g": 5
       },
       "statut": "À tester",
       "favori": false,
@@ -23914,9 +23914,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 325,
-        "proteines_g": 18.0,
-        "glucides_g": 42.0,
-        "lipides_g": 9.0
+        "proteines_g": 18,
+        "glucides_g": 42,
+        "lipides_g": 9
       },
       "statut": "À tester",
       "favori": false,
@@ -23989,9 +23989,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 360,
-        "proteines_g": 28.0,
-        "glucides_g": 8.0,
-        "lipides_g": 23.0
+        "proteines_g": 28,
+        "glucides_g": 8,
+        "lipides_g": 23
       },
       "statut": "À tester",
       "favori": false,
@@ -24070,9 +24070,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 85,
-        "proteines_g": 8.0,
-        "glucides_g": 2.0,
-        "lipides_g": 5.0
+        "proteines_g": 8,
+        "glucides_g": 2,
+        "lipides_g": 5
       },
       "statut": "À tester",
       "favori": false,
@@ -24145,9 +24145,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 110,
-        "proteines_g": 4.0,
-        "glucides_g": 20.0,
-        "lipides_g": 2.0
+        "proteines_g": 4,
+        "glucides_g": 20,
+        "lipides_g": 2
       },
       "statut": "À tester",
       "favori": false,
@@ -24241,9 +24241,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 155,
-        "proteines_g": 20.0,
-        "glucides_g": 2.0,
-        "lipides_g": 7.0
+        "proteines_g": 20,
+        "glucides_g": 2,
+        "lipides_g": 7
       },
       "statut": "À tester",
       "favori": false,
@@ -24340,9 +24340,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 565,
-        "proteines_g": 40.0,
-        "glucides_g": 62.0,
-        "lipides_g": 17.0
+        "proteines_g": 40,
+        "glucides_g": 62,
+        "lipides_g": 17
       },
       "statut": "À tester",
       "favori": false,
@@ -24428,9 +24428,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 430,
-        "proteines_g": 37.0,
-        "glucides_g": 35.0,
-        "lipides_g": 15.0
+        "proteines_g": 37,
+        "glucides_g": 35,
+        "lipides_g": 15
       },
       "statut": "À tester",
       "favori": false,
@@ -24545,9 +24545,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 520,
-        "proteines_g": 42.0,
-        "glucides_g": 14.0,
-        "lipides_g": 32.0
+        "proteines_g": 42,
+        "glucides_g": 14,
+        "lipides_g": 32
       },
       "statut": "À tester",
       "favori": false,
@@ -24657,9 +24657,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 450,
-        "proteines_g": 14.0,
-        "glucides_g": 62.0,
-        "lipides_g": 15.0
+        "proteines_g": 14,
+        "glucides_g": 62,
+        "lipides_g": 15
       },
       "statut": "À tester",
       "favori": false,
@@ -24744,9 +24744,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 320,
-        "proteines_g": 11.0,
-        "glucides_g": 35.0,
-        "lipides_g": 14.0
+        "proteines_g": 11,
+        "glucides_g": 35,
+        "lipides_g": 14
       },
       "statut": "À tester",
       "favori": false,
@@ -24840,9 +24840,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 450,
-        "proteines_g": 35.0,
-        "glucides_g": 32.0,
-        "lipides_g": 22.0
+        "proteines_g": 35,
+        "glucides_g": 32,
+        "lipides_g": 22
       },
       "statut": "À tester",
       "favori": false,
@@ -24931,9 +24931,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 320,
-        "proteines_g": 38.0,
-        "glucides_g": 8.0,
-        "lipides_g": 16.0
+        "proteines_g": 38,
+        "glucides_g": 8,
+        "lipides_g": 16
       },
       "statut": "À tester",
       "favori": false,
@@ -25012,9 +25012,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 320,
-        "proteines_g": 7.0,
-        "glucides_g": 30.0,
-        "lipides_g": 20.0
+        "proteines_g": 7,
+        "glucides_g": 30,
+        "lipides_g": 20
       },
       "statut": "À tester",
       "favori": false,
@@ -25107,9 +25107,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 120,
-        "proteines_g": 22.0,
-        "glucides_g": 4.0,
-        "lipides_g": 2.0
+        "proteines_g": 22,
+        "glucides_g": 4,
+        "lipides_g": 2
       },
       "statut": "À tester",
       "favori": false,
@@ -25217,9 +25217,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 280,
-        "proteines_g": 35.0,
-        "glucides_g": 12.0,
-        "lipides_g": 10.0
+        "proteines_g": 35,
+        "glucides_g": 12,
+        "lipides_g": 10
       },
       "statut": "À tester",
       "favori": false,
@@ -25329,9 +25329,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 350,
-        "proteines_g": 38.0,
-        "glucides_g": 18.0,
-        "lipides_g": 12.0
+        "proteines_g": 38,
+        "glucides_g": 18,
+        "lipides_g": 12
       },
       "statut": "À tester",
       "favori": false,
@@ -25455,9 +25455,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 360,
-        "proteines_g": 38.0,
-        "glucides_g": 22.0,
-        "lipides_g": 12.0
+        "proteines_g": 38,
+        "glucides_g": 22,
+        "lipides_g": 12
       },
       "statut": "À tester",
       "favori": false,
@@ -25537,9 +25537,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 450,
-        "proteines_g": 35.0,
-        "glucides_g": 5.0,
-        "lipides_g": 30.0
+        "proteines_g": 35,
+        "glucides_g": 5,
+        "lipides_g": 30
       },
       "statut": "À tester",
       "favori": false,
@@ -25648,9 +25648,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 450,
-        "proteines_g": 35.0,
-        "glucides_g": 35.0,
-        "lipides_g": 15.0
+        "proteines_g": 35,
+        "glucides_g": 35,
+        "lipides_g": 15
       },
       "statut": "À tester",
       "favori": false,
@@ -25766,9 +25766,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 380,
-        "proteines_g": 14.0,
-        "glucides_g": 50.0,
-        "lipides_g": 12.0
+        "proteines_g": 14,
+        "glucides_g": 50,
+        "lipides_g": 12
       },
       "statut": "À tester",
       "favori": false,
@@ -25870,9 +25870,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 360,
-        "proteines_g": 11.0,
-        "glucides_g": 60.0,
-        "lipides_g": 9.0
+        "proteines_g": 11,
+        "glucides_g": 60,
+        "lipides_g": 9
       },
       "statut": "À tester",
       "favori": false,
@@ -25927,9 +25927,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 65,
-        "proteines_g": 4.0,
-        "glucides_g": 9.0,
-        "lipides_g": 2.0
+        "proteines_g": 4,
+        "glucides_g": 9,
+        "lipides_g": 2
       },
       "statut": "À tester",
       "favori": false,
@@ -26011,9 +26011,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 340,
-        "proteines_g": 9.0,
-        "glucides_g": 62.0,
-        "lipides_g": 9.0
+        "proteines_g": 9,
+        "glucides_g": 62,
+        "lipides_g": 9
       },
       "statut": "À tester",
       "favori": false,
@@ -26129,9 +26129,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 340,
-        "proteines_g": 10.0,
-        "glucides_g": 35.0,
-        "lipides_g": 17.0
+        "proteines_g": 10,
+        "glucides_g": 35,
+        "lipides_g": 17
       },
       "statut": "À tester",
       "favori": false,
@@ -26217,9 +26217,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 110,
-        "proteines_g": 5.0,
-        "glucides_g": 15.0,
-        "lipides_g": 4.0
+        "proteines_g": 5,
+        "glucides_g": 15,
+        "lipides_g": 4
       },
       "statut": "À tester",
       "favori": false,
@@ -26335,9 +26335,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 210,
-        "proteines_g": 6.0,
-        "glucides_g": 42.0,
-        "lipides_g": 3.0
+        "proteines_g": 6,
+        "glucides_g": 42,
+        "lipides_g": 3
       },
       "statut": "À tester",
       "favori": false,
@@ -26402,8 +26402,8 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 120,
-        "proteines_g": 1.0,
-        "glucides_g": 25.0,
+        "proteines_g": 1,
+        "glucides_g": 25,
         "lipides_g": 0.5
       },
       "statut": "À tester",
@@ -26541,9 +26541,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 280,
-        "proteines_g": 4.0,
-        "glucides_g": 35.0,
-        "lipides_g": 14.0
+        "proteines_g": 4,
+        "glucides_g": 35,
+        "lipides_g": 14
       },
       "statut": "À tester",
       "favori": false,
@@ -26601,9 +26601,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 230,
-        "proteines_g": 3.0,
-        "glucides_g": 38.0,
-        "lipides_g": 7.0
+        "proteines_g": 3,
+        "glucides_g": 38,
+        "lipides_g": 7
       },
       "statut": "À tester",
       "favori": false,
@@ -26681,9 +26681,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 250,
-        "proteines_g": 8.0,
-        "glucides_g": 10.0,
-        "lipides_g": 20.0
+        "proteines_g": 8,
+        "glucides_g": 10,
+        "lipides_g": 20
       },
       "statut": "À tester",
       "favori": false,
@@ -26764,9 +26764,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 340,
-        "proteines_g": 3.0,
-        "glucides_g": 15.0,
-        "lipides_g": 31.0
+        "proteines_g": 3,
+        "glucides_g": 15,
+        "lipides_g": 31
       },
       "statut": "À tester",
       "favori": false,
@@ -26809,9 +26809,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 165,
-        "proteines_g": 2.0,
-        "glucides_g": 19.0,
-        "lipides_g": 9.0
+        "proteines_g": 2,
+        "glucides_g": 19,
+        "lipides_g": 9
       },
       "statut": "À tester",
       "favori": false,
@@ -26879,9 +26879,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 130,
-        "proteines_g": 2.0,
-        "glucides_g": 18.0,
-        "lipides_g": 5.0
+        "proteines_g": 2,
+        "glucides_g": 18,
+        "lipides_g": 5
       },
       "statut": "À tester",
       "favori": false,
@@ -26997,9 +26997,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 520,
-        "proteines_g": 35.0,
-        "glucides_g": 40.0,
-        "lipides_g": 24.0
+        "proteines_g": 35,
+        "glucides_g": 40,
+        "lipides_g": 24
       },
       "statut": "À tester",
       "favori": false,
@@ -27107,9 +27107,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 490,
-        "proteines_g": 30.0,
-        "glucides_g": 35.0,
-        "lipides_g": 24.0
+        "proteines_g": 30,
+        "glucides_g": 35,
+        "lipides_g": 24
       },
       "statut": "À tester",
       "favori": false,
@@ -27247,9 +27247,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 510,
-        "proteines_g": 36.0,
-        "glucides_g": 35.0,
-        "lipides_g": 26.0
+        "proteines_g": 36,
+        "glucides_g": 35,
+        "lipides_g": 26
       },
       "statut": "À tester",
       "favori": false,
@@ -27356,9 +27356,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 520,
-        "proteines_g": 34.0,
-        "glucides_g": 32.0,
-        "lipides_g": 27.0
+        "proteines_g": 34,
+        "glucides_g": 32,
+        "lipides_g": 27
       },
       "statut": "À tester",
       "favori": false,
@@ -27480,9 +27480,9 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 440,
-        "proteines_g": 34.0,
-        "glucides_g": 25.0,
-        "lipides_g": 23.0
+        "proteines_g": 34,
+        "glucides_g": 25,
+        "lipides_g": 23
       },
       "statut": "À tester",
       "favori": false,
@@ -28241,7 +28241,7 @@
         "kcal": 355,
         "proteines_g": 18.9,
         "glucides_g": 40.9,
-        "lipides_g": 13.0
+        "lipides_g": 13
       },
       "statut": "À tester",
       "favori": false,
@@ -28442,7 +28442,7 @@
       "nutrition_par_portion_estimee": {
         "kcal": 345,
         "proteines_g": 7.5,
-        "glucides_g": 64.0,
+        "glucides_g": 64,
         "lipides_g": 5.7
       },
       "statut": "À tester",
@@ -28565,7 +28565,7 @@
         "kcal": 885,
         "proteines_g": 57.8,
         "glucides_g": 47.8,
-        "lipides_g": 51.0
+        "lipides_g": 51
       },
       "statut": "À tester",
       "favori": false,
@@ -29199,7 +29199,7 @@
       ],
       "nutrition_par_portion_estimee": {
         "kcal": 635,
-        "proteines_g": 43.0,
+        "proteines_g": 43,
         "glucides_g": 76.5,
         "lipides_g": 16.3
       },
@@ -29762,7 +29762,7 @@
       "nutrition_par_portion_estimee": {
         "kcal": 125,
         "proteines_g": 0.8,
-        "glucides_g": 33.0,
+        "glucides_g": 33,
         "lipides_g": 0.4
       },
       "statut": "À tester",
@@ -33724,6 +33724,363 @@
       "statut": "À tester",
       "favori": false,
       "note_personnelle": "Source : « Vegan <500 kcal », p. 10. Macros reprises du PDF."
+    },
+    {
+      "id": "rigatoni-cremeux-legumes-rotis-double-tofu",
+      "nom": "Rigatoni crémeux aux légumes rôtis & double tofu",
+      "categorie": "Salé",
+      "sous_categorie": "Pâtes",
+      "tags": [
+        "vidéo",
+        "pâtes",
+        "tofu",
+        "tofu soyeux",
+        "poivron",
+        "tomates cerises",
+        "protéiné",
+        "végétarien"
+      ],
+      "temps_minutes": 45,
+      "difficulte": "Facile",
+      "portions": 4,
+      "ingredients": [
+        {
+          "quantite": 300,
+          "unite": "g",
+          "ingredient": "Rigatoni",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
+        },
+        {
+          "quantite": 400,
+          "unite": "g",
+          "ingredient": "Tofu ferme",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
+        },
+        {
+          "quantite": 300,
+          "unite": "g",
+          "ingredient": "Tofu soyeux",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
+        },
+        {
+          "quantite": 2,
+          "unite": "",
+          "ingredient": "Poivrons rouges",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
+        },
+        {
+          "quantite": 500,
+          "unite": "g",
+          "ingredient": "Tomates cerises",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
+        },
+        {
+          "quantite": 1,
+          "unite": "",
+          "ingredient": "Oignon rouge",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
+        },
+        {
+          "quantite": 1,
+          "unite": "tête",
+          "ingredient": "Ail",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 2,
+          "unite": "c. à soupe",
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 4,
+          "unite": "c. à soupe",
+          "ingredient": "Sauce glaze type teriyaki",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 1,
+          "unite": "poignée",
+          "ingredient": "Basilic frais",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 100,
+          "unite": "ml",
+          "ingredient": "Eau de cuisson des pâtes",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
+        }
+      ],
+      "etapes": [
+        "Préchauffer le four à 220 °C.",
+        "Couper les poivrons et l'oignon en gros morceaux. Les déposer dans un plat avec les tomates cerises et la tête d'ail coupée en deux.",
+        "Arroser d'huile d'olive, assaisonner puis rôtir 25 à 30 minutes, jusqu'à ce que les légumes soient très tendres et légèrement grillés.",
+        "Pendant ce temps, cuire les rigatoni al dente et réserver environ 100 ml d'eau de cuisson.",
+        "Émietter le tofu ferme dans une grande poêle et le faire dorer jusqu'à ce qu'il soit croustillant.",
+        "Ajouter la sauce glaze et poursuivre quelques minutes pour caraméliser le tofu.",
+        "Mixer les légumes rôtis avec le tofu soyeux et le basilic jusqu'à obtenir une sauce lisse.",
+        "Verser la sauce dans la poêle avec le tofu croustillant et réchauffer 2 à 3 minutes.",
+        "Ajouter les rigatoni et mélanger. Détendre avec un peu d'eau de cuisson si nécessaire.",
+        "Servir bien chaud avec quelques feuilles de basilic."
+      ],
+      "nutrition_par_portion_estimee": {
+        "kcal": 620,
+        "proteines_g": 33,
+        "glucides_g": 80,
+        "lipides_g": 20
+      },
+      "statut": "À tester",
+      "favori": false,
+      "note_personnelle": "Reconstituée depuis une vidéo. Les quantités n'étant pas affichées, les grammages et macros sont estimés. La sauce glaze est interprétée comme une sauce sucrée-salée type teriyaki.",
+      "version_simplifiee": {
+        "etapes": [
+          "Rôtir poivrons, tomates, oignon et ail avec l'huile à 220 °C.",
+          "Cuire les rigatoni. Faire croustiller le tofu ferme puis le caraméliser avec la sauce glaze.",
+          "Mixer les légumes rôtis avec le tofu soyeux et le basilic.",
+          "Réunir sauce, tofu et pâtes dans la poêle, détendre avec un peu d'eau de cuisson et servir."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont regroupées pour aller à l'essentiel."
+      }
+    },
+    {
+      "id": "poelee-cremeuse-truite-patate-douce-poireau-carotte",
+      "nom": "Poêlée crémeuse de truite, patate douce, poireau & carotte",
+      "categorie": "Salé",
+      "sous_categorie": "Poisson",
+      "tags": [
+        "vidéo",
+        "truite",
+        "patate douce",
+        "poireau",
+        "carotte",
+        "crémeux",
+        "aneth",
+        "plat complet"
+      ],
+      "temps_minutes": 35,
+      "difficulte": "Facile",
+      "portions": 2,
+      "ingredients": [
+        {
+          "quantite": 300,
+          "unite": "g",
+          "ingredient": "Patate douce",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
+        },
+        {
+          "quantite": 1,
+          "unite": "",
+          "ingredient": "Poireau",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
+        },
+        {
+          "quantite": 2,
+          "unite": "",
+          "ingredient": "Carottes",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
+        },
+        {
+          "quantite": 250,
+          "unite": "g",
+          "ingredient": "Pavé de truite",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
+        },
+        {
+          "quantite": 0.5,
+          "unite": "",
+          "ingredient": "Citron",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 150,
+          "unite": "ml",
+          "ingredient": "Crème légère",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 250,
+          "unite": "ml",
+          "ingredient": "Eau",
+          "type_stock": "secondaire",
+          "groupe_stock": "autre"
+        },
+        {
+          "quantite": 1,
+          "unite": "c. à soupe",
+          "ingredient": "Huile d'olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 1,
+          "unite": "c. à soupe",
+          "ingredient": "Aneth",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 1,
+          "unite": "pincée",
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        }
+      ],
+      "etapes": [
+        "Éplucher la patate douce et la couper en petits cubes. Émincer le poireau et couper les carottes en rondelles ou demi-rondelles.",
+        "Couper la truite en gros morceaux et presser le citron.",
+        "Faire chauffer l'huile d'olive dans une grande sauteuse puis ajouter patate douce, poireau et carottes.",
+        "Ajouter l'eau, couvrir et laisser cuire jusqu'à ce que les légumes commencent à devenir tendres.",
+        "Ajouter la truite, l'aneth, le poivre et le jus de citron.",
+        "Poursuivre la cuisson doucement jusqu'à ce que la truite soit cuite.",
+        "Verser la crème légère, mélanger délicatement et laisser épaissir quelques minutes.",
+        "Servir chaud avec un peu d'aneth supplémentaire si désiré."
+      ],
+      "nutrition_par_portion_estimee": {
+        "kcal": 570,
+        "proteines_g": 29,
+        "glucides_g": 43,
+        "lipides_g": 29
+      },
+      "statut": "À tester",
+      "favori": false,
+      "note_personnelle": "Reconstituée depuis une vidéo. La patate douce, le poireau, la carotte, le citron, la truite, l'aneth et la crème sont visibles ; les quantités ne sont pas indiquées et sont donc estimées.",
+      "version_simplifiee": {
+        "etapes": [
+          "Couper patate douce, poireau et carottes, puis les faire revenir dans l'huile.",
+          "Ajouter l'eau, couvrir et cuire jusqu'à ce que les légumes soient presque tendres.",
+          "Ajouter la truite, le citron, l'aneth et le poivre.",
+          "Terminer avec la crème légère et laisser épaissir quelques minutes."
+        ],
+        "note": "Même recette et mêmes ingrédients : les étapes sont regroupées pour aller à l'essentiel."
+      }
+    },
+    {
+      "id": "croquettes-carotte-poulet-croustillantes",
+      "nom": "Croquettes croustillantes carotte-poulet",
+      "categorie": "Salé",
+      "sous_categorie": "Poulet",
+      "tags": [
+        "vidéo",
+        "carotte",
+        "poulet",
+        "croquettes",
+        "croustillant",
+        "protéiné",
+        "snack salé"
+      ],
+      "temps_minutes": 45,
+      "difficulte": "Facile",
+      "portions": 4,
+      "ingredients": [
+        {
+          "quantite": 500,
+          "unite": "g",
+          "ingredient": "Carottes",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
+        },
+        {
+          "quantite": 300,
+          "unite": "g",
+          "ingredient": "Poulet cuit",
+          "type_stock": "principal",
+          "groupe_stock": "proteine"
+        },
+        {
+          "quantite": 4,
+          "unite": "tranches",
+          "ingredient": "Pain de mie",
+          "type_stock": "principal",
+          "groupe_stock": "feculent"
+        },
+        {
+          "quantite": 90,
+          "unite": "g",
+          "ingredient": "Fécule de maïs",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 1,
+          "unite": "c. à café",
+          "ingredient": "Paprika",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 1,
+          "unite": "c. à café",
+          "ingredient": "Flocons de piment",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 1,
+          "unite": "pincée",
+          "ingredient": "Poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 1,
+          "unite": "pincée",
+          "ingredient": "Sel",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 1,
+          "unite": "pour cuisson",
+          "ingredient": "Huile de friture",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        }
+      ],
+      "etapes": [
+        "Éplucher les carottes, les couper en rondelles et les cuire à la vapeur ou dans très peu d'eau jusqu'à ce qu'elles soient très tendres.",
+        "Bien égoutter les carottes puis les remettre 2 à 3 minutes dans la casserole chaude à feu doux pour évaporer l'excès d'humidité. Les écraser en purée.",
+        "Humidifier rapidement le pain de mie dans l'eau puis le presser fortement entre les mains pour retirer le maximum d'eau.",
+        "Ajouter à la purée de carottes le poulet cuit en petits morceaux, le pain essoré, la fécule, le paprika, les flocons de piment, le sel et le poivre.",
+        "Pétrir jusqu'à obtenir une pâte homogène qui se tient. Si elle reste trop humide, ajouter 1 à 2 cuillères à soupe de fécule.",
+        "Former un long boudin, le couper en rondelles puis former de petites croquettes. Marquer le dessus à la fourchette comme dans la vidéo.",
+        "Faire chauffer l'huile à environ 175 °C et frire les croquettes par petites quantités jusqu'à ce qu'elles soient bien dorées.",
+        "Égoutter sur une grille ou du papier absorbant et servir chaud, éventuellement avec une sauce sweet chili."
+      ],
+      "nutrition_par_portion_estimee": {
+        "kcal": 440,
+        "proteines_g": 29,
+        "glucides_g": 48,
+        "lipides_g": 15
+      },
+      "statut": "À tester",
+      "favori": false,
+      "note_personnelle": "Adaptation de la recette vidéo : les pommes de terre sont remplacées par des carottes. Comme la carotte contient moins d'amidon et davantage d'eau, elle doit être bien desséchée après cuisson et la quantité de fécule est légèrement augmentée pour que les croquettes se tiennent.",
+      "version_simplifiee": {
+        "etapes": [
+          "Cuire les carottes, bien les égoutter et les dessécher quelques minutes avant de les écraser.",
+          "Mélanger avec poulet, pain de mie essoré, fécule et épices.",
+          "Former les croquettes, les marquer à la fourchette puis les frire à environ 175 °C jusqu'à coloration."
+        ],
+        "note": "La carotte remplace la pomme de terre ; il faut simplement éliminer davantage d'humidité et utiliser un peu plus de fécule."
+      }
     }
   ]
 }
