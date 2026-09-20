@@ -16,6 +16,7 @@ applyTheme(getInitialTheme());
 
 const state={
   recipes:[],category:"Toutes",query:"",favOnly:false,stockMode:false,
+  searchFilters:{maxTime:999,protein:false,light:false},
   prefs:JSON.parse(localStorage.getItem("culina-prefs")||"{}"),
   stock:JSON.parse(localStorage.getItem("culina-stock-v1")||"{}"),
   shopping:JSON.parse(localStorage.getItem("culina-shopping-v1")||"[]"),
@@ -67,6 +68,60 @@ const groupLabels={
 
 function normalize(s){return(s||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g," ").trim()}
 function esc(s){return String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"}[m]))}
+
+const SEARCH_SYNONYM_GROUPS=[
+  ["boeuf","bœuf","steak","viande hachee","boeuf hache"],
+  ["pomme de terre","pommes de terre","patate","patates"],
+  ["pomme","pommes","apple"],
+  ["patate douce","patates douces"],
+  ["pates","pate","spaghetti","macaroni","tagliatelle","penne","lasagnes","linguine"],
+  ["poulet","volaille","escalope de poulet","blanc de poulet"],
+  ["dinde","escalope de dinde"],
+  ["creme","creme fraiche","creme entiere"],
+  ["tomate","tomates","tomate concassee","tomates concassees"],
+  ["poivron","poivrons","poivron rouge","poivron vert"],
+  ["oeuf","oeufs"],
+  ["framboise","framboises"],
+  ["chocolat","cacao"],
+  ["dessert","sucre","gateau","gouter"],
+  ["sale","plat","repas"]
+].map(group=>group.map(normalize));
+const SEARCH_STOP_WORDS=new Set("un une des du de la le les avec aux au a l d pour recette plat repas envie faire cuisine cuisiner quelque chose moi je veux voudrais qui et en".split(" "));
+
+function searchAlternatives(term){const t=normalize(term),group=SEARCH_SYNONYM_GROUPS.find(g=>g.includes(t));return group||[t]}
+function searchDistance(a,b){
+  if(a===b)return 0;if(!a.length)return b.length;if(!b.length)return a.length;
+  const row=Array.from({length:b.length+1},(_,i)=>i);
+  for(let i=1;i<=a.length;i++){let prev=row[0];row[0]=i;for(let j=1;j<=b.length;j++){const old=row[j];row[j]=Math.min(row[j]+1,row[j-1]+1,prev+(a[i-1]===b[j-1]?0:1));prev=old}}
+  return row[b.length];
+}
+function fuzzyContains(hay,needle){
+  if(hay.includes(needle))return true;if(needle.length<4)return false;
+  const tolerance=needle.length>=8?2:1;
+  return hay.split(" ").some(word=>Math.abs(word.length-needle.length)<=tolerance&&searchDistance(word,needle)<=tolerance);
+}
+function parseSearchQuery(raw){
+  let q=normalize(raw),excluded=[];
+  q=q.replace(/\bsans\s+([a-z0-9 ]+?)(?=\s+(?:sans|avec|et|mais|en|pour|moins|maximum|max)\b|$)/g,(_,value)=>{excluded.push(value.trim());return" "});
+  const maxMatch=q.match(/(?:moins de|max(?:imum)?|jusqu a)\s*(\d{1,3})\s*(?:min|minutes)?/);
+  const naturalMax=maxMatch?Number(maxMatch[1]):(/\b(rapide|express|vite)\b/.test(q)?30:null);
+  if(maxMatch)q=q.replace(maxMatch[0]," ");q=q.replace(/\b(rapide|express|vite)\b/g," ");
+  const tokens=q.split(" ").filter(t=>t&&!SEARCH_STOP_WORDS.has(t));
+  return {tokens,excluded:excluded.flatMap(x=>x.split(/\s+et\s+|,/)).map(normalize).filter(Boolean),naturalMax};
+}
+function recipeSearchFields(r){return {title:normalize(r.nom),subcategory:normalize(r.sous_categorie),tags:normalize((r.tags||[]).join(" ")),ingredients:normalize((r.ingredients||[]).map(i=>i.ingredient).join(" ")),all:normalize([r.nom,r.categorie,r.sous_categorie,...(r.tags||[]),...(r.ingredients||[]).map(i=>i.ingredient)].join(" "))}}
+function recipeSearchScore(r,parsed){
+  const f=recipeSearchFields(r);if(parsed.excluded.some(term=>searchAlternatives(term).some(alt=>f.ingredients.includes(alt))))return null;
+  let score=0;
+  for(const token of parsed.tokens){
+    const alternatives=searchAlternatives(token);let best=0;
+    for(const alt of alternatives){
+      if(f.title===alt)best=Math.max(best,120);else if(f.title.startsWith(alt+" "))best=Math.max(best,100);else if(f.title.includes(alt))best=Math.max(best,80);else if(f.subcategory.includes(alt))best=Math.max(best,55);else if(f.tags.includes(alt))best=Math.max(best,45);else if(f.ingredients.includes(alt))best=Math.max(best,35);else if(fuzzyContains(f.title,alt))best=Math.max(best,65);else if(fuzzyContains(f.tags,alt))best=Math.max(best,28);else if(fuzzyContains(f.ingredients,alt))best=Math.max(best,20);
+    }
+    if(!best)return null;score+=best;
+  }
+  if(parsed.tokens.length&&parsed.tokens.every(t=>f.title.includes(t)))score+=30;if(isFav(r))score+=3;return score;
+}
 function savePrefs(){localStorage.setItem("culina-prefs",JSON.stringify(state.prefs))}
 function saveStock(){localStorage.setItem("culina-stock-v1",JSON.stringify(state.stock));publishCulinaSnapshot()}
 function saveShopping(){localStorage.setItem("culina-shopping-v1",JSON.stringify(state.shopping))}
@@ -374,7 +429,7 @@ async function boot(){
   catch(e){base=JSON.parse(document.getElementById("culinaFallback").textContent)}
   state.recipes=applyRecipeCustomizations(base.recettes);
   migrateStockGroups();
-  drawChips();setupTabs();wireEvents();renderAll();publishCulinaSnapshot();
+  drawChips();setupTabs();wireEvents();buildSearchSuggestions();renderAll();publishCulinaSnapshot();
 }
 function activateView(view){
   document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("active",x.dataset.view===view));
@@ -401,18 +456,41 @@ function drawChips(){
   categories.forEach(cat=>{const b=document.createElement("button");b.className="chip"+(state.category===cat?" active":"");b.textContent=cat;b.onclick=()=>{state.category=cat;drawChips();renderRecipes()};c.appendChild(b)});
 }
 function filteredRecipes(){
-  const q=normalize(state.query);
-  let a=state.recipes.filter(r=>{
-    if(state.category!=="Toutes"&&r.categorie!==state.category)return false;
-    if(state.favOnly&&!isFav(r))return false;
-    if(q){
-      const hay=normalize([r.nom,r.categorie,r.sous_categorie,...(r.tags||[]),...(r.ingredients||[]).map(i=>i.ingredient)].join(" "));
-      if(!hay.includes(q))return false;
-    }
-    return true;
+  const parsed=parseSearchQuery(state.query),scored=[];
+  state.recipes.forEach(r=>{
+    if(state.category!=="Toutes"&&r.categorie!==state.category)return;
+    if(state.favOnly&&!isFav(r))return;
+    const maxTime=Math.min(Number(state.searchFilters.maxTime)||999,parsed.naturalMax||999);
+    if(Number(r.temps_minutes)>maxTime)return;
+    const nutrition=r.nutrition_par_portion_estimee||{};
+    if(state.searchFilters.protein&&Number(nutrition.proteines_g)<25)return;
+    if(state.searchFilters.light&&Number(nutrition.kcal)>500)return;
+    const score=recipeSearchScore(r,parsed);if(score===null)return;scored.push({r,score});
   });
-  if(state.stockMode)a.sort((a,b)=>matchInfo(b).score-matchInfo(a).score||matchInfo(a).missing.length-matchInfo(b).missing.length);
-  return a;
+  scored.sort((a,b)=>{
+    if(state.stockMode){const stock=matchInfo(b.r).score-matchInfo(a.r).score||matchInfo(a.r).missing.length-matchInfo(b.r).missing.length;if(stock)return stock}
+    return b.score-a.score||a.r.nom.localeCompare(b.r.nom,"fr");
+  });
+  return scored.map(x=>x.r);
+}
+
+function renderSearchControls(){
+  document.querySelectorAll("[data-search-filter]").forEach(btn=>{
+    const key=btn.dataset.searchFilter,value=btn.dataset.value;
+    const active=key==="maxTime"?String(state.searchFilters.maxTime)===value:!!state.searchFilters[key];
+    btn.classList.toggle("active",active);btn.setAttribute("aria-pressed",String(active));
+  });
+  const clear=document.getElementById("clearSearchBtn");if(clear)clear.hidden=!state.query;
+}
+function toggleSearchFilter(key,value){
+  if(key==="maxTime")state.searchFilters.maxTime=String(state.searchFilters.maxTime)===String(value)?999:Number(value);else state.searchFilters[key]=!state.searchFilters[key];
+  renderSearchControls();renderRecipes();
+}
+function clearRecipeSearch(){state.query="";const input=document.getElementById("search");if(input)input.value="";renderSearchControls();renderRecipes();input?.focus()}
+function buildSearchSuggestions(){
+  const list=document.getElementById("searchSuggestions");if(!list)return;const values=new Set();
+  state.recipes.forEach(r=>{values.add(r.nom);(r.ingredients||[]).forEach(i=>values.add(i.ingredient));(r.tags||[]).forEach(t=>values.add(t))});
+  list.innerHTML=[...values].sort((a,b)=>a.localeCompare(b,"fr")).slice(0,900).map(v=>`<option value="${esc(v)}"></option>`).join("");
 }
 function matchBadge(r,force=false){
   if(!state.stockMode&&!force)return"";
@@ -436,8 +514,9 @@ function renderRecipes(){
   const list=filteredRecipes(),grid=document.getElementById("grid");grid.innerHTML="";
   list.forEach(r=>grid.appendChild(recipeCard(r)));
   document.getElementById("recipeEmpty").style.display=list.length?"none":"block";
+  renderSearchControls();
   document.getElementById("count").textContent=list.length+" recette"+(list.length>1?"s":"");
-  document.getElementById("sectionName").textContent=state.stockMode?"Classées selon mes stocks":(state.category==="Toutes"?"Toutes les recettes":state.category);
+  document.getElementById("sectionName").textContent=state.query?`Résultats pour « ${state.query.trim()} »`:state.stockMode?"Classées selon mes stocks":(state.category==="Toutes"?"Toutes les recettes":state.category);
   document.getElementById("totalStat").textContent=state.recipes.length;
   document.getElementById("stockStat").textContent=Object.values(state.stock).filter(Boolean).length;
   document.getElementById("favStat").textContent=state.recipes.filter(isFav).length;
@@ -993,6 +1072,8 @@ function wireEvents(){
   document.getElementById("fruitHabitDone").onclick=completeFruitHabit;document.getElementById("fruitHabitSnooze").onclick=snoozeFruitHabit;
   document.getElementById("recipeEditorForm").addEventListener("submit",e=>{if(e.submitter?.value==='cancel')return;e.preventDefault();saveRecipeEditor()});
   document.getElementById("search").oninput=e=>{state.query=e.target.value;renderRecipes()};
+  document.getElementById("clearSearchBtn").onclick=clearRecipeSearch;
+  document.querySelectorAll("[data-search-filter]").forEach(b=>b.onclick=()=>toggleSearchFilter(b.dataset.searchFilter,b.dataset.value));
   document.getElementById("favOnly").onclick=()=>{state.favOnly=!state.favOnly;document.getElementById("favOnly").textContent=state.favOnly?"♥ Favoris":"♡ Favoris";renderRecipes()};
   document.getElementById("stockMode").onclick=()=>{state.stockMode=!state.stockMode;renderRecipes()};
   document.getElementById("randomBtn").onclick=()=>{const a=filteredRecipes();if(a.length)openDetail(a[Math.floor(Math.random()*a.length)].id)};
