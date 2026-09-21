@@ -41151,57 +41151,127 @@
       "categorie": "Salé",
       "sous_categorie": "Plat complet",
       "tags": [
-        "TikTok",
-        "reconstituée",
-        "à tester"
+        "bœuf",
+        "effiloché",
+        "mijoté",
+        "tomate",
+        "familial"
       ],
-      "temps_minutes": 30,
+      "temps_minutes": 200,
       "difficulte": "Facile",
-      "portions": 2,
+      "portions": 4,
       "ingredients": [
         {
           "quantite": 800,
           "unite": "g",
-          "ingredient": "bœuf 1 oignon 2 carottes",
+          "ingredient": "Paleron ou jumeau de bœuf",
           "type_stock": "principal",
-          "groupe_stock": "autre"
+          "groupe_stock": "proteine"
+        },
+        {
+          "quantite": 1,
+          "unite": "",
+          "ingredient": "Oignon",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
+        },
+        {
+          "quantite": 2,
+          "unite": "",
+          "ingredient": "Carottes",
+          "type_stock": "principal",
+          "groupe_stock": "legume"
         },
         {
           "quantite": 3,
           "unite": "gousses",
-          "ingredient": "ails 1 boîte de sauce tomates",
-          "type_stock": "principal",
-          "groupe_stock": "autre"
+          "ingredient": "Ail",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 400,
+          "unite": "g",
+          "ingredient": "Tomates concassées",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         },
         {
           "quantite": 2,
-          "unite": "Cas",
-          "ingredient": "concentré de tomate",
-          "type_stock": "principal",
-          "groupe_stock": "autre"
+          "unite": "c. à soupe",
+          "ingredient": "Concentré de tomate",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 400,
+          "unite": "ml",
+          "ingredient": "Bouillon de bœuf",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 1,
+          "unite": "c. à soupe",
+          "ingredient": "Huile d’olive",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 1,
+          "unite": "c. à café",
+          "ingredient": "Paprika fumé",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 1,
+          "unite": "branche",
+          "ingredient": "Thym",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 1,
+          "unite": "feuille",
+          "ingredient": "Laurier",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
+        },
+        {
+          "quantite": 1,
+          "unite": "pincée",
+          "ingredient": "Sel et poivre",
+          "type_stock": "basique",
+          "groupe_stock": "basique"
         }
       ],
       "etapes": [
-        "Préparer et découper tous les ingrédients.",
-        "Cuire séparément ou faire revenir les éléments principaux, puis ajouter l’assaisonnement.",
-        "Assembler, laisser mijoter ou gratiner jusqu’à cuisson complète, puis servir."
+        "Préchauffer le four à 160 °C. Couper le bœuf en 3 ou 4 gros morceaux, émincer l’oignon, couper les carottes en rondelles et hacher l’ail.",
+        "Faire chauffer l’huile dans une cocotte. Saler et poivrer le bœuf, puis le saisir 3 à 4 minutes sur chaque face jusqu’à ce qu’il soit bien coloré. Le réserver.",
+        "Dans la même cocotte, faire revenir l’oignon et les carottes 5 minutes. Ajouter l’ail, le paprika et le concentré de tomate, puis cuire encore 1 minute.",
+        "Ajouter les tomates concassées et le bouillon. Gratter le fond de la cocotte, remettre le bœuf, puis ajouter le thym et le laurier. Le liquide doit arriver environ à mi-hauteur de la viande.",
+        "Couvrir et enfourner pendant 3 heures, en retournant la viande à mi-cuisson. Elle est prête lorsqu’elle se défait très facilement à la fourchette.",
+        "Sortir le bœuf et l’effilocher avec deux fourchettes. Retirer le thym et le laurier. Si la sauce est trop liquide, la faire réduire 5 à 10 minutes à découvert.",
+        "Remettre le bœuf effiloché dans la sauce, mélanger et réchauffer quelques minutes avant de servir."
       ],
       "nutrition_par_portion_estimee": {
-        "kcal": null,
-        "proteines_g": null,
-        "glucides_g": null,
-        "lipides_g": null
+        "kcal": 570,
+        "proteines_g": 44,
+        "glucides_g": 17,
+        "lipides_g": 32
       },
       "statut": "À tester",
       "favori": false,
-      "note_personnelle": "Source TikTok : https://www.tiktok.com/@comment_cuisiner/video/7490601127482854679. Recette reconstituée à partir du titre, des ingrédients visibles et des usages culinaires courants. Les étapes sont estimées. Les quantités listées sont explicites dans la publication; leur mise en œuvre est estimée.",
+      "note_personnelle": "Recette complétée à partir des ingrédients visibles dans la publication TikTok d’origine. Utiliser un morceau à cuisson longue comme le paleron ou le jumeau. Servir avec du riz, une purée, des pâtes ou dans un sandwich.",
       "version_simplifiee": {
         "etapes": [
-          "Préparer et découper tous les ingrédients.",
-          "Cuire séparément ou faire revenir les éléments principaux, puis ajouter l’assaisonnement.",
-          "Assembler, laisser mijoter ou gratiner jusqu’à cuisson complète, puis servir."
+          "Faire dorer les gros morceaux de bœuf dans l’huile, puis les réserver.",
+          "Faire revenir oignon, carottes et ail. Ajouter paprika, concentré de tomate, tomates concassées et bouillon.",
+          "Remettre la viande avec le thym et le laurier, couvrir et cuire 3 heures au four à 160 °C.",
+          "Effilocher le bœuf, faire réduire la sauce si nécessaire, puis tout mélanger."
         ],
-        "note": "Version reconstituée : vérifier les quantités et la cuisson lors du premier essai."
+        "note": "La cuisson longue et douce est indispensable pour que le bœuf s’effiloche facilement."
       }
     },
     {
