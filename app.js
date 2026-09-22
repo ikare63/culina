@@ -1099,5 +1099,5 @@ setInterval(updateMealMoment,60000);
 setInterval(checkRecipeReminders,30000);
 setInterval(checkFruitHabitReminder,30000);
 document.addEventListener("visibilitychange",()=>{if(!document.hidden){updateMealMoment();checkRecipeReminders();armNearestReminder();checkFruitHabitReminder()}});
-window.addEventListener("storage",e=>{if(e.key===CAP_SNAPSHOT_KEY){renderCapNeeds();renderForYou()}});
+window.addEventListener("storage",e=>{if(e.key===CAP_SNAPSHOT_KEY){renderCapNeeds();renderForYou()}if(e.key==="culina-shopping-v1"){try{state.shopping=JSON.parse(e.newValue||"[]");if(!Array.isArray(state.shopping))state.shopping=[]}catch(_e){state.shopping=[]}renderShopping();updateBadges()}});
 setInterval(renderCapNeeds,3000);
