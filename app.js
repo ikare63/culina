@@ -122,14 +122,14 @@ function recipeSearchScore(r,parsed){
   }
   if(parsed.tokens.length&&parsed.tokens.every(t=>f.title.includes(t)))score+=30;if(isFav(r))score+=3;return score;
 }
-function savePrefs(){localStorage.setItem("culina-prefs",JSON.stringify(state.prefs))}
-function saveStock(){localStorage.setItem("culina-stock-v1",JSON.stringify(state.stock));publishCulinaSnapshot()}
-function saveShopping(){localStorage.setItem("culina-shopping-v1",JSON.stringify(state.shopping))}
-function saveHistory(){localStorage.setItem("culina-history-v1",JSON.stringify(state.history))}
-function saveLeftovers(){localStorage.setItem("culina-leftovers-v1",JSON.stringify(state.leftovers))}
-function saveWeek(){localStorage.setItem("culina-week-v1",JSON.stringify(state.weekPlan))}
-function savePlanned(){localStorage.setItem("culina-planned-v1",JSON.stringify(state.planned));publishCulinaSnapshot()}
-function saveRecipeCustom(){localStorage.setItem("culina-recipes-custom-v1",JSON.stringify(state.recipeCustom))}
+function savePrefs(){window.LenaicSync?.localChange('culina');localStorage.setItem("culina-prefs",JSON.stringify(state.prefs))}
+function saveStock(){window.LenaicSync?.localChange('culina');localStorage.setItem("culina-stock-v1",JSON.stringify(state.stock));publishCulinaSnapshot()}
+function saveShopping(){window.LenaicSync?.localChange('culina');localStorage.setItem("culina-shopping-v1",JSON.stringify(state.shopping))}
+function saveHistory(){window.LenaicSync?.localChange('culina');localStorage.setItem("culina-history-v1",JSON.stringify(state.history))}
+function saveLeftovers(){window.LenaicSync?.localChange('culina');localStorage.setItem("culina-leftovers-v1",JSON.stringify(state.leftovers))}
+function saveWeek(){window.LenaicSync?.localChange('culina');localStorage.setItem("culina-week-v1",JSON.stringify(state.weekPlan))}
+function savePlanned(){window.LenaicSync?.localChange('culina');localStorage.setItem("culina-planned-v1",JSON.stringify(state.planned));publishCulinaSnapshot()}
+function saveRecipeCustom(){window.LenaicSync?.localChange('culina');localStorage.setItem("culina-recipes-custom-v1",JSON.stringify(state.recipeCustom))}
 function normalizedRecipeCustom(){
  const s=state.recipeCustom&&typeof state.recipeCustom==='object'?state.recipeCustom:{};
  s.added=Array.isArray(s.added)?s.added:[];s.overrides=s.overrides&&typeof s.overrides==='object'?s.overrides:{};s.deleted=Array.isArray(s.deleted)?s.deleted:[];state.recipeCustom=s;return s;
@@ -1101,3 +1101,10 @@ setInterval(checkFruitHabitReminder,30000);
 document.addEventListener("visibilitychange",()=>{if(!document.hidden){updateMealMoment();checkRecipeReminders();armNearestReminder();checkFruitHabitReminder()}});
 window.addEventListener("storage",e=>{if(e.key===CAP_SNAPSHOT_KEY){renderCapNeeds();renderForYou()}if(e.key==="culina-shopping-v1"){try{state.shopping=JSON.parse(e.newValue||"[]");if(!Array.isArray(state.shopping))state.shopping=[]}catch(_e){state.shopping=[]}renderShopping();updateBadges()}});
 setInterval(renderCapNeeds,3000);
+
+const culinaSyncKeys={prefs:'culina-prefs',stock:'culina-stock-v1',shopping:'culina-shopping-v1',history:'culina-history-v1',matchPrefs:'culina-match-prefs-v1',leftovers:'culina-leftovers-v1',weekPlan:'culina-week-v1',planned:'culina-planned-v1',recipeCustom:'culina-recipes-custom-v1'};
+const culinaSafeAdapter={id:'culina',get:()=>({app:'Culina',version:1,data:Object.fromEntries(Object.keys(culinaSyncKeys).map(k=>[k,state[k]]))}),
+ valid:v=>v?.app==='Culina'&&v.version===1&&v.data&&Object.keys(culinaSyncKeys).every(k=>v.data[k]!=null)&&Array.isArray(v.data.shopping)&&Array.isArray(v.data.history),
+ has:v=>Object.keys(v.data.stock||{}).length>0||Object.keys(v.data.prefs||{}).length>0||['shopping','history','leftovers','weekPlan','planned'].some(k=>v.data[k]?.length)||v.data.recipeCustom?.added?.length>0,
+ apply:async v=>{for(const [k,key] of Object.entries(culinaSyncKeys))localStorage.setItem(key,JSON.stringify(v.data[k]));Object.assign(state,v.data);renderAll();renderHistory();renderLeftovers();renderPlanned()}};
+window.LenaicSync.register(culinaSafeAdapter);
