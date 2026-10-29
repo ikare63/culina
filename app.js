@@ -1,3 +1,6 @@
+window.LenaicSync.assertStorageReady();
+const culinaSyncKeys={prefs:'culina-prefs',stock:'culina-stock-v1',shopping:'culina-shopping-v1',history:'culina-history-v1',matchPrefs:'culina-match-prefs-v1',leftovers:'culina-leftovers-v1',weekPlan:'culina-week-v1',planned:'culina-planned-v1',recipeCustom:'culina-recipes-custom-v1'};
+const culinaKnownRevision=window.LenaicSync.rawStorage(Object.values(culinaSyncKeys));
 function getInitialTheme(){
   const saved=localStorage.getItem("culina-theme");
   if(saved==="light"||saved==="dark")return saved;
@@ -122,14 +125,14 @@ function recipeSearchScore(r,parsed){
   }
   if(parsed.tokens.length&&parsed.tokens.every(t=>f.title.includes(t)))score+=30;if(isFav(r))score+=3;return score;
 }
-function savePrefs(){window.LenaicSync?.localChange('culina');localStorage.setItem("culina-prefs",JSON.stringify(state.prefs))}
-function saveStock(){window.LenaicSync?.localChange('culina');localStorage.setItem("culina-stock-v1",JSON.stringify(state.stock));publishCulinaSnapshot()}
-function saveShopping(){window.LenaicSync?.localChange('culina');localStorage.setItem("culina-shopping-v1",JSON.stringify(state.shopping))}
-function saveHistory(){window.LenaicSync?.localChange('culina');localStorage.setItem("culina-history-v1",JSON.stringify(state.history))}
-function saveLeftovers(){window.LenaicSync?.localChange('culina');localStorage.setItem("culina-leftovers-v1",JSON.stringify(state.leftovers))}
-function saveWeek(){window.LenaicSync?.localChange('culina');localStorage.setItem("culina-week-v1",JSON.stringify(state.weekPlan))}
-function savePlanned(){window.LenaicSync?.localChange('culina');localStorage.setItem("culina-planned-v1",JSON.stringify(state.planned));publishCulinaSnapshot()}
-function saveRecipeCustom(){window.LenaicSync?.localChange('culina');localStorage.setItem("culina-recipes-custom-v1",JSON.stringify(state.recipeCustom))}
+function savePrefs(){window.LenaicSync?.localChange('culina');window.LenaicSync.atomicStorage({"culina-prefs":JSON.stringify(state.prefs)},{"culina-prefs":culinaKnownRevision["culina-prefs"]});culinaKnownRevision["culina-prefs"]=localStorage.getItem("culina-prefs")}
+function saveStock(){window.LenaicSync?.localChange('culina');window.LenaicSync.atomicStorage({"culina-stock-v1":JSON.stringify(state.stock)},{"culina-stock-v1":culinaKnownRevision["culina-stock-v1"]});culinaKnownRevision["culina-stock-v1"]=localStorage.getItem("culina-stock-v1");publishCulinaSnapshot()}
+function saveShopping(){window.LenaicSync?.localChange('culina');window.LenaicSync.atomicStorage({"culina-shopping-v1":JSON.stringify(state.shopping)},{"culina-shopping-v1":culinaKnownRevision["culina-shopping-v1"]});culinaKnownRevision["culina-shopping-v1"]=localStorage.getItem("culina-shopping-v1")}
+function saveHistory(){window.LenaicSync?.localChange('culina');window.LenaicSync.atomicStorage({"culina-history-v1":JSON.stringify(state.history)},{"culina-history-v1":culinaKnownRevision["culina-history-v1"]});culinaKnownRevision["culina-history-v1"]=localStorage.getItem("culina-history-v1")}
+function saveLeftovers(){window.LenaicSync?.localChange('culina');window.LenaicSync.atomicStorage({"culina-leftovers-v1":JSON.stringify(state.leftovers)},{"culina-leftovers-v1":culinaKnownRevision["culina-leftovers-v1"]});culinaKnownRevision["culina-leftovers-v1"]=localStorage.getItem("culina-leftovers-v1")}
+function saveWeek(){window.LenaicSync?.localChange('culina');window.LenaicSync.atomicStorage({"culina-week-v1":JSON.stringify(state.weekPlan)},{"culina-week-v1":culinaKnownRevision["culina-week-v1"]});culinaKnownRevision["culina-week-v1"]=localStorage.getItem("culina-week-v1")}
+function savePlanned(){window.LenaicSync?.localChange('culina');window.LenaicSync.atomicStorage({"culina-planned-v1":JSON.stringify(state.planned)},{"culina-planned-v1":culinaKnownRevision["culina-planned-v1"]});culinaKnownRevision["culina-planned-v1"]=localStorage.getItem("culina-planned-v1");publishCulinaSnapshot()}
+function saveRecipeCustom(){window.LenaicSync?.localChange('culina');window.LenaicSync.atomicStorage({"culina-recipes-custom-v1":JSON.stringify(state.recipeCustom)},{"culina-recipes-custom-v1":culinaKnownRevision["culina-recipes-custom-v1"]});culinaKnownRevision["culina-recipes-custom-v1"]=localStorage.getItem("culina-recipes-custom-v1")}
 function normalizedRecipeCustom(){
  const s=state.recipeCustom&&typeof state.recipeCustom==='object'?state.recipeCustom:{};
  s.added=Array.isArray(s.added)?s.added:[];s.overrides=s.overrides&&typeof s.overrides==='object'?s.overrides:{};s.deleted=Array.isArray(s.deleted)?s.deleted:[];state.recipeCustom=s;return s;
@@ -448,7 +451,7 @@ function setupTabs(){
 }
 function homeMatch(mood,time){
   state.matchPrefs={...state.matchPrefs,mood,time,missing:2,repeat:"on"};
-  localStorage.setItem("culina-match-prefs-v1",JSON.stringify(state.matchPrefs));
+  window.LenaicSync.atomicStorage({"culina-match-prefs-v1":JSON.stringify(state.matchPrefs)},{"culina-match-prefs-v1":culinaKnownRevision["culina-match-prefs-v1"]});culinaKnownRevision["culina-match-prefs-v1"]=localStorage.getItem("culina-match-prefs-v1");
   goView("culinaMatch");
 }
 function drawChips(){
@@ -963,7 +966,7 @@ function syncMatchControls(){
 }
 function readMatchControls(){
   state.matchPrefs={mood:document.getElementById("matchMood").value,time:Number(document.getElementById("matchTime").value),missing:Number(document.getElementById("matchMissing").value),repeat:document.getElementById("matchRepeat").value};
-  localStorage.setItem("culina-match-prefs-v1",JSON.stringify(state.matchPrefs));
+  window.LenaicSync.atomicStorage({"culina-match-prefs-v1":JSON.stringify(state.matchPrefs)},{"culina-match-prefs-v1":culinaKnownRevision["culina-match-prefs-v1"]});culinaKnownRevision["culina-match-prefs-v1"]=localStorage.getItem("culina-match-prefs-v1");
 }
 
 function mealMomentLabel(){
@@ -1099,12 +1102,13 @@ setInterval(updateMealMoment,60000);
 setInterval(checkRecipeReminders,30000);
 setInterval(checkFruitHabitReminder,30000);
 document.addEventListener("visibilitychange",()=>{if(!document.hidden){updateMealMoment();checkRecipeReminders();armNearestReminder();checkFruitHabitReminder()}});
-window.addEventListener("storage",e=>{if(e.key===CAP_SNAPSHOT_KEY){renderCapNeeds();renderForYou()}if(e.key==="culina-shopping-v1"){try{state.shopping=JSON.parse(e.newValue||"[]");if(!Array.isArray(state.shopping))state.shopping=[]}catch(_e){state.shopping=[]}renderShopping();updateBadges()}});
+window.addEventListener("storage",e=>{if(e.key===CAP_SNAPSHOT_KEY){renderCapNeeds();renderForYou()}if(e.key==="culina-shopping-v1"){culinaKnownRevision[e.key]=e.newValue;try{state.shopping=JSON.parse(e.newValue||"[]");if(!Array.isArray(state.shopping))state.shopping=[]}catch(_e){state.shopping=[]}renderShopping();updateBadges()}});
 setInterval(renderCapNeeds,3000);
 
-const culinaSyncKeys={prefs:'culina-prefs',stock:'culina-stock-v1',shopping:'culina-shopping-v1',history:'culina-history-v1',matchPrefs:'culina-match-prefs-v1',leftovers:'culina-leftovers-v1',weekPlan:'culina-week-v1',planned:'culina-planned-v1',recipeCustom:'culina-recipes-custom-v1'};
-const culinaSafeAdapter={id:'culina',get:()=>({app:'Culina',version:1,data:Object.fromEntries(Object.keys(culinaSyncKeys).map(k=>[k,state[k]]))}),
- valid:v=>v?.app==='Culina'&&v.version===1&&v.data&&Object.keys(culinaSyncKeys).every(k=>v.data[k]!=null)&&Array.isArray(v.data.shopping)&&Array.isArray(v.data.history),
+
+const culinaSafeAdapter={id:'culina',get:()=>({app:'Culina',version:1,data:Object.fromEntries(Object.keys(culinaSyncKeys).map(k=>[k,state[k]])),storageExtras:window.LenaicSync.rawStorage(['culina-theme','culina-fruit-reminders-v1'])}),
+ valid:v=>v?.app==='Culina'&&v.version===1&&v.data&&['shopping','history','leftovers','weekPlan','planned'].every(k=>Array.isArray(v.data[k]))&&['prefs','stock','matchPrefs','recipeCustom'].every(k=>v.data[k]&&typeof v.data[k]==='object'&&!Array.isArray(v.data[k]))&&Array.isArray(v.data.recipeCustom.added)&&Array.isArray(v.data.recipeCustom.deleted)&&v.data.recipeCustom.overrides&&typeof v.data.recipeCustom.overrides==='object',
  has:v=>Object.keys(v.data.stock||{}).length>0||Object.keys(v.data.prefs||{}).length>0||['shopping','history','leftovers','weekPlan','planned'].some(k=>v.data[k]?.length)||v.data.recipeCustom?.added?.length>0,
- apply:async v=>{for(const [k,key] of Object.entries(culinaSyncKeys))localStorage.setItem(key,JSON.stringify(v.data[k]));Object.assign(state,v.data);renderAll();renderHistory();renderLeftovers();renderPlanned()}};
+ revision:()=>window.LenaicSync.rawStorage([...Object.values(culinaSyncKeys),'culina-theme','culina-fruit-reminders-v1']),consistent:(v,r)=>window.LenaicSync.canonical(Object.fromEntries(Object.keys(culinaKnownRevision).map(k=>[k,r[k]])))===window.LenaicSync.canonical(culinaKnownRevision),
+ apply:async(v,expected)=>{const changes=Object.fromEntries(Object.entries(culinaSyncKeys).map(([k,key])=>[key,JSON.stringify(v.data[k])]));for(const key of ['culina-theme','culina-fruit-reminders-v1'])if(v.storageExtras&&Object.hasOwn(v.storageExtras,key))changes[key]=v.storageExtras[key];window.LenaicSync.atomicStorage(changes,expected);Object.assign(culinaKnownRevision,Object.fromEntries(Object.values(culinaSyncKeys).map(k=>[k,changes[k]])));Object.assign(state,v.data);renderAll();renderHistory();renderLeftovers();renderPlanned();return culinaSafeAdapter.get()}};
 window.LenaicSync.register(culinaSafeAdapter);

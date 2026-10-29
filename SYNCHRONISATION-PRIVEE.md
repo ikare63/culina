@@ -1,3 +1,5 @@
+> **29 octobre 2026 : migration gelée.** Lire [MIGRATION-SANS-PERTE.md](MIGRATION-SANS-PERTE.md) avant toute action. La comparaison ne remplace plus automatiquement une version divergente ; les anciennes instructions de synchronisation directe sont suspendues. Aucune sauvegarde réelle ni restauration sur appareil validée.
+
 # Synchronisation privée — corrections proposées
 
 Branche : `audit/private-sync-20261028`. Aucune fusion ni publication automatique. Aucune sauvegarde personnelle modifiée pendant l’audit.
